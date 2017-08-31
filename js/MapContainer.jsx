@@ -8,18 +8,23 @@ import {
   } from "react-simple-maps";
 
 import {Modal} from './Modal.jsx';
-import {Button} from './Style.jsx';
+import {Button} from './style.jsx';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const Map = styled.div`
-    border: 2px solid #EE6C4D;;  
-    width: 60vw;
+    border: 2px solid #EE6C4D;
+    border-radius: 2px;
+    width: 80vw;
     margin: 0 auto;
     overflow: hidden;
 `;
 
 const ButtonList = styled.div`
+    width: 100vw;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
     `;
 
 class MapContainer extends React.Component { 
@@ -30,6 +35,10 @@ class MapContainer extends React.Component {
         zoom: 1,
         clickedOn: false,
         country: "",
+        breakfastName: "",
+        description: "",
+        img: "",
+        info: "Sorry. This content is not yet available...",
         continents: [
             {name: "Asia", coordinates: [103.8198,1.3521]},
             {name: "Africa", coordinates: [3.3792,6.5244]},
@@ -64,10 +73,30 @@ class MapContainer extends React.Component {
       if (this.state.clickedOn === false) {
       this.setState({
         clickedOn: true,
-        country: countryName
-      }) } else {
+        country: countryName,
+      });
+      fetch(`https://codekingdom.pl/projects/coderslab-workshops/international-breakfast/`)
+      .then(resp => {
+        return resp.json();
+      }).then(resp => {
+        let breakLength = resp.breakfast.length;
+        for (let i = 0; i < breakLength; i++ ) {
+        if (resp.breakfast[i].name == this.state.country) {
+          this.setState({
+            breakfastName: resp.breakfast[i].breakfastName,
+            description: resp.breakfast[i].description,
+            img: resp.breakfast[i].img,
+            info: ""
+          })};
+        }}
+  ).catch( err => {
+        console.log("Error", err)}) } else {
         this.setState({
-          clickedOn: false
+          clickedOn: false,
+          breakfastName: "",
+          description: "",
+          img: "",
+          info: "Sorry. This content is not yet available..."
         })
       }
     }
@@ -76,7 +105,7 @@ class MapContainer extends React.Component {
       return(
           <div>
         <Map>
-          <Modal show={this.state.clickedOn} close={this.handleClick} country={this.state.country}>
+          <Modal show={this.state.clickedOn} close={this.handleClick} country={this.state.country} breakfastName={this.state.breakfastName} description={this.state.description} img={this.state.img} info={this.state.info}>
             </Modal>
           <ComposableMap projectionConfig={{
               scale: 220,
@@ -99,16 +128,19 @@ class MapContainer extends React.Component {
                     default: {fill: 'lightgrey',
                       stroke: "#3D5A80",
                       strokeWidth: .75,
-                      outline: "none"},
+                      outline: "none",
+                      transition: "fill .5s"},
                     hover: {fill: '#EE6C4D',
                       stroke: "#3D5A80",
                       strokeWidth: .75,
                       outline: "none",
-                      cursor: "pointer"},
+                      cursor: "pointer",
+                      transition: "fill .5s"},
                     pressed: {fill: '#EE6C4D',
                       stroke: "#3D5A80",
                       strokeWidth: .75,
-                      outline: "none"}
+                      outline: "none",
+                      transition: "fill .5s"}
                   }}
                   onClick={ this.handleClick }
                   />

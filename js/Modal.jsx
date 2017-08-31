@@ -1,7 +1,28 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {injectGlobal} from 'styled-components';
 
-import { Button } from './Style.jsx'
+import { Button } from './style.jsx'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+injectGlobal`
+  .example-enter {
+    opacity: 0.01;
+
+  .example-enter.example-enter-active {
+      opacity: 1;
+      transition: opacity 500ms ease-in;
+    }
+    
+  .example-leave {
+      opacity: 1;
+    }
+    
+  .example-leave.example-leave-active {
+      opacity: 0.01;
+      transition: opacity 300ms ease-in;
+    }
+}
+`
 
 const ModalBackground = styled.div`
     position: fixed;
@@ -27,26 +48,32 @@ const ModalWindow = styled.div`
     h2 {
         color: #EE6C4D;
         text-align: center;
+        padding-bottom: .5rem;
+    }
+
+    h3 {
+      color: #3D5A80;
+      padding-bottom: .5rem;
     }
 
     p {
         color: #3D5A80;
+        padding-bottom: .5rem;
+    }
+
+    img {
+      width: 80%;
+      border-radius: 5%; 
+      opacity: .80;
+      padding-bottom: .5rem;
     }
 `;
+
 
 class Modal extends React.Component {
     constructor(props) {
       super(props);
-    //   this.findCountry = () => {
-    //     for (let i = 0; i < breakfast.length; i++ ) {
-    //     if (this.props.country == breakfast[i].name) {
-    //       return <div><p>{breakfast[i].breakfastName}</p>
-    //       <p>{breakfast[i].description}</p></div>
-    //     }
-    //     }
-    //   }
-    }
-  
+      }
     render() {
       if (!this.props.show) {
         return null;
@@ -54,15 +81,13 @@ class Modal extends React.Component {
         return <ModalBackground>
           <ModalWindow>
             <h2>{this.props.country}</h2>
-            <p>Breakfast:</p>
-            
+            <h3>{this.props.breakfastName}{this.props.info}</h3>
+            <p>{this.props.description}</p>
+            <img src={this.props.img} />
             <div className="modal-footer">
               <Button>
-                Take a challenge
+                <a href={`https://www.google.pl/search?q=${this.props.breakfastName}+recipe`} target="_blank">Take a challenge</a>
                 </Button>
-                <Button>
-                  Save for later
-                  </Button>
               <Button onClick={this.props.close}>
                 Close
               </Button>

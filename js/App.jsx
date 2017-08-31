@@ -12,13 +12,21 @@ injectGlobal`
   margin: 0;
   padding: 0;
 }
+
+body {
+    background-color: whitesmoke;
+}
 `;
+
+const Container = styled.div`
+    width: 100vw;
+`
 
 class App extends React.Component {
     
     render() {
         
-        return <div className="container">
+        return <Container>
                 <Header>
                 </Header>
                 <About>
@@ -27,7 +35,7 @@ class App extends React.Component {
                 </MapContainer>
                 <Footer>
                 </Footer>
-                </div>
+                </Container>
     }
 }
 

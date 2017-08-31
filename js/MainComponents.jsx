@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from './style.jsx'
 
 // Header
 
 const StyledHeader = styled.header`
-height: 12vh;
+height: 5rem;
 background-color: lightgrey;
 display: flex;
 flex-direction: row;  
@@ -38,24 +39,19 @@ const AboutSection = styled.section`
 
   h2 {
     font-size: 1.5rem;
-    padding-top: 1rem;
+    padding-top: 2rem;;
     text-align: center; 
 } 
   p {
     text-align: center;
-    padding: 1rem;  
-}
-  a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #3D5A80;
+    padding: 2rem 0 2rem 0;  
 }`;
 
 class About extends React.Component {
   render() {
       return <AboutSection>
         <h2>Challenge yourself with making different breakfast every day!</h2>
-        <p>Click on the chosen country and enjoy your new breakfast idea or get a random one <a href="#">here</a>.</p>
+        <p>Click on the chosen country and enjoy your new breakfast idea or get a random one <Link href="#">here</Link>.</p>
         </AboutSection>
   }
 }
@@ -65,19 +61,23 @@ export {About};
 // Footer 
 
 const StyledFooter = styled.footer`
-  height: 5vh;
   text-align: center;
   color: #3D5A80;
   background-color: lightgrey;
+
+  p {
+    font-size: .75rem;
+  }
 `;
 
 class Footer extends React.Component {
   render() {
       return <StyledFooter>
         <p>Breakfast</p>
-        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
-        </div>
-        </StyledFooter>
+        <p>Icons made by 
+          <Link href="http://www.freepik.com" title="Freepik"> Freepik </Link> 
+          from <Link href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com </Link>
+          is licensed by <Link href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</Link></p>        </StyledFooter>
   }
 }
 
