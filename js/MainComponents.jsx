@@ -4,7 +4,7 @@ import {Link} from './style.jsx'
 
 // Header
 
-const StyledHeader = styled.header`
+const StyledHeader = styled.header `
 height: 5rem;
 background-color: lightgrey;
 display: flex;
@@ -27,7 +27,9 @@ img {
 
 class Header extends React.Component {
   render() {
-      return <StyledHeader><img src="./img/breakfast.svg"/><h1>Breakfast</h1></StyledHeader>
+    return <StyledHeader><img src="./img/breakfast.svg"/>
+      <h1>Breakfast</h1>
+    </StyledHeader>
   }
 }
 
@@ -35,7 +37,7 @@ export {Header};
 
 // About section
 
-const AboutSection = styled.section`
+const AboutSection = styled.section `
   color: #3D5A80;
 
   h2 {
@@ -50,18 +52,19 @@ const AboutSection = styled.section`
 
 class About extends React.Component {
   render() {
-      return <AboutSection>
-        <h2>Challenge yourself with making different breakfast every day!</h2>
-        <p>Click on the chosen country and enjoy your new breakfast idea or get a random one.</p>
-        </AboutSection>
+    return <AboutSection>
+      <h2>Challenge yourself with making different breakfast every day!</h2>
+      <p>Click on the chosen country and enjoy your new breakfast idea or get a random
+        one.</p>
+    </AboutSection>
   }
 }
 
 export {About};
 
-// Footer 
+// Footer
 
-const StyledFooter = styled.footer`
+const StyledFooter = styled.footer `
   text-align: center;
   color: #3D5A80;
   background-color: lightgrey;
@@ -79,12 +82,36 @@ const StyledFooter = styled.footer`
 
 class Footer extends React.Component {
   render() {
-      return <StyledFooter>
-        <p>Breakfast App made by<Link href="https://github.com/mhabdas"> Marta Habdas</Link></p>
-        <p>Icons made by 
-          <Link href="http://www.freepik.com" title="Freepik"> Freepik </Link> 
-          from <Link href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com </Link>
-          is licensed by <Link href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</Link></p>        </StyledFooter>
+    return <StyledFooter>
+      <p>
+        &copy; 2017 Breakfast App made by<Link href="https://github.com/mhabdas">
+          Marta Habdas</Link>
+      </p>
+      <p>Icons made by
+        <Link href="http://www.freepik.com" title="Freepik">
+          Freepik
+        </Link>
+        from
+        <Link href="https://www.flaticon.com/" title="Flaticon">
+          www.flaticon.com
+        </Link>
+        is licensed by
+        <Link
+          href="http://creativecommons.org/licenses/by/3.0/"
+          title="Creative Commons BY 3.0"
+          target="_blank">CC 3.0 BY</Link>
+      </p>
+      <p>All photos via
+        <Link href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons
+        </Link>
+        are licensed by
+        <Link
+          href="http://creativecommons.org/licenses/by/3.0/"
+          title="Creative Commons BY 3.0"
+          target="_blank">
+          CC 3.0 BY</Link>
+      </p>
+    </StyledFooter>
   }
 }
 

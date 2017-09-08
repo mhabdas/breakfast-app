@@ -1,11 +1,10 @@
 import React from 'react';
 import styled, {injectGlobal} from 'styled-components';
 
-import { Button } from './style.jsx'
+import {Button} from './style.jsx'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-
-const ModalBackground = styled.div`
+const ModalBackground = styled.div `
     position: fixed;
     top: 0;
     bottom: 0;
@@ -16,7 +15,7 @@ const ModalBackground = styled.div`
   
 `;
 
-const ModalWindow = styled.div`
+const ModalWindow = styled.div `
     background-color: whitesmoke;
     border-radius: 5px;
     max-width: 500px;
@@ -52,45 +51,51 @@ const ModalWindow = styled.div`
     }
 `;
 
-
 class Modal extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        visible: true
-      }
-      }
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: true
+    }
+  }
 
-      componentDidMount() {
-        setTimeout(() => {
-          this.setState({
-            visible: false,
-          })
-        }, 1000)
-      }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({visible: false})
+    }, 1000)
+  }
 
-    render() {
-      if (!this.props.show) {
-        return null;
-      } else {
-        return <ModalBackground>
+  render() {
+    if (!this.props.show) {
+      return null;
+    } else {
+      return <ModalBackground>
+        <ReactCSSTransitionGroup
+        transitionName="fade"
+        transitionAppear={true}
+        transitionAppearTimeout={500}
+        transitionEnter={false}
+        transitionLeave={false}>
           <ModalWindow>
             <h2>{this.props.country}</h2>
             <h3>{this.props.breakfastName}{this.props.info}</h3>
             <p>{this.props.description}</p>
-            <img src={this.props.img} />
+            <img src={this.props.img}/>
             <div className="modal-footer">
               <Button>
-                <a href={`https://www.google.pl/search?q=${this.props.breakfastName}+recipe`} target="_blank">Take a challenge</a>
-                </Button>
+                <a
+                  href={`https://www.google.pl/search?q=${this.props.breakfastName}+recipe`}
+                  target="_blank">Take a challenge</a>
+              </Button>
               <Button onClick={this.props.close}>
                 Close
               </Button>
             </div>
           </ModalWindow>
+          </ReactCSSTransitionGroup>
         </ModalBackground>
-      }
     }
   }
+}
 
-  export { Modal };
+export {Modal};

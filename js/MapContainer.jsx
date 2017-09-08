@@ -9,34 +9,6 @@ import {
 
 import {Modal} from './Modal.jsx';
 import {Button} from './style.jsx';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
-injectGlobal`
-.example-enter {
-  opacity: 0.01;
-}
-
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.example-leave {
-  opacity: 1;
-}
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}
-.example-appear {
-  opacity: 0.01;
-}
-
-.example-appear.example-appear-active {
-  opacity: 1;
-  transition: opacity .5s ease-in;
-}`
 
 const Map = styled.div`
     border: 2px solid #EE6C4D;
@@ -157,6 +129,7 @@ class MapContainer extends React.Component {
     render() {
       return(
           <div>
+             
         <Map>
           <Modal show={this.state.clickedOn} close={this.handleClick} country={this.state.country} breakfastName={this.state.breakfastName} description={this.state.description} img={this.state.img} info={this.state.info}>
             </Modal>
