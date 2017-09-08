@@ -4,25 +4,6 @@ import styled, {injectGlobal} from 'styled-components';
 import { Button } from './style.jsx'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-injectGlobal`
-  .example-enter {
-    opacity: 0.01;
-
-  .example-enter.example-enter-active {
-      opacity: 1;
-      transition: opacity 500ms ease-in;
-    }
-    
-  .example-leave {
-      opacity: 1;
-    }
-    
-  .example-leave.example-leave-active {
-      opacity: 0.01;
-      transition: opacity 300ms ease-in;
-    }
-}
-`
 
 const ModalBackground = styled.div`
     position: fixed;
@@ -32,6 +13,7 @@ const ModalBackground = styled.div`
     right: 0;
     background-color: rgba(0,0,0,0.7);
     padding: 50px;
+  
 `;
 
 const ModalWindow = styled.div`
@@ -44,6 +26,7 @@ const ModalWindow = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 
     h2 {
         color: #EE6C4D;
@@ -73,7 +56,19 @@ const ModalWindow = styled.div`
 class Modal extends React.Component {
     constructor(props) {
       super(props);
+      this.state = {
+        visible: true
       }
+      }
+
+      componentDidMount() {
+        setTimeout(() => {
+          this.setState({
+            visible: false,
+          })
+        }, 1000)
+      }
+
     render() {
       if (!this.props.show) {
         return null;

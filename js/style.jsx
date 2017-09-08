@@ -7,7 +7,6 @@ const colors = {
     background: 'whitesmoke',
     accent: '#EE6C4D',
     text: '#3D5A80',
-
 }
 
 

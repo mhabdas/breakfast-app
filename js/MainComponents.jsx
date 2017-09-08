@@ -10,17 +10,18 @@ background-color: lightgrey;
 display: flex;
 flex-direction: row;  
 justify-content: center;
+align-items: center;
 
 h1 {
   font-weight: 700;
   color: #EE6C4D;
-  padding: 1rem 0 0 .5rem;
+  font-size: 2.5rem;
 } 
 
 img {
   width: 4rem;
   height: 4rem;
-  padding: .5rem 0 0 1rem;
+  padding-right: .5rem;
 }
 `;
 
@@ -51,7 +52,7 @@ class About extends React.Component {
   render() {
       return <AboutSection>
         <h2>Challenge yourself with making different breakfast every day!</h2>
-        <p>Click on the chosen country and enjoy your new breakfast idea or get a random one <Link href="#">here</Link>.</p>
+        <p>Click on the chosen country and enjoy your new breakfast idea or get a random one.</p>
         </AboutSection>
   }
 }
@@ -67,13 +68,19 @@ const StyledFooter = styled.footer`
 
   p {
     font-size: .75rem;
+    :first-child {
+    padding-top: 1rem;
+    }
+    :last-child {
+      padding-bottom: 1rem;
+    }
   }
 `;
 
 class Footer extends React.Component {
   render() {
       return <StyledFooter>
-        <p>Breakfast</p>
+        <p>Breakfast App made by<Link href="https://github.com/mhabdas"> Marta Habdas</Link></p>
         <p>Icons made by 
           <Link href="http://www.freepik.com" title="Freepik"> Freepik </Link> 
           from <Link href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com </Link>

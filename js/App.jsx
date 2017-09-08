@@ -18,15 +18,11 @@ body {
 }
 `;
 
-const Container = styled.div`
-    width: 100vw;
-`
-
 class App extends React.Component {
     
     render() {
         
-        return <Container>
+        return <div>
                 <Header>
                 </Header>
                 <About>
@@ -35,7 +31,7 @@ class App extends React.Component {
                 </MapContainer>
                 <Footer>
                 </Footer>
-                </Container>
+                </div>
     }
 }
 

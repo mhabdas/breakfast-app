@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {injectGlobal} from 'styled-components';
 import {
     ComposableMap,
     ZoomableGroup,
@@ -11,16 +11,42 @@ import {Modal} from './Modal.jsx';
 import {Button} from './style.jsx';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
+injectGlobal`
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}`
+
 const Map = styled.div`
     border: 2px solid #EE6C4D;
     border-radius: 2px;
-    width: 80vw;
+    width: 60vw;
     margin: 0 auto;
     overflow: hidden;
 `;
 
 const ButtonList = styled.div`
-    width: 100vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -51,6 +77,7 @@ class MapContainer extends React.Component {
       this.handleZoom = this.handleZoom.bind(this);
       this.handleClick = this.handleClick.bind(this);
       this.handleReset = this.handleReset.bind(this);
+      this.handleRandom = this.handleRandom.bind(this);
     }
     handleZoom(e) {
         const contId = e.target.getAttribute("data-cont");
@@ -99,6 +126,32 @@ class MapContainer extends React.Component {
           info: "Sorry. This content is not yet available..."
         })
       }
+    }
+
+    handleRandom() {
+      fetch(`https://codekingdom.pl/projects/coderslab-workshops/international-breakfast/`)
+      .then(resp => {
+        return resp.json();
+      }).then(resp => {  
+        let random = resp.breakfast[Math.floor(Math.random()*resp.breakfast.length)];
+          console.log(random.name)
+        let countryName = random.name;
+        this.setState({
+          clickedOn: true,
+          country: countryName
+        });
+        let breakLength = resp.breakfast.length;
+        for (let i = 0; i < breakLength; i++ ) {
+        if (resp.breakfast[i].name == this.state.country) {
+          this.setState({
+            breakfastName: resp.breakfast[i].breakfastName,
+            description: resp.breakfast[i].description,
+            img: resp.breakfast[i].img,
+            info: ""
+          })};
+        }}
+  ).catch( err => {
+        console.log("Error", err)})
     }
   
     render() {
@@ -154,6 +207,7 @@ class MapContainer extends React.Component {
             <Button key={i} onClick={this.handleZoom} data-cont={i}>{cont.name}</Button>
         )}
         <Button onClick={this.handleReset}>Reset</Button>
+        <Button onClick={this.handleRandom}>Random</Button>
         </ButtonList>
         </div>
       )
