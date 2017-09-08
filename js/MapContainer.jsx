@@ -51,6 +51,20 @@ class MapContainer extends React.Component {
       this.handleReset = this.handleReset.bind(this);
       this.handleRandom = this.handleRandom.bind(this);
     }
+
+    getBreakfastData(resp) {
+      let breakLength = resp.breakfast.length;
+      for (let i = 0; i < breakLength; i++ ) {
+        if (resp.breakfast[i].name == this.state.country) {
+          this.setState({
+            breakfastName: resp.breakfast[i].breakfastName,
+            description: resp.breakfast[i].description,
+            img: resp.breakfast[i].img,
+            info: ""
+          })};
+        }
+    }
+
     handleZoom(e) {
         const contId = e.target.getAttribute("data-cont");
         const cont = this.state.continents[contId];
@@ -78,16 +92,8 @@ class MapContainer extends React.Component {
       .then(resp => {
         return resp.json();
       }).then(resp => {
-        let breakLength = resp.breakfast.length;
-        for (let i = 0; i < breakLength; i++ ) {
-        if (resp.breakfast[i].name == this.state.country) {
-          this.setState({
-            breakfastName: resp.breakfast[i].breakfastName,
-            description: resp.breakfast[i].description,
-            img: resp.breakfast[i].img,
-            info: ""
-          })};
-        }}
+        this.getBreakfastData(resp);
+        }
   ).catch( err => {
         console.log("Error", err)}) } else {
         this.setState({
@@ -112,16 +118,7 @@ class MapContainer extends React.Component {
           clickedOn: true,
           country: countryName
         });
-        let breakLength = resp.breakfast.length;
-        for (let i = 0; i < breakLength; i++ ) {
-        if (resp.breakfast[i].name == this.state.country) {
-          this.setState({
-            breakfastName: resp.breakfast[i].breakfastName,
-            description: resp.breakfast[i].description,
-            img: resp.breakfast[i].img,
-            info: ""
-          })};
-        }}
+        this.getBreakfastData(resp)}
   ).catch( err => {
         console.log("Error", err)})
     }

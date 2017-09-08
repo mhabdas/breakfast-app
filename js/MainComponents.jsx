@@ -85,31 +85,31 @@ class Footer extends React.Component {
     return <StyledFooter>
       <p>
         &copy; 2017 Breakfast App made by<Link href="https://github.com/mhabdas">
-          Marta Habdas</Link>
+        &nbsp;Marta Habdas</Link>.
       </p>
-      <p>Icons made by
+      <p>Icons made by	
         <Link href="http://www.freepik.com" title="Freepik">
-          Freepik
+        &nbsp;Freepik&nbsp;
         </Link>
         from
         <Link href="https://www.flaticon.com/" title="Flaticon">
-          www.flaticon.com
+        &nbsp;www.flaticon.com&nbsp;
         </Link>
         is licensed by
         <Link
           href="http://creativecommons.org/licenses/by/3.0/"
           title="Creative Commons BY 3.0"
-          target="_blank">CC 3.0 BY</Link>
+          target="_blank">&nbsp;CC 3.0 BY</Link>.
       </p>
       <p>All photos via
-        <Link href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons
+        <Link href="https://commons.wikimedia.org/wiki/Main_Page">&nbsp;Wikimedia Commons&nbsp;
         </Link>
         are licensed by
         <Link
           href="http://creativecommons.org/licenses/by/3.0/"
           title="Creative Commons BY 3.0"
           target="_blank">
-          CC 3.0 BY</Link>
+          &nbsp;CC 3.0 BY</Link>.
       </p>
     </StyledFooter>
   }
