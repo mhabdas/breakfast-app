@@ -41,6 +41,10 @@ const ModalWindow = styled.div `
     p {
         color: #3D5A80;
         padding-bottom: .5rem;
+
+        &:last-of-type {
+          font-size: .75rem;
+        }
     }
 
     img {
@@ -49,6 +53,8 @@ const ModalWindow = styled.div `
       opacity: .80;
       padding-bottom: .5rem;
     }
+
+    
 `;
 
 class Modal extends React.Component {
@@ -81,6 +87,7 @@ class Modal extends React.Component {
             <h3>{this.props.breakfastName}{this.props.info}</h3>
             <p>{this.props.description}</p>
             <img src={this.props.img}/>
+            <p>{this.props.attr}</p>
             <div className="modal-footer">
               <Button>
                 <a

@@ -30536,6 +30536,7 @@ var MapContainer = function (_React$Component) {
       breakfastName: "",
       description: "",
       img: "",
+      attr: "",
       info: "Sorry. This content is not yet available...",
       continents: [{ name: "Asia", coordinates: [103.8198, 1.3521] }, { name: "Africa", coordinates: [3.3792, 6.5244] }, { name: "Australia", coordinates: [151.2093, -33.8688] }, { name: "Europe", coordinates: [8.5417, 47.3769] }, { name: "North America", coordinates: [-122.4194, 37.7749] }, { name: "South America", coordinates: [-58.3816, -34.6037] }]
     };
@@ -30556,6 +30557,7 @@ var MapContainer = function (_React$Component) {
             breakfastName: resp.breakfast[i].breakfastName,
             description: resp.breakfast[i].description,
             img: resp.breakfast[i].img,
+            attr: resp.breakfast[i].attr,
             info: ""
           });
         };
@@ -30603,6 +30605,7 @@ var MapContainer = function (_React$Component) {
           breakfastName: "",
           description: "",
           img: "",
+          attr: "",
           info: "Sorry. This content is not yet available..."
         });
       }
@@ -30638,7 +30641,14 @@ var MapContainer = function (_React$Component) {
         _react2.default.createElement(
           Map,
           null,
-          _react2.default.createElement(_Modal.Modal, { show: this.state.clickedOn, close: this.handleClick, country: this.state.country, breakfastName: this.state.breakfastName, description: this.state.description, img: this.state.img, info: this.state.info }),
+          _react2.default.createElement(_Modal.Modal, { show: this.state.clickedOn,
+            close: this.handleClick,
+            country: this.state.country,
+            breakfastName: this.state.breakfastName,
+            description: this.state.description,
+            img: this.state.img,
+            attr: this.state.attr,
+            info: this.state.info }),
           _react2.default.createElement(
             _reactSimpleMaps.ComposableMap,
             { projectionConfig: {
@@ -30664,7 +30674,7 @@ var MapContainer = function (_React$Component) {
                       'data-country': geography.properties.name,
                       projection: projection,
                       style: {
-                        default: { fill: 'lightgrey',
+                        default: { fill: "lightgrey",
                           stroke: "#3D5A80",
                           strokeWidth: .75,
                           outline: "none",
@@ -39367,7 +39377,7 @@ exports.Modal = undefined;
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _templateObject = _taggedTemplateLiteral(['\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background-color: rgba(0,0,0,0.7);\n    padding: 50px;\n  \n'], ['\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background-color: rgba(0,0,0,0.7);\n    padding: 50px;\n  \n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    background-color: whitesmoke;\n    border-radius: 5px;\n    max-width: 500px;\n    min-height: 300px;\n    margin: 0 auto;\n    padding: 30px;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    text-align: center;\n\n    h2 {\n        color: #EE6C4D;\n        text-align: center;\n        padding-bottom: .5rem;\n    }\n\n    h3 {\n      color: #3D5A80;\n      padding-bottom: .5rem;\n    }\n\n    p {\n        color: #3D5A80;\n        padding-bottom: .5rem;\n    }\n\n    img {\n      width: 80%;\n      border-radius: 5%; \n      opacity: .80;\n      padding-bottom: .5rem;\n    }\n'], ['\n    background-color: whitesmoke;\n    border-radius: 5px;\n    max-width: 500px;\n    min-height: 300px;\n    margin: 0 auto;\n    padding: 30px;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    text-align: center;\n\n    h2 {\n        color: #EE6C4D;\n        text-align: center;\n        padding-bottom: .5rem;\n    }\n\n    h3 {\n      color: #3D5A80;\n      padding-bottom: .5rem;\n    }\n\n    p {\n        color: #3D5A80;\n        padding-bottom: .5rem;\n    }\n\n    img {\n      width: 80%;\n      border-radius: 5%; \n      opacity: .80;\n      padding-bottom: .5rem;\n    }\n']);
+    _templateObject2 = _taggedTemplateLiteral(['\n    background-color: whitesmoke;\n    border-radius: 5px;\n    max-width: 500px;\n    min-height: 300px;\n    margin: 0 auto;\n    padding: 30px;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    text-align: center;\n\n    h2 {\n        color: #EE6C4D;\n        text-align: center;\n        padding-bottom: .5rem;\n    }\n\n    h3 {\n      color: #3D5A80;\n      padding-bottom: .5rem;\n    }\n\n    p {\n        color: #3D5A80;\n        padding-bottom: .5rem;\n\n        &:last-of-type {\n          font-size: .75rem;\n        }\n    }\n\n    img {\n      width: 80%;\n      border-radius: 5%; \n      opacity: .80;\n      padding-bottom: .5rem;\n    }\n\n    \n'], ['\n    background-color: whitesmoke;\n    border-radius: 5px;\n    max-width: 500px;\n    min-height: 300px;\n    margin: 0 auto;\n    padding: 30px;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    text-align: center;\n\n    h2 {\n        color: #EE6C4D;\n        text-align: center;\n        padding-bottom: .5rem;\n    }\n\n    h3 {\n      color: #3D5A80;\n      padding-bottom: .5rem;\n    }\n\n    p {\n        color: #3D5A80;\n        padding-bottom: .5rem;\n\n        &:last-of-type {\n          font-size: .75rem;\n        }\n    }\n\n    img {\n      width: 80%;\n      border-radius: 5%; \n      opacity: .80;\n      padding-bottom: .5rem;\n    }\n\n    \n']);
 
 var _react = __webpack_require__(9);
 
@@ -39457,6 +39467,11 @@ var Modal = function (_React$Component) {
                 this.props.description
               ),
               _react2.default.createElement('img', { src: this.props.img }),
+              _react2.default.createElement(
+                'p',
+                null,
+                this.props.attr
+              ),
               _react2.default.createElement(
                 'div',
                 { className: 'modal-footer' },

@@ -36,6 +36,7 @@ class MapContainer extends React.Component {
         breakfastName: "",
         description: "",
         img: "",
+        attr: "",
         info: "Sorry. This content is not yet available...",
         continents: [
             {name: "Asia", coordinates: [103.8198,1.3521]},
@@ -60,6 +61,7 @@ class MapContainer extends React.Component {
             breakfastName: resp.breakfast[i].breakfastName,
             description: resp.breakfast[i].description,
             img: resp.breakfast[i].img,
+            attr: resp.breakfast[i].attr,
             info: ""
           })};
         }
@@ -101,6 +103,7 @@ class MapContainer extends React.Component {
           breakfastName: "",
           description: "",
           img: "",
+          attr: "",
           info: "Sorry. This content is not yet available..."
         })
       }
@@ -122,13 +125,21 @@ class MapContainer extends React.Component {
   ).catch( err => {
         console.log("Error", err)})
     }
+
   
     render() {
       return(
           <div>
              
         <Map>
-          <Modal show={this.state.clickedOn} close={this.handleClick} country={this.state.country} breakfastName={this.state.breakfastName} description={this.state.description} img={this.state.img} info={this.state.info}>
+          <Modal show={this.state.clickedOn} 
+          close={this.handleClick} 
+          country={this.state.country} 
+          breakfastName={this.state.breakfastName} 
+          description={this.state.description} 
+          img={this.state.img} 
+          attr={this.state.attr} 
+          info={this.state.info}>
             </Modal>
           <ComposableMap projectionConfig={{
               scale: 220,
@@ -148,7 +159,7 @@ class MapContainer extends React.Component {
                   data-country={ geography.properties.name }
                   projection={ projection }
                   style={{
-                    default: {fill: 'lightgrey',
+                    default: {fill: "lightgrey",
                       stroke: "#3D5A80",
                       strokeWidth: .75,
                       outline: "none",
