@@ -39,12 +39,12 @@ class MapContainer extends React.Component {
         attr: "",
         info: "Sorry. This content is not yet available...",
         continents: [
-            {name: "Asia", coordinates: [103.8198,1.3521]},
+            {name: "Asia", coordinates: [103.8198,15.3521]},
             {name: "Africa", coordinates: [3.3792,6.5244]},
             {name: "Australia", coordinates: [151.2093,-33.8688]},
             {name: "Europe", coordinates: [8.5417,47.3769]},
             {name: "North America", coordinates: [-122.4194,37.7749]},
-            {name: "South America", coordinates: [-58.3816,-34.6037]}
+            {name: "South America", coordinates: [-58.3816,-18.6037]}
         ]
       }
       this.handleZoom = this.handleZoom.bind(this);
