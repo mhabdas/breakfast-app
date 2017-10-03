@@ -42,7 +42,7 @@ class MapContainer extends React.Component {
             {name: "Asia", coordinates: [103.8198,15.3521]},
             {name: "Africa", coordinates: [3.3792,6.5244]},
             {name: "Australia", coordinates: [151.2093,-33.8688]},
-            {name: "Europe", coordinates: [8.5417,47.3769]},
+            {name: "Europe", coordinates: [8.5417,52.3769]},
             {name: "North America", coordinates: [-122.4194,37.7749]},
             {name: "South America", coordinates: [-58.3816,-18.6037]}
         ]
@@ -70,10 +70,15 @@ class MapContainer extends React.Component {
     handleZoom(e) {
         const contId = e.target.getAttribute("data-cont");
         const cont = this.state.continents[contId];
-        this.setState({
+        if (cont.name === "Europe") {
+          this.setState({
+            center: cont.coordinates,
+            zoom: 3.5,
+          })} else {
+          this.setState({
             center: cont.coordinates,
             zoom: 2,
-          })
+          })}
     }
 
     handleReset() {
