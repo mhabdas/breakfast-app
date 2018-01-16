@@ -10,6 +10,8 @@ import {
 import {Modal} from './Modal.jsx';
 import {Button} from './style.jsx';
 
+
+
 const Map = styled.div`
     border: 2px solid #EE6C4D;
     border-radius: 2px;
@@ -88,9 +90,9 @@ class MapContainer extends React.Component {
           })
     }
 
-    handleClick(e) {
-      let countryName = e.target.getAttribute("data-country");
+    handleClick(geography) {
       if (this.state.clickedOn === false) {
+      let countryName = geography.properties.NAME;
       this.setState({
         clickedOn: true,
         country: countryName,
@@ -159,11 +161,8 @@ class MapContainer extends React.Component {
             <Geographies geographyUrl={ "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json" }>
               {(geographies, projection) => geographies.map((geography, i) => (
                 <Geography
-                  key={ `geography-${i}` }
-                  geography={ geography }
-                  data-country={ geography.properties.name }
-                  projection={ projection }
-                  style={{
+                  key={ `geography-${i}` } geography={ geography } data-country={ geography.properties.name }
+                  projection={ projection } style={{
                     default: {fill: "lightgrey",
                       stroke: "#3D5A80",
                       strokeWidth: .75,
@@ -180,8 +179,7 @@ class MapContainer extends React.Component {
                       strokeWidth: .75,
                       outline: "none",
                       transition: "fill .5s"}
-                  }}
-                  onClick={ this.handleClick }
+                  }} onClick={ this.handleClick }
                   />
               ))}
             </Geographies>
