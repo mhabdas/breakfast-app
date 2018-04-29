@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {injectGlobal} from 'styled-components';
+import styled from 'styled-components';
 import {
     ComposableMap,
     ZoomableGroup,
@@ -40,6 +40,7 @@ class MapContainer extends React.Component {
         img: "",
         attr: "",
         info: "Sorry. This content is not yet available...",
+        selected: [],
         continents: [
             {name: "Asia", coordinates: [103.8198,15.3521]},
             {name: "Africa", coordinates: [3.3792,6.5244]},
@@ -95,7 +96,7 @@ class MapContainer extends React.Component {
       let countryName = geography.properties.NAME;
       this.setState({
         clickedOn: true,
-        country: countryName,
+        country: countryName
       });
       fetch(`https://codekingdom.pl/projects/coderslab-workshops/international-breakfast/`)
       .then(resp => {
@@ -137,7 +138,6 @@ class MapContainer extends React.Component {
     render() {
       return(
           <div>
-             
         <Map>
           <Modal show={this.state.clickedOn} 
           close={this.handleClick} 

@@ -31965,6 +31965,7 @@ var MapContainer = function (_React$Component) {
       img: "",
       attr: "",
       info: "Sorry. This content is not yet available...",
+      selected: [],
       continents: [{ name: "Asia", coordinates: [103.8198, 15.3521] }, { name: "Africa", coordinates: [3.3792, 6.5244] }, { name: "Australia", coordinates: [151.2093, -33.8688] }, { name: "Europe", coordinates: [8.5417, 52.3769] }, { name: "North America", coordinates: [-122.4194, 37.7749] }, { name: "South America", coordinates: [-58.3816, -18.6037] }]
     };
     _this.handleZoom = _this.handleZoom.bind(_this);
