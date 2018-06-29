@@ -74,7 +74,7 @@ class Modal extends React.Component {
   render() {
     if (!this.props.show) {
       return null;
-    } else {
+    } {
       return <ModalBackground>
         <ReactCSSTransitionGroup
         transitionName="fade"

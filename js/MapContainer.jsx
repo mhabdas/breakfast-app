@@ -39,7 +39,7 @@ class MapContainer extends React.Component {
         description: "",
         img: "",
         attr: "",
-        info: "Sorry. This content is not yet available...",
+        info: "Sorry. This content is not yet available. Try a different or random country.",
         selected: [],
         continents: [
             {name: "Asia", coordinates: [103.8198,15.3521]},
@@ -57,17 +57,17 @@ class MapContainer extends React.Component {
     }
 
     getBreakfastData(resp) {
-      let breakLength = resp.breakfast.length;
-      for (let i = 0; i < breakLength; i++ ) {
-        if (resp.breakfast[i].name == this.state.country) {
+      resp.breakfast.forEach ( (element) => {
+        if (element.name == this.state.country) {
+            console.log(element);
           this.setState({
-            breakfastName: resp.breakfast[i].breakfastName,
-            description: resp.breakfast[i].description,
-            img: resp.breakfast[i].img,
-            attr: resp.breakfast[i].attr,
+            breakfastName: element.breakfastName,
+            description: element.description,
+            img: element.img,
+            attr: element.attr,
             info: ""
           })};
-        }
+        })
     }
 
     handleZoom(e) {
@@ -112,7 +112,7 @@ class MapContainer extends React.Component {
           description: "",
           img: "",
           attr: "",
-          info: "Sorry. This content is not yet available..."
+          info: "Sorry. This content is not yet available. Try a different or random country."
         })
       }
     }
