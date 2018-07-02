@@ -84,7 +84,7 @@ class Footer extends React.Component {
   render() {
     return <StyledFooter>
       <p>
-        &copy; 2017 Breakfast App made by<Link href="https://github.com/mhabdas">
+        &copy; 2018 Breakfast App made by<Link href="https://github.com/mhabdas">
         &nbsp;Marta Habdas</Link>.
       </p>
       <p>Icons made by	
@@ -110,6 +110,9 @@ class Footer extends React.Component {
           title="Creative Commons BY 3.0"
           target="_blank">
           &nbsp;CC 3.0 BY</Link>.
+      </p>
+      <p>Sources:
+         <Link href="https://www.independent.co.uk/life-style/food-and-drink/features/what-people-eat-for-breakfast-around-the-world-a6730126.html">Independent</Link>
       </p>
     </StyledFooter>
   }
