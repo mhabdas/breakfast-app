@@ -112,7 +112,7 @@ class Footer extends React.Component {
           &nbsp;CC 3.0 BY</Link>.
       </p>
       <p>Sources:
-         <Link href="https://www.independent.co.uk/life-style/food-and-drink/features/what-people-eat-for-breakfast-around-the-world-a6730126.html">Independent</Link>
+         <Link href="https://www.independent.co.uk/life-style/food-and-drink/features/what-people-eat-for-breakfast-around-the-world-a6730126.html">Independent</Link>.
       </p>
     </StyledFooter>
   }
