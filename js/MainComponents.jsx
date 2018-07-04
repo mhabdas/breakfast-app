@@ -1,6 +1,9 @@
+// Main stateless components (the initial view of the website)
+
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from './style.jsx'
+
 
 // Header
 
@@ -25,12 +28,10 @@ img {
 }
 `;
 
-class Header extends React.Component {
-  render() {
+function Header() {
     return <StyledHeader><img src="./img/breakfast.svg"/>
       <h1>Breakfast</h1>
     </StyledHeader>
-  }
 }
 
 export {Header};
@@ -50,14 +51,12 @@ const AboutSection = styled.section `
     padding: 2rem 0 2rem 0;  
 }`;
 
-class About extends React.Component {
-  render() {
+function About() {
     return <AboutSection>
       <h2>Challenge yourself with making different breakfast every day!</h2>
       <p>Click on the chosen country and enjoy your new breakfast idea or get a random
         one.</p>
     </AboutSection>
-  }
 }
 
 export {About};
@@ -80,8 +79,7 @@ const StyledFooter = styled.footer `
   }
 `;
 
-class Footer extends React.Component {
-  render() {
+function Footer() {
     return <StyledFooter>
       <p>
         &copy; 2018 Breakfast App made by<Link href="https://github.com/mhabdas" target="_blank">
@@ -115,7 +113,6 @@ class Footer extends React.Component {
          <Link href="https://www.independent.co.uk/life-style/food-and-drink/features/what-people-eat-for-breakfast-around-the-world-a6730126.html" target="_blank"> Independent</Link>.
       </p>
     </StyledFooter>
-  }
 }
 
 export {Footer};

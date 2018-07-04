@@ -32040,8 +32040,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Footer = exports.About = exports.Header = undefined;
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _templateObject = _taggedTemplateLiteral(['\nheight: 5rem;\nbackground-color: lightgrey;\ndisplay: flex;\nflex-direction: row;  \njustify-content: center;\nalign-items: center;\n\nh1 {\n  font-weight: 700;\n  color: #EE6C4D;\n  font-size: 2.5rem;\n} \n\nimg {\n  width: 4rem;\n  height: 4rem;\n  padding-right: .5rem;\n}\n'], ['\nheight: 5rem;\nbackground-color: lightgrey;\ndisplay: flex;\nflex-direction: row;  \njustify-content: center;\nalign-items: center;\n\nh1 {\n  font-weight: 700;\n  color: #EE6C4D;\n  font-size: 2.5rem;\n} \n\nimg {\n  width: 4rem;\n  height: 4rem;\n  padding-right: .5rem;\n}\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  color: #3D5A80;\n\n  h2 {\n    font-size: 1.5rem;\n    padding-top: 2rem;;\n    text-align: center; \n} \n  p {\n    text-align: center;\n    padding: 2rem 0 2rem 0;  \n}'], ['\n  color: #3D5A80;\n\n  h2 {\n    font-size: 1.5rem;\n    padding-top: 2rem;;\n    text-align: center; \n} \n  p {\n    text-align: center;\n    padding: 2rem 0 2rem 0;  \n}']),
     _templateObject3 = _taggedTemplateLiteral(['\n  text-align: center;\n  color: #3D5A80;\n  background-color: lightgrey;\n\n  p {\n    font-size: .75rem;\n    :first-child {\n    padding-top: 1rem;\n    }\n    :last-child {\n      padding-bottom: 1rem;\n    }\n  }\n'], ['\n  text-align: center;\n  color: #3D5A80;\n  background-color: lightgrey;\n\n  p {\n    font-size: .75rem;\n    :first-child {\n    padding-top: 1rem;\n    }\n    :last-child {\n      padding-bottom: 1rem;\n    }\n  }\n']);
@@ -32058,45 +32056,24 @@ var _style = __webpack_require__(87);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); } // Main stateless components (the initial view of the website)
 
 // Header
 
 var StyledHeader = _styledComponents2.default.header(_templateObject);
 
-var Header = function (_React$Component) {
-  _inherits(Header, _React$Component);
-
-  function Header() {
-    _classCallCheck(this, Header);
-
-    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
-  }
-
-  _createClass(Header, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        StyledHeader,
-        null,
-        _react2.default.createElement('img', { src: './img/breakfast.svg' }),
-        _react2.default.createElement(
-          'h1',
-          null,
-          'Breakfast'
-        )
-      );
-    }
-  }]);
-
-  return Header;
-}(_react2.default.Component);
+function Header() {
+  return _react2.default.createElement(
+    StyledHeader,
+    null,
+    _react2.default.createElement('img', { src: './img/breakfast.svg' }),
+    _react2.default.createElement(
+      'h1',
+      null,
+      'Breakfast'
+    )
+  );
+}
 
 exports.Header = Header;
 
@@ -32104,37 +32081,22 @@ exports.Header = Header;
 
 var AboutSection = _styledComponents2.default.section(_templateObject2);
 
-var About = function (_React$Component2) {
-  _inherits(About, _React$Component2);
-
-  function About() {
-    _classCallCheck(this, About);
-
-    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
-  }
-
-  _createClass(About, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        AboutSection,
-        null,
-        _react2.default.createElement(
-          'h2',
-          null,
-          'Challenge yourself with making different breakfast every day!'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'Click on the chosen country and enjoy your new breakfast idea or get a random one.'
-        )
-      );
-    }
-  }]);
-
-  return About;
-}(_react2.default.Component);
+function About() {
+  return _react2.default.createElement(
+    AboutSection,
+    null,
+    _react2.default.createElement(
+      'h2',
+      null,
+      'Challenge yourself with making different breakfast every day!'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Click on the chosen country and enjoy your new breakfast idea or get a random one.'
+    )
+  );
+}
 
 exports.About = About;
 
@@ -32142,95 +32104,80 @@ exports.About = About;
 
 var StyledFooter = _styledComponents2.default.footer(_templateObject3);
 
-var Footer = function (_React$Component3) {
-  _inherits(Footer, _React$Component3);
-
-  function Footer() {
-    _classCallCheck(this, Footer);
-
-    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
-  }
-
-  _createClass(Footer, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        StyledFooter,
-        null,
-        _react2.default.createElement(
-          'p',
-          null,
-          '\xA9 2018 Breakfast App made by',
-          _react2.default.createElement(
-            _style.Link,
-            { href: 'https://github.com/mhabdas', target: '_blank' },
-            '\xA0Marta Habdas'
-          ),
-          '.'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'Icons made by',
-          _react2.default.createElement(
-            _style.Link,
-            { href: 'http://www.freepik.com', title: 'Freepik', target: '_blank' },
-            '\xA0Freepik\xA0'
-          ),
-          'from',
-          _react2.default.createElement(
-            _style.Link,
-            { href: 'https://www.flaticon.com/', title: 'Flaticon', target: '_blank' },
-            '\xA0www.flaticon.com\xA0'
-          ),
-          'is licensed by',
-          _react2.default.createElement(
-            _style.Link,
-            {
-              href: 'http://creativecommons.org/licenses/by/3.0/',
-              title: 'Creative Commons BY 3.0',
-              target: '_blank' },
-            '\xA0CC 3.0 BY'
-          ),
-          '.'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'All photos via',
-          _react2.default.createElement(
-            _style.Link,
-            { href: 'https://commons.wikimedia.org/wiki/Main_Page', target: '_blank' },
-            '\xA0Wikimedia Commons\xA0'
-          ),
-          'are licensed by',
-          _react2.default.createElement(
-            _style.Link,
-            {
-              href: 'http://creativecommons.org/licenses/by/3.0/',
-              title: 'Creative Commons BY 3.0',
-              target: '_blank' },
-            '\xA0CC 3.0 BY'
-          ),
-          '.'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'Content sources:',
-          _react2.default.createElement(
-            _style.Link,
-            { href: 'https://www.independent.co.uk/life-style/food-and-drink/features/what-people-eat-for-breakfast-around-the-world-a6730126.html', target: '_blank' },
-            ' Independent'
-          ),
-          '.'
-        )
-      );
-    }
-  }]);
-
-  return Footer;
-}(_react2.default.Component);
+function Footer() {
+  return _react2.default.createElement(
+    StyledFooter,
+    null,
+    _react2.default.createElement(
+      'p',
+      null,
+      '\xA9 2018 Breakfast App made by',
+      _react2.default.createElement(
+        _style.Link,
+        { href: 'https://github.com/mhabdas', target: '_blank' },
+        '\xA0Marta Habdas'
+      ),
+      '.'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Icons made by',
+      _react2.default.createElement(
+        _style.Link,
+        { href: 'http://www.freepik.com', title: 'Freepik', target: '_blank' },
+        '\xA0Freepik\xA0'
+      ),
+      'from',
+      _react2.default.createElement(
+        _style.Link,
+        { href: 'https://www.flaticon.com/', title: 'Flaticon', target: '_blank' },
+        '\xA0www.flaticon.com\xA0'
+      ),
+      'is licensed by',
+      _react2.default.createElement(
+        _style.Link,
+        {
+          href: 'http://creativecommons.org/licenses/by/3.0/',
+          title: 'Creative Commons BY 3.0',
+          target: '_blank' },
+        '\xA0CC 3.0 BY'
+      ),
+      '.'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'All photos via',
+      _react2.default.createElement(
+        _style.Link,
+        { href: 'https://commons.wikimedia.org/wiki/Main_Page', target: '_blank' },
+        '\xA0Wikimedia Commons\xA0'
+      ),
+      'are licensed by',
+      _react2.default.createElement(
+        _style.Link,
+        {
+          href: 'http://creativecommons.org/licenses/by/3.0/',
+          title: 'Creative Commons BY 3.0',
+          target: '_blank' },
+        '\xA0CC 3.0 BY'
+      ),
+      '.'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Content sources:',
+      _react2.default.createElement(
+        _style.Link,
+        { href: 'https://www.independent.co.uk/life-style/food-and-drink/features/what-people-eat-for-breakfast-around-the-world-a6730126.html', target: '_blank' },
+        ' Independent'
+      ),
+      '.'
+    )
+  );
+}
 
 exports.Footer = Footer;
 
