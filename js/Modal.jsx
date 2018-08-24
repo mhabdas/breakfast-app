@@ -1,8 +1,9 @@
 import React from 'react';
-import styled, {injectGlobal} from 'styled-components';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import {Button} from './style.jsx'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { Button } from './style.jsx'
 
 const ModalBackground = styled.div `
     position: fixed;
@@ -68,41 +69,80 @@ class Modal extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({visible: false})
-    }, 1000)
+    }, 1000);
   }
 
   render() {
-    if (!this.props.show) {
+    const {
+      show,
+      close,
+      country,
+      breakfastName,
+      info,
+      description,
+      img,
+      attr,
+      alt
+    } = this.props;
+    if (!show) {
       return null;
-    } {
-      return <ModalBackground>
+    } return (
+      <ModalBackground>
         <ReactCSSTransitionGroup
-        transitionName="fade"
-        transitionAppear={true}
-        transitionAppearTimeout={500}
-        transitionEnter={false}
-        transitionLeave={false}>
+          transitionName="fade"
+          transitionAppear
+          transitionAppearTimeout={500}
+          transitionEnter={false}
+          transitionLeave={false}
+        >
           <ModalWindow>
-            <h2>{this.props.country}</h2>
-            <h3>{this.props.breakfastName}{this.props.info}</h3>
-            <p>{this.props.description}</p>
-            <img src={this.props.img}/>
-            <p>{this.props.attr}</p>
+            <h2>
+              {country}
+            </h2>
+            <h3>
+              {breakfastName}
+              {info}
+            </h3>
+            <p>
+              {description}
+            </p>
+            <img
+              src={img}
+              alt={alt}
+            />
+            <p>
+              {attr}
+            </p>
             <div className="modal-footer">
               <Button>
                 <a
-                  href={`https://www.google.pl/search?q=${this.props.breakfastName}+recipe`}
-                  target="_blank">Take a challenge</a>
+                  href={`https://www.google.pl/search?q=${breakfastName}+recipe`}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                    Take a challenge
+                </a>
               </Button>
-              <Button onClick={this.props.close}>
+              <Button onClick={close}>
                 Close
               </Button>
             </div>
           </ModalWindow>
-          </ReactCSSTransitionGroup>
-        </ModalBackground>
-    }
+        </ReactCSSTransitionGroup>
+      </ModalBackground>
+    );
   }
 }
 
-export {Modal};
+Modal.propTypes = {
+  show: PropTypes.bool.isRequired,
+  close: PropTypes.bool.isRequired,
+  country: PropTypes.string.isRequired,
+  breakfastName: PropTypes.string.isRequired,
+  info: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  attr: PropTypes.string.isRequired,
+};
+
+export default { Modal };

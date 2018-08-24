@@ -1,12 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import styled, {injectGlobal} from 'styled-components';
+import { injectGlobal } from 'styled-components';
 
-import {Header, About, Footer} from './MainComponents.jsx';
-import {MapContainer} from './MapContainer.jsx'
+import { Header, About, Footer } from './MainComponents.jsx';
+import { MapContainer } from './MapContainer.jsx';
 
 // CSS Styles (with styled-components)
-
 injectGlobal `
 * {
   box-sizing: border-box;
@@ -49,21 +48,20 @@ body {
 
 // Main app container
 
-class App extends React.Component {
-
-    render() {
-
-        return <div>
-            <Header></Header>
-            <About></About>
-            <MapContainer></MapContainer>
-            <Footer></Footer>
-        </div>
-    }
+function App() {
+  return (
+    <div>
+      <Header />
+      <About />
+      <MapContainer />
+      <Footer />
+    </div>
+  );
 }
 
 document
-    .addEventListener('DOMContentLoaded', function () {
-        ReactDOM.render(
-            <App/>, document.getElementById('app'))
-    });
+  .addEventListener('DOMContentLoaded', () => {
+    ReactDOM.render(
+      <App />, document.getElementById('app'),
+    );
+  });
