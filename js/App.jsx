@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { injectGlobal } from 'styled-components';
 
-import { Header, About, Footer } from './MainComponents.jsx';
-import { MapContainer } from './MapContainer.jsx';
+import Header from './Header';
+import MapContainer from './MapContainer';
+import Footer from './Footer';
+import About from './MainComponents';
 
 // CSS Styles (with styled-components)
-injectGlobal `
+injectGlobal`
 * {
   box-sizing: border-box;
   font-family: Work Sans;

@@ -1,13 +1,12 @@
-import React from 'react';
 import styled from 'styled-components';
 
 
-// Colors 
+// Colors
 const colors = {
-    background: 'whitesmoke',
-    accent: '#EE6C4D',
-    text: '#3D5A80',
-}
+  background: 'whitesmoke',
+  accent: '#EE6C4D',
+  text: '#3D5A80',
+};
 
 
 // Buttons & Links
@@ -50,6 +49,5 @@ const Link = styled.a`
     &:hover {
         color: ${colors.accent};
     }
-`
-
-export {Button, Link};
+`;
+export { Button, Link };

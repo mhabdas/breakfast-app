@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import { Button } from './style.jsx'
+import { Button } from './style';
 
-const ModalBackground = styled.div `
+const ModalBackground = styled.div`
     position: fixed;
     top: 0;
     bottom: 0;
@@ -16,7 +16,7 @@ const ModalBackground = styled.div `
   
 `;
 
-const ModalWindow = styled.div `
+const ModalWindow = styled.div`
     background-color: whitesmoke;
     border-radius: 5px;
     max-width: 500px;
@@ -62,13 +62,16 @@ class Modal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: true
-    }
+      visible: true,
+    };
   }
 
   componentDidMount() {
+    const {
+      visible,
+    } = this.state;
     setTimeout(() => {
-      this.setState({visible: false})
+      this.setState({ visible: !visible });
     }, 1000);
   }
 
@@ -82,7 +85,7 @@ class Modal extends React.Component {
       description,
       img,
       attr,
-      alt
+      alt,
     } = this.props;
     if (!show) {
       return null;
@@ -143,6 +146,7 @@ Modal.propTypes = {
   description: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   attr: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
 };
 
 export default { Modal };

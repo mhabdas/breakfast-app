@@ -7,8 +7,8 @@ import {
   Geography,
 } from 'react-simple-maps';
 
-import Modal from './Modal.jsx';
-import { Button } from './style.jsx';
+import Modal from './Modal';
+import { Button } from './style';
 
 const Map = styled.div`
     border: 2px solid #EE6C4D;
@@ -25,7 +25,7 @@ const ButtonList = styled.div`
     padding-bottom: 2rem;
     `;
 
-class MapContainer extends React.Component { 
+class MapContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,8 +54,11 @@ class MapContainer extends React.Component {
   }
 
   getBreakfastData(resp) {
+    const {
+      country,
+    } = this.state;
     resp.breakfast.forEach((element) => {
-      if (element.name === this.state.country) {
+      if (element.name === country) {
         this.setState({
           breakfastName: element.breakfastName,
           description: element.description,
@@ -68,8 +71,11 @@ class MapContainer extends React.Component {
   }
 
   handleZoom(e) {
+    const {
+      continents,
+    } = this.state;
     const contId = e.target.getAttribute('data-cont');
-    const cont = this.state.continents[contId];
+    const cont = continents[contId];
     if (cont.name === 'Europe') {
       this.setState({
         center: cont.coordinates,
@@ -91,7 +97,10 @@ class MapContainer extends React.Component {
   }
 
   handleClick(geography) {
-    if (this.state.clickedOn === false) {
+    const {
+      clickedOn,
+    } = this.state;
+    if (clickedOn === false) {
       const countryName = geography.properties.NAME;
       this.setState({
         clickedOn: true,
@@ -100,7 +109,7 @@ class MapContainer extends React.Component {
       fetch('https://codekingdom.pl/projects/coderslab-workshops/international-breakfast/')
         .then(resp => resp.json())
         .then(resp => this.getBreakfastData(resp))
-        .catch(err => console.log('Error', err));
+        .catch(err => err);
     } else {
       this.setState({
         clickedOn: false,
@@ -108,7 +117,7 @@ class MapContainer extends React.Component {
         description: '',
         img: '',
         attr: '',
-        info: 'Sorry. This content is not yet available. Try a different or random country.'
+        info: 'Sorry. This content is not yet available. Try a different or random country.',
       });
     }
   }
@@ -124,7 +133,7 @@ class MapContainer extends React.Component {
           country: countryName,
         });
         this.getBreakfastData(resp);
-      }).catch(err => console.log('Error', err));
+      }).catch(err => err);
   }
 
   render() {
@@ -139,6 +148,7 @@ class MapContainer extends React.Component {
       alt,
       center,
       zoom,
+      continents,
     } = this.state;
     return (
       <div>
@@ -170,9 +180,9 @@ class MapContainer extends React.Component {
               zoom={zoom}
             >
               <Geographies geographyUrl="https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json">
-                {(geographies, projection) => geographies.map((geography, i) => (
+                {(geographies, projection) => geographies.map(geography => (
                   <Geography
-                    key={`geography-${i}`}
+                    key={`geography-${geography}`}
                     geography={geography}
                     data-country={geography.properties.name}
                     projection={projection}
@@ -208,8 +218,8 @@ class MapContainer extends React.Component {
           </ComposableMap>
         </Map>
         <ButtonList>
-          {this.state.continents.map((cont, i) => (
-            <Button key={i} onClick={this.handleZoom} data-cont={i}>
+          {continents.map((cont, i) => (
+            <Button key={cont.name} onClick={this.handleZoom} data-cont={i}>
               {cont.name}
             </Button>))}
           <Button onClick={this.handleReset}>

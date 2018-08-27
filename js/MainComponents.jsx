@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // About section
 
-const AboutSection = styled.section `
+const AboutSection = styled.section`
   color: #3D5A80;
 
   h2 {
@@ -30,4 +30,4 @@ function About() {
   );
 }
 
-export default About;
+export default { About };

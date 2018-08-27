@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from './style.jsx'
+import { Link } from './style';
 
 // Footer
 
-const StyledFooter = styled.footer `
+const StyledFooter = styled.footer`
   text-align: center;
   color: #3D5A80;
   background-color: lightgrey;
@@ -75,4 +75,4 @@ function Footer() {
   );
 }
 
-export {Footer};
+export default { Footer };
