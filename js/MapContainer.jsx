@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import {
   ComposableMap,
@@ -25,10 +25,11 @@ const ButtonList = styled.div`
     padding-bottom: 2rem;
     `;
 
-class MapContainer extends React.Component {
+class MapContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      data: null,
       center: [0, 20],
       zoom: 1,
       clickedOn: false,
@@ -51,6 +52,13 @@ class MapContainer extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleReset = this.handleReset.bind(this);
     this.handleRandom = this.handleRandom.bind(this);
+  }
+
+  componentDidMount() {
+    fetch('https://codekingdom.pl/projects/coderslab-workshops/international-breakfast/')
+      .then(resp => resp.json())
+      .then(resp => this.setState({ data: resp }))
+      .catch(err => err);
   }
 
   getBreakfastData(resp) {
@@ -99,17 +107,15 @@ class MapContainer extends React.Component {
   handleClick(geography) {
     const {
       clickedOn,
+      data,
     } = this.state;
-    if (clickedOn === false) {
+    if (!clickedOn) {
       const countryName = geography.properties.NAME;
       this.setState({
         clickedOn: true,
         country: countryName,
       });
-      fetch('https://codekingdom.pl/projects/coderslab-workshops/international-breakfast/')
-        .then(resp => resp.json())
-        .then(resp => this.getBreakfastData(resp))
-        .catch(err => err);
+      this.getBreakfastData(data);
     } else {
       this.setState({
         clickedOn: false,
@@ -123,17 +129,16 @@ class MapContainer extends React.Component {
   }
 
   handleRandom() {
-    fetch('https://codekingdom.pl/projects/coderslab-workshops/international-breakfast/')
-      .then(resp => resp.json())
-      .then((resp) => {
-        const random = resp.breakfast[Math.floor(Math.random() * resp.breakfast.length)];
-        const countryName = random.name;
-        this.setState({
-          clickedOn: true,
-          country: countryName,
-        });
-        this.getBreakfastData(resp);
-      }).catch(err => err);
+    const {
+      data,
+    } = this.state;
+    const random = data.breakfast[Math.floor(Math.random() * data.breakfast.length)];
+    const countryName = random.name;
+    this.setState({
+      clickedOn: true,
+      country: countryName,
+    });
+    this.getBreakfastData(data);
   }
 
   render() {
