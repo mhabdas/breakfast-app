@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import { Button } from './style';
+import { Button } from '../styles/style';
 
 const ModalBackground = styled.div`
     position: fixed;

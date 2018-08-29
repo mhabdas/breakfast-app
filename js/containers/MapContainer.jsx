@@ -8,7 +8,7 @@ import {
 } from 'react-simple-maps';
 
 import Modal from './Modal';
-import { Button } from './style';
+import { Button } from '../styles/style';
 
 const Map = styled.div`
     border: 2px solid #EE6C4D;

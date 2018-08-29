@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { injectGlobal } from 'styled-components';
 
 import Header from './components/Header';
-import MapContainer from './MapContainer';
+import MapContainer from './containers/MapContainer';
 import Footer from './components/Footer';
 import About from './components/About';
 
