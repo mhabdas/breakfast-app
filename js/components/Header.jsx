@@ -27,7 +27,7 @@ img {
 function Header() {
   return (
     <StyledHeader>
-      <img src="../img/breakfast.svg" alt="Icon depicting breakfast plate" />
+      <img src="../../img/breakfast.svg" alt="Icon depicting breakfast plate" />
       <h1>
         Breakfast
       </h1>

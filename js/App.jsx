@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { injectGlobal } from 'styled-components';
 
-import Header from './Header';
+import Header from './components/Header';
 import MapContainer from './MapContainer';
-import Footer from './Footer';
-import About from './MainComponents';
+import Footer from './components/Footer';
+import About from './components/About';
 
 // CSS Styles (with styled-components)
 injectGlobal`
