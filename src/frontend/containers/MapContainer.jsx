@@ -164,7 +164,6 @@ class MapContainer extends Component {
       center,
       zoom,
       continents,
-      data,
       visible,
     } = this.state;
     return (

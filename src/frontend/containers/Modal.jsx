@@ -58,69 +58,66 @@ const ModalWindow = styled.div`
     
 `;
 
-class Modal extends React.Component {
-
-  render() {
-    const {
-      show,
-      close,
-      country,
-      breakfastName,
-      info,
-      description,
-      img,
-      attr,
-      alt,
-    } = this.props;
-    if (!show) {
-      return null;
-    } return (
-      <ModalBackground>
-        <ReactCSSTransitionGroup
-          transitionName="fade"
-          transitionAppear
-          transitionAppearTimeout={500}
-          transitionEnter={false}
-          transitionLeave
-          transitionLeaveTimeout={500}
-        >
-          <ModalWindow>
-            <h2>
-              {country}
-            </h2>
-            <h3>
-              {breakfastName}
-              {info}
-            </h3>
-            <p>
-              {description}
-            </p>
-            <img
-              src={img}
-              alt={alt}
-            />
-            <p>
-              {attr}
-            </p>
-            <div className="modal-footer">
-              <Button>
-                <a
-                  href={`https://www.google.pl/search?q=${breakfastName}+recipe`}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
+function Modal(props) {
+  const {
+    show,
+    close,
+    country,
+    breakfastName,
+    info,
+    description,
+    img,
+    attr,
+    alt,
+  } = props;
+  if (!show) {
+    return null;
+  } return (
+    <ModalBackground>
+      <ReactCSSTransitionGroup
+        transitionName="fade"
+        transitionAppear
+        transitionAppearTimeout={500}
+        transitionEnter={false}
+        transitionLeave
+        transitionLeaveTimeout={500}
+      >
+        <ModalWindow>
+          <h2>
+            {country}
+          </h2>
+          <h3>
+            {breakfastName}
+            {info}
+          </h3>
+          <p>
+            {description}
+          </p>
+          <img
+            src={img}
+            alt={alt}
+          />
+          <p>
+            {attr}
+          </p>
+          <div className="modal-footer">
+            <Button>
+              <a
+                href={`https://www.google.pl/search?q=${breakfastName}+recipe`}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                     Take a challenge
-                </a>
-              </Button>
-              <Button onClick={close}>
+              </a>
+            </Button>
+            <Button onClick={close}>
                 Close
-              </Button>
-            </div>
-          </ModalWindow>
-        </ReactCSSTransitionGroup>
-      </ModalBackground>
-    );
-  }
+            </Button>
+          </div>
+        </ModalWindow>
+      </ReactCSSTransitionGroup>
+    </ModalBackground>
+  );
 }
 
 Modal.propTypes = {

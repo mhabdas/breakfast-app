@@ -32250,7 +32250,6 @@ var MapContainer = function (_Component) {
           center = _state.center,
           zoom = _state.zoom,
           continents = _state.continents,
-          data = _state.data,
           visible = _state.visible;
 
       return _react2.default.createElement(
@@ -42790,8 +42789,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _templateObject = _taggedTemplateLiteral(['\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background-color: rgba(0,0,0,0.7);\n    padding: 50px;\n  \n'], ['\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background-color: rgba(0,0,0,0.7);\n    padding: 50px;\n  \n']),
     _templateObject2 = _taggedTemplateLiteral(['\n    background-color: whitesmoke;\n    border-radius: 5px;\n    max-width: 500px;\n    min-height: 300px;\n    margin: 0 auto;\n    padding: 30px;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    text-align: center;\n\n    h2 {\n        color: #EE6C4D;\n        text-align: center;\n        padding-bottom: .5rem;\n    }\n\n    h3 {\n      color: #3D5A80;\n      padding-bottom: .5rem;\n    }\n\n    p {\n        color: #3D5A80;\n        padding-bottom: .5rem;\n\n        &:last-of-type {\n          font-size: .75rem;\n        }\n    }\n\n    img {\n      width: 80%;\n      border-radius: 5%; \n      opacity: .80;\n      padding-bottom: .5rem;\n    }\n\n    \n'], ['\n    background-color: whitesmoke;\n    border-radius: 5px;\n    max-width: 500px;\n    min-height: 300px;\n    margin: 0 auto;\n    padding: 30px;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    text-align: center;\n\n    h2 {\n        color: #EE6C4D;\n        text-align: center;\n        padding-bottom: .5rem;\n    }\n\n    h3 {\n      color: #3D5A80;\n      padding-bottom: .5rem;\n    }\n\n    p {\n        color: #3D5A80;\n        padding-bottom: .5rem;\n\n        &:last-of-type {\n          font-size: .75rem;\n        }\n    }\n\n    img {\n      width: 80%;\n      border-radius: 5%; \n      opacity: .80;\n      padding-bottom: .5rem;\n    }\n\n    \n']);
 
@@ -42815,114 +42812,92 @@ var _style = __webpack_require__(103);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var ModalBackground = _styledComponents2.default.div(_templateObject);
 
 var ModalWindow = _styledComponents2.default.div(_templateObject2);
 
-var Modal = function (_React$Component) {
-  _inherits(Modal, _React$Component);
+function Modal(props) {
+  var show = props.show,
+      close = props.close,
+      country = props.country,
+      breakfastName = props.breakfastName,
+      info = props.info,
+      description = props.description,
+      img = props.img,
+      attr = props.attr,
+      alt = props.alt;
 
-  function Modal() {
-    _classCallCheck(this, Modal);
-
-    return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));
-  }
-
-  _createClass(Modal, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          show = _props.show,
-          close = _props.close,
-          country = _props.country,
-          breakfastName = _props.breakfastName,
-          info = _props.info,
-          description = _props.description,
-          img = _props.img,
-          attr = _props.attr,
-          alt = _props.alt;
-
-      if (!show) {
-        return null;
-      }return _react2.default.createElement(
-        ModalBackground,
+  if (!show) {
+    return null;
+  }return _react2.default.createElement(
+    ModalBackground,
+    null,
+    _react2.default.createElement(
+      _reactAddonsCssTransitionGroup2.default,
+      {
+        transitionName: 'fade',
+        transitionAppear: true,
+        transitionAppearTimeout: 500,
+        transitionEnter: false,
+        transitionLeave: true,
+        transitionLeaveTimeout: 500
+      },
+      _react2.default.createElement(
+        ModalWindow,
         null,
         _react2.default.createElement(
-          _reactAddonsCssTransitionGroup2.default,
-          {
-            transitionName: 'fade',
-            transitionAppear: true,
-            transitionAppearTimeout: 500,
-            transitionEnter: false,
-            transitionLeave: true,
-            transitionLeaveTimeout: 500
-          },
+          'h2',
+          null,
+          country
+        ),
+        _react2.default.createElement(
+          'h3',
+          null,
+          breakfastName,
+          info
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          description
+        ),
+        _react2.default.createElement('img', {
+          src: img,
+          alt: alt
+        }),
+        _react2.default.createElement(
+          'p',
+          null,
+          attr
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'modal-footer' },
           _react2.default.createElement(
-            ModalWindow,
+            _style.Button,
             null,
             _react2.default.createElement(
-              'h2',
-              null,
-              country
-            ),
-            _react2.default.createElement(
-              'h3',
-              null,
-              breakfastName,
-              info
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              description
-            ),
-            _react2.default.createElement('img', {
-              src: img,
-              alt: alt
-            }),
-            _react2.default.createElement(
-              'p',
-              null,
-              attr
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'modal-footer' },
-              _react2.default.createElement(
-                _style.Button,
-                null,
-                _react2.default.createElement(
-                  'a',
-                  {
-                    href: 'https://www.google.pl/search?q=' + breakfastName + '+recipe',
-                    rel: 'noopener noreferrer',
-                    target: '_blank'
-                  },
-                  'Take a challenge'
-                )
-              ),
-              _react2.default.createElement(
-                _style.Button,
-                { onClick: close },
-                'Close'
-              )
+              'a',
+              {
+                href: 'https://www.google.pl/search?q=' + breakfastName + '+recipe',
+                rel: 'noopener noreferrer',
+                target: '_blank'
+              },
+              'Take a challenge'
             )
+          ),
+          _react2.default.createElement(
+            _style.Button,
+            { onClick: close },
+            'Close'
           )
         )
-      );
-    }
-  }]);
-
-  return Modal;
-}(_react2.default.Component);
+      )
+    )
+  );
+}
 
 Modal.propTypes = {
   show: _propTypes2.default.bool.isRequired,
