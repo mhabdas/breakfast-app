@@ -1,11 +1,14 @@
 // Konfiguracja Webpack
 const path = require('path');
 
+const BUILD_DIR = path.resolve(__dirname, 'src/frontend/public');
+const APP_DIR = path.resolve(__dirname, 'src/frontend/');
+
 module.exports = {
-  entry: './js/App.jsx',
+  entry: `${APP_DIR}/app/index.jsx`,
   output: {
-    path: path.resolve('js'),
-    filename: 'out.js',
+    path: BUILD_DIR,
+    filename: 'js/bundle.js',
   },
   devServer: {
     inline: true,
@@ -14,9 +17,10 @@ module.exports = {
   },
   watch: true,
   module: {
-    loaders: [{
-      test: /\.jsx$/,
+    rules: [{
+      test: /\.(js(x))$/,
       exclude: /node_modules/,
+      include: APP_DIR,
       loader: 'babel-loader',
       query: {
         presets: ['es2015', 'stage-2', 'react'],
@@ -24,6 +28,6 @@ module.exports = {
     }],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: [' ', '.js', '.jsx'],
   },
 };

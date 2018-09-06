@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from '../styles/style';
+import { Link } from '../../styles/style';
 
 // Footer
 
@@ -75,4 +75,4 @@ function Footer() {
   );
 }
 
-export default { Footer };
+export default Footer;

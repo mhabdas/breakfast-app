@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import { Button } from '../styles/style';
+import { Button } from '../../styles/style';
 
 const ModalBackground = styled.div`
     position: fixed;
@@ -59,21 +59,6 @@ const ModalWindow = styled.div`
 `;
 
 class Modal extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      visible: true,
-    };
-  }
-
-  componentDidMount() {
-    const {
-      visible,
-    } = this.state;
-    setTimeout(() => {
-      this.setState({ visible: !visible });
-    }, 1000);
-  }
 
   render() {
     const {
@@ -96,7 +81,8 @@ class Modal extends React.Component {
           transitionAppear
           transitionAppearTimeout={500}
           transitionEnter={false}
-          transitionLeave={false}
+          transitionLeave
+          transitionLeaveTimeout={500}
         >
           <ModalWindow>
             <h2>
@@ -139,7 +125,7 @@ class Modal extends React.Component {
 
 Modal.propTypes = {
   show: PropTypes.bool.isRequired,
-  close: PropTypes.bool.isRequired,
+  close: PropTypes.func.isRequired,
   country: PropTypes.string.isRequired,
   breakfastName: PropTypes.string.isRequired,
   info: PropTypes.string.isRequired,
@@ -149,4 +135,4 @@ Modal.propTypes = {
   alt: PropTypes.string.isRequired,
 };
 
-export default { Modal };
+export default Modal;

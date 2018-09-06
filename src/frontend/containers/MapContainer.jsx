@@ -8,7 +8,7 @@ import {
 } from 'react-simple-maps';
 
 import Modal from './Modal';
-import { Button } from '../styles/style';
+import { Button } from '../../styles/style';
 
 const Map = styled.div`
     border: 2px solid #EE6C4D;
@@ -25,6 +25,17 @@ const ButtonList = styled.div`
     padding-bottom: 2rem;
     `;
 
+const initialState = {
+  country: '',
+  visible: false,
+  breakfastName: '',
+  description: '',
+  img: '',
+  attr: '',
+  alt: '',
+  info: 'Sorry. This content is not yet available. Try a different or random country.',
+};
+
 class MapContainer extends Component {
   constructor(props) {
     super(props);
@@ -32,13 +43,7 @@ class MapContainer extends Component {
       data: null,
       center: [0, 20],
       zoom: 1,
-      clickedOn: false,
-      country: '',
-      breakfastName: '',
-      description: '',
-      img: '',
-      attr: '',
-      info: 'Sorry. This content is not yet available. Try a different or random country.',
+      ...initialState,
       continents: [
         { name: 'Asia', coordinates: [103.8198, 15.3521] },
         { name: 'Africa', coordinates: [3.3792, 6.5244] },
@@ -57,7 +62,7 @@ class MapContainer extends Component {
   componentDidMount() {
     fetch('https://codekingdom.pl/projects/coderslab-workshops/international-breakfast/')
       .then(resp => resp.json())
-      .then(resp => this.setState({ data: resp }))
+      .then(data => this.setState({ data: data.breakfast }))
       .catch(err => err);
   }
 
@@ -65,7 +70,7 @@ class MapContainer extends Component {
     const {
       country,
     } = this.state;
-    resp.breakfast.forEach((element) => {
+    resp.forEach((element) => {
       if (element.name === country) {
         this.setState({
           breakfastName: element.breakfastName,
@@ -75,6 +80,15 @@ class MapContainer extends Component {
           info: '',
         });
       }
+    });
+  }
+
+  handleToggle() {
+    const {
+      visible,
+    } = this.state;
+    this.setState({
+      visible: !visible,
     });
   }
 
@@ -106,44 +120,40 @@ class MapContainer extends Component {
 
   handleClick(geography) {
     const {
-      clickedOn,
       data,
     } = this.state;
-    if (!clickedOn) {
-      const countryName = geography.properties.NAME;
-      this.setState({
-        clickedOn: true,
-        country: countryName,
-      });
+    const countryName = geography.properties.NAME;
+    this.setState({
+      country: countryName,
+    }, () => {
       this.getBreakfastData(data);
-    } else {
-      this.setState({
-        clickedOn: false,
-        breakfastName: '',
-        description: '',
-        img: '',
-        attr: '',
-        info: 'Sorry. This content is not yet available. Try a different or random country.',
-      });
-    }
+      this.handleToggle();
+    });
+  }
+
+  handleClose() {
+    this.handleToggle();
+    this.setState({
+      ...initialState,
+    });
   }
 
   handleRandom() {
     const {
       data,
     } = this.state;
-    const random = data.breakfast[Math.floor(Math.random() * data.breakfast.length)];
+    const random = data[Math.floor(Math.random() * data.length)];
     const countryName = random.name;
     this.setState({
-      clickedOn: true,
       country: countryName,
+    }, () => {
+      this.handleToggle();
+      this.getBreakfastData(data);
     });
-    this.getBreakfastData(data);
   }
 
   render() {
     const {
-      clickedOn,
       country,
       breakfastName,
       description,
@@ -154,13 +164,15 @@ class MapContainer extends Component {
       center,
       zoom,
       continents,
+      data,
+      visible,
     } = this.state;
     return (
       <div>
         <Map>
           <Modal
-            show={clickedOn}
-            close={this.handleClick}
+            show={visible}
+            close={() => this.handleClose()}
             country={country}
             breakfastName={breakfastName}
             description={description}
@@ -187,9 +199,9 @@ class MapContainer extends Component {
               <Geographies geographyUrl="https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json">
                 {(geographies, projection) => geographies.map(geography => (
                   <Geography
-                    key={`geography-${geography}`}
+                    key={geography.properties.NAME}
                     geography={geography}
-                    data-country={geography.properties.name}
+                    data-country={geography.properties.NAME}
                     projection={projection}
                     style={{
                       default: {
@@ -239,4 +251,4 @@ class MapContainer extends Component {
   }
 }
 
-export default { MapContainer };
+export default MapContainer;
