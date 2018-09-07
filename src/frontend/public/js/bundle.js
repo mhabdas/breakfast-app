@@ -32107,6 +32107,11 @@ var initialState = {
   info: 'Sorry. This content is not yet available. Try a different or random country.'
 };
 
+var initalZoom = {
+  center: [0, 20],
+  zoom: 1
+};
+
 var MapContainer = function (_Component) {
   _inherits(MapContainer, _Component);
 
@@ -32116,10 +32121,8 @@ var MapContainer = function (_Component) {
     var _this = _possibleConstructorReturn(this, (MapContainer.__proto__ || Object.getPrototypeOf(MapContainer)).call(this, props));
 
     _this.state = _extends({
-      data: null,
-      center: [0, 20],
-      zoom: 1
-    }, initialState, {
+      data: null
+    }, initalZoom, initialState, {
       continents: [{ name: 'Asia', coordinates: [103.8198, 15.3521] }, { name: 'Africa', coordinates: [3.3792, 6.5244] }, { name: 'Australia', coordinates: [151.2093, -33.8688] }, { name: 'Europe', coordinates: [8.5417, 52.3769] }, { name: 'North America', coordinates: [-122.4194, 37.7749] }, { name: 'South America', coordinates: [-58.3816, -18.6037] }]
     });
     _this.handleZoom = _this.handleZoom.bind(_this);
@@ -32192,10 +32195,7 @@ var MapContainer = function (_Component) {
   }, {
     key: 'handleReset',
     value: function handleReset() {
-      this.setState({
-        center: [0, 20],
-        zoom: 1
-      });
+      this.setState(_extends({}, initalZoom));
     }
   }, {
     key: 'handleClick',
@@ -32230,8 +32230,8 @@ var MapContainer = function (_Component) {
       this.setState({
         country: countryName
       }, function () {
-        _this5.handleToggle();
         _this5.getBreakfastData(data);
+        _this5.handleToggle();
       });
     }
   }, {
@@ -32250,7 +32250,8 @@ var MapContainer = function (_Component) {
           center = _state.center,
           zoom = _state.zoom,
           continents = _state.continents,
-          visible = _state.visible;
+          visible = _state.visible,
+          data = _state.data;
 
       return _react2.default.createElement(
         'div',
@@ -32290,7 +32291,7 @@ var MapContainer = function (_Component) {
                 center: center,
                 zoom: zoom
               },
-              _react2.default.createElement(
+              data ? _react2.default.createElement(
                 _reactSimpleMaps.Geographies,
                 { geographyUrl: 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json' },
                 function (geographies, projection) {
@@ -32300,7 +32301,32 @@ var MapContainer = function (_Component) {
                       geography: geography,
                       'data-country': geography.properties.NAME,
                       projection: projection,
-                      style: {
+                      style: data && data.map(function (el) {
+                        return el.name;
+                      }).includes(geography.properties.NAME) ? {
+                        default: {
+                          fill: '#EE6C4D',
+                          stroke: '#3D5A80',
+                          strokeWidth: 0.75,
+                          outline: 'none',
+                          transition: 'fill .5s'
+                        },
+                        hover: {
+                          fill: 'lightgrey',
+                          stroke: '#3D5A80',
+                          strokeWidth: 0.75,
+                          outline: 'none',
+                          cursor: 'pointer',
+                          transition: 'fill .5s'
+                        },
+                        pressed: {
+                          fill: 'lightgrey',
+                          stroke: '#3D5A80',
+                          strokeWidth: 0.75,
+                          outline: 'none',
+                          transition: 'fill .5s'
+                        }
+                      } : {
                         default: {
                           fill: 'lightgrey',
                           stroke: '#3D5A80',
@@ -32309,26 +32335,27 @@ var MapContainer = function (_Component) {
                           transition: 'fill .5s'
                         },
                         hover: {
-                          fill: '#EE6C4D',
+                          fill: 'lightgrey',
                           stroke: '#3D5A80',
                           strokeWidth: 0.75,
                           outline: 'none',
-                          cursor: 'pointer',
                           transition: 'fill .5s'
                         },
                         pressed: {
-                          fill: '#EE6C4D',
+                          fill: 'lightgrey',
                           stroke: '#3D5A80',
                           strokeWidth: 0.75,
                           outline: 'none',
                           transition: 'fill .5s'
                         }
                       },
-                      onClick: _this6.handleClick
+                      onClick: data && data.map(function (el) {
+                        return el.name;
+                      }).includes(geography.properties.NAME) ? _this6.handleClick : null
                     });
                   });
                 }
-              )
+              ) : null
             )
           )
         ),

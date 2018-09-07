@@ -36,13 +36,17 @@ const initialState = {
   info: 'Sorry. This content is not yet available. Try a different or random country.',
 };
 
+const initalZoom = {
+  center: [0, 20],
+  zoom: 1,
+};
+
 class MapContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: null,
-      center: [0, 20],
-      zoom: 1,
+      ...initalZoom,
       ...initialState,
       continents: [
         { name: 'Asia', coordinates: [103.8198, 15.3521] },
@@ -113,8 +117,7 @@ class MapContainer extends Component {
 
   handleReset() {
     this.setState({
-      center: [0, 20],
-      zoom: 1,
+      ...initalZoom,
     });
   }
 
@@ -147,8 +150,8 @@ class MapContainer extends Component {
     this.setState({
       country: countryName,
     }, () => {
-      this.handleToggle();
       this.getBreakfastData(data);
+      this.handleToggle();
     });
   }
 
@@ -165,6 +168,7 @@ class MapContainer extends Component {
       zoom,
       continents,
       visible,
+      data,
     } = this.state;
     return (
       <div>
@@ -195,41 +199,66 @@ class MapContainer extends Component {
               center={center}
               zoom={zoom}
             >
-              <Geographies geographyUrl="https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json">
-                {(geographies, projection) => geographies.map(geography => (
-                  <Geography
-                    key={geography.properties.NAME}
-                    geography={geography}
-                    data-country={geography.properties.NAME}
-                    projection={projection}
-                    style={{
-                      default: {
-                        fill: 'lightgrey',
-                        stroke: '#3D5A80',
-                        strokeWidth: 0.75,
-                        outline: 'none',
-                        transition: 'fill .5s',
-                      },
-                      hover: {
-                        fill: '#EE6C4D',
-                        stroke: '#3D5A80',
-                        strokeWidth: 0.75,
-                        outline: 'none',
-                        cursor: 'pointer',
-                        transition: 'fill .5s',
-                      },
-                      pressed: {
-                        fill: '#EE6C4D',
-                        stroke: '#3D5A80',
-                        strokeWidth: 0.75,
-                        outline: 'none',
-                        transition: 'fill .5s',
-                      },
-                    }}
-                    onClick={this.handleClick}
-                  />
-                ))}
-              </Geographies>
+              { data ? (
+                <Geographies geographyUrl="https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json">
+                  {(geographies, projection) => geographies.map(geography => (
+                    <Geography
+                      key={geography.properties.NAME}
+                      geography={geography}
+                      data-country={geography.properties.NAME}
+                      projection={projection}
+                      style={data && data.map(el => el.name).includes(geography.properties.NAME) ? {
+                        default: {
+                          fill: '#EE6C4D',
+                          stroke: '#3D5A80',
+                          strokeWidth: 0.75,
+                          outline: 'none',
+                          transition: 'fill .5s',
+                        },
+                        hover: {
+                          fill: 'lightgrey',
+                          stroke: '#3D5A80',
+                          strokeWidth: 0.75,
+                          outline: 'none',
+                          cursor: 'pointer',
+                          transition: 'fill .5s',
+                        },
+                        pressed: {
+                          fill: 'lightgrey',
+                          stroke: '#3D5A80',
+                          strokeWidth: 0.75,
+                          outline: 'none',
+                          transition: 'fill .5s',
+                        },
+                      } : {
+                        default: {
+                          fill: 'lightgrey',
+                          stroke: '#3D5A80',
+                          strokeWidth: 0.75,
+                          outline: 'none',
+                          transition: 'fill .5s',
+                        },
+                        hover: {
+                          fill: 'lightgrey',
+                          stroke: '#3D5A80',
+                          strokeWidth: 0.75,
+                          outline: 'none',
+                          transition: 'fill .5s',
+                        },
+                        pressed: {
+                          fill: 'lightgrey',
+                          stroke: '#3D5A80',
+                          strokeWidth: 0.75,
+                          outline: 'none',
+                          transition: 'fill .5s',
+                        },
+                      }}
+                      onClick={data && data.map(el => el.name).includes(geography.properties.NAME)
+                        ? this.handleClick : null}
+                    />
+                  ))}
+                </Geographies>
+              ) : null }
             </ZoomableGroup>
           </ComposableMap>
         </Map>
