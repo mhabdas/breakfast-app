@@ -32037,7 +32037,7 @@ function Header() {
   return _react2.default.createElement(
     StyledHeader,
     null,
-    _react2.default.createElement('img', { src: '../../../img/breakfast.svg', alt: 'Icon depicting breakfast plate' }),
+    _react2.default.createElement('img', { src: 'src/frontend/img/breakfast.svg', alt: 'Icon depicting breakfast plate' }),
     _react2.default.createElement(
       'h1',
       null,
