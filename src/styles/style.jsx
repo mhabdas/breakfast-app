@@ -105,7 +105,6 @@ const Map = styled.div`
     width: 60vw;
     margin: 0 auto;
     overflow: hidden;
-    height: 60vh;
     display: flex;
     align-items: center;
 `;
