@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, {injectGlobal} from 'styled-components';
+import '../../node_modules/spinkit/css/spinners/2-double-bounce.css';
 
 
 // Colors
@@ -7,6 +8,51 @@ const colors = {
   accent: '#EE6C4D',
   text: '#3D5A80',
 };
+
+// CSS Styles (with styled-components)
+injectGlobal`
+* {
+  box-sizing: border-box;
+  font-family: Work Sans;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.fade-enter {
+    opacity: 0.01;
+  }
+  
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  
+.fade-leave {
+    opacity: 1;
+  }
+  
+.fade-leave.fade-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+.fade-appear {
+    opacity: 0.01;
+  }
+  
+.fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
+  
+.sk-double-bounce .sk-child {
+ background-color: ${colors.accent};
+}
+`;
+
 
 
 // Buttons & Links
@@ -50,4 +96,28 @@ const Link = styled.a`
         color: ${colors.accent};
     }
 `;
-export { Button, Link };
+
+// MapContainer
+
+const Map = styled.div`
+    border: 2px solid #EE6C4D;
+    border-radius: 2px;
+    width: 60vw;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+`;
+
+const ButtonList = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    `;
+
+export {
+  Button, Link, Map, ButtonList,
+};
+

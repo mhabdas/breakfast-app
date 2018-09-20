@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import {
   ComposableMap,
   ZoomableGroup,
@@ -7,23 +6,11 @@ import {
   Geography,
 } from 'react-simple-maps';
 
+
 import Modal from './Modal';
-import { Button } from '../../styles/style';
+import { Button, ButtonList, Map } from '../../styles/style';
 
-const Map = styled.div`
-    border: 2px solid #EE6C4D;
-    border-radius: 2px;
-    width: 60vw;
-    margin: 0 auto;
-    overflow: hidden;
-`;
-
-const ButtonList = styled.div`
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-bottom: 2rem;
-    `;
+const Loader = require('halogen/RotateLoader');
 
 const initialState = {
   country: '',
@@ -36,7 +23,7 @@ const initialState = {
   info: 'Sorry. This content is not yet available. Try a different or random country.',
 };
 
-const initalZoom = {
+const initialZoom = {
   center: [0, 20],
   zoom: 1,
 };
@@ -46,7 +33,7 @@ class MapContainer extends Component {
     super(props);
     this.state = {
       data: null,
-      ...initalZoom,
+      ...initialZoom,
       ...initialState,
       continents: [
         { name: 'Asia', coordinates: [103.8198, 15.3521] },
@@ -117,7 +104,7 @@ class MapContainer extends Component {
 
   handleReset() {
     this.setState({
-      ...initalZoom,
+      ...initialZoom,
     });
   }
 
@@ -184,7 +171,7 @@ class MapContainer extends Component {
             info={info}
             alt={alt}
           />
-          <ComposableMap
+            {data ? <ComposableMap
             projectionConfig={{
               scale: 220,
             }}
@@ -199,7 +186,6 @@ class MapContainer extends Component {
               center={center}
               zoom={zoom}
             >
-              { data ? (
                 <Geographies geographyUrl="https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json">
                   {(geographies, projection) => geographies.map(geography => (
                     <Geography
@@ -207,7 +193,7 @@ class MapContainer extends Component {
                       geography={geography}
                       data-country={geography.properties.NAME}
                       projection={projection}
-                      style={data && data.map(el => el.name).includes(geography.properties.NAME) ? {
+                      style={data.map(el => el.name).includes(geography.properties.NAME) ? {
                         default: {
                           fill: '#EE6C4D',
                           stroke: '#3D5A80',
@@ -253,14 +239,16 @@ class MapContainer extends Component {
                           transition: 'fill .5s',
                         },
                       }}
-                      onClick={data && data.map(el => el.name).includes(geography.properties.NAME)
-                        ? this.handleClick : null}
+                      onClick={data.map(el => el.name).includes(geography.properties.NAME)
+                        && this.handleClick}
                     />
                   ))}
                 </Geographies>
-              ) : null }
             </ZoomableGroup>
-          </ComposableMap>
+          </ComposableMap> : <div className="sk-double-bounce">
+                <div className="sk-child sk-double-bounce1" />
+                <div className="sk-child sk-double-bounce2" />
+            </div>}
         </Map>
         <ButtonList>
           {continents.map((cont, i) => (
