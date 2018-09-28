@@ -1,4 +1,4 @@
-import styled, {injectGlobal} from 'styled-components';
+import styled, { injectGlobal } from 'styled-components';
 import '../../node_modules/spinkit/css/spinners/2-double-bounce.css';
 
 
@@ -52,7 +52,6 @@ body {
  background-color: ${colors.accent};
 }
 `;
-
 
 
 // Buttons & Links
@@ -119,4 +118,3 @@ const ButtonList = styled.div`
 export {
   Button, Link, Map, ButtonList,
 };
-

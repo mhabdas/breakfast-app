@@ -171,7 +171,7 @@ class MapContainer extends Component {
             info={info}
             alt={alt}
           />
-            {data ? <ComposableMap
+          <ComposableMap
             projectionConfig={{
               scale: 220,
             }}
@@ -182,73 +182,78 @@ class MapContainer extends Component {
               height: 'auto',
             }}
           >
-            <ZoomableGroup
-              center={center}
-              zoom={zoom}
-            >
-                <Geographies geographyUrl="https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json">
-                  {(geographies, projection) => geographies.map(geography => (
-                    <Geography
-                      key={geography.properties.NAME}
-                      geography={geography}
-                      data-country={geography.properties.NAME}
-                      projection={projection}
-                      style={data.map(el => el.name).includes(geography.properties.NAME) ? {
-                        default: {
-                          fill: '#EE6C4D',
-                          stroke: '#3D5A80',
-                          strokeWidth: 0.75,
-                          outline: 'none',
-                          transition: 'fill .5s',
-                        },
-                        hover: {
-                          fill: 'lightgrey',
-                          stroke: '#3D5A80',
-                          strokeWidth: 0.75,
-                          outline: 'none',
-                          cursor: 'pointer',
-                          transition: 'fill .5s',
-                        },
-                        pressed: {
-                          fill: 'lightgrey',
-                          stroke: '#3D5A80',
-                          strokeWidth: 0.75,
-                          outline: 'none',
-                          transition: 'fill .5s',
-                        },
-                      } : {
-                        default: {
-                          fill: 'lightgrey',
-                          stroke: '#3D5A80',
-                          strokeWidth: 0.75,
-                          outline: 'none',
-                          transition: 'fill .5s',
-                        },
-                        hover: {
-                          fill: 'lightgrey',
-                          stroke: '#3D5A80',
-                          strokeWidth: 0.75,
-                          outline: 'none',
-                          transition: 'fill .5s',
-                        },
-                        pressed: {
-                          fill: 'lightgrey',
-                          stroke: '#3D5A80',
-                          strokeWidth: 0.75,
-                          outline: 'none',
-                          transition: 'fill .5s',
-                        },
-                      }}
-                      onClick={data.map(el => el.name).includes(geography.properties.NAME)
+            {data
+              ? (
+                <ZoomableGroup
+                  center={center}
+                  zoom={zoom}
+                >
+                  <Geographies geographyUrl="https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json">
+                    {(geographies, projection) => geographies.map(geography => (
+                      <Geography
+                        key={geography.properties.NAME}
+                        geography={geography}
+                        data-country={geography.properties.NAME}
+                        projection={projection}
+                        style={data.map(el => el.name).includes(geography.properties.NAME) ? {
+                          default: {
+                            fill: '#EE6C4D',
+                            stroke: '#3D5A80',
+                            strokeWidth: 0.75,
+                            outline: 'none',
+                            transition: 'fill .5s',
+                          },
+                          hover: {
+                            fill: 'lightgrey',
+                            stroke: '#3D5A80',
+                            strokeWidth: 0.75,
+                            outline: 'none',
+                            cursor: 'pointer',
+                            transition: 'fill .5s',
+                          },
+                          pressed: {
+                            fill: 'lightgrey',
+                            stroke: '#3D5A80',
+                            strokeWidth: 0.75,
+                            outline: 'none',
+                            transition: 'fill .5s',
+                          },
+                        } : {
+                          default: {
+                            fill: 'lightgrey',
+                            stroke: '#3D5A80',
+                            strokeWidth: 0.75,
+                            outline: 'none',
+                            transition: 'fill .5s',
+                          },
+                          hover: {
+                            fill: 'lightgrey',
+                            stroke: '#3D5A80',
+                            strokeWidth: 0.75,
+                            outline: 'none',
+                            transition: 'fill .5s',
+                          },
+                          pressed: {
+                            fill: 'lightgrey',
+                            stroke: '#3D5A80',
+                            strokeWidth: 0.75,
+                            outline: 'none',
+                            transition: 'fill .5s',
+                          },
+                        }}
+                        onClick={data.map(el => el.name).includes(geography.properties.NAME)
                         && this.handleClick}
-                    />
-                  ))}
-                </Geographies>
-            </ZoomableGroup>
-          </ComposableMap> : <div className="sk-double-bounce">
-                <div className="sk-child sk-double-bounce1" />
-                <div className="sk-child sk-double-bounce2" />
-            </div>}
+                      />
+                    ))}
+                  </Geographies>
+                </ZoomableGroup>
+              ) : (
+                <div className="sk-double-bounce">
+                  <div className="sk-child sk-double-bounce1" />
+                  <div className="sk-child sk-double-bounce2" />
+                </div>
+              )}
+          </ComposableMap>
         </Map>
         <ButtonList>
           {continents.map((cont, i) => (

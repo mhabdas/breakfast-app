@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="50607d39-0023-4953-96ca-9b5980729eff" name="Default Changelist" comment="ł">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/frontend/containers/MapContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/containers/MapContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/frontend/public/js/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/public/js/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/style.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/js/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,17 +21,18 @@
     <session id="419071020">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="29" />
+          <entry key="project.closed" value="31" />
           <entry key="project.open.time.1" value="11" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.2" value="5" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="29" />
+          <entry key="project.opened" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -66,7 +65,7 @@
           <entry key="js" value="224" />
           <entry key="json" value="104" />
           <entry key="jsx" value="2860" />
-          <entry key="txt" value="16065" />
+          <entry key="txt" value="16915" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -76,12 +75,12 @@
           <entry key="JSX Harmony" value="2860" />
           <entry key="JavaScript" value="224" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Scratch" value="16064" />
+          <entry key="Scratch" value="16914" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="ESLintLanguageService" value="19" />
+          <entry key="ESLintLanguageService" value="21" />
           <entry key="TypeScriptServerServiceImpl" value="1" />
         </counts>
       </usages-collector>
@@ -104,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+            <state relative-caret-position="270">
+              <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -120,9 +119,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -136,7 +132,7 @@
         <entry file="file://$PROJECT_DIR$/node_modules/spinkit/css/spinkit.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -145,7 +141,7 @@
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="85" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -164,8 +160,8 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="97485">
               <caret line="1178" column="23" selection-start-line="1178" selection-start-column="23" selection-end-line="1178" selection-end-column="23" />
-              <caret line="2014" column="23" selection-start-line="2014" selection-start-column="23" selection-end-line="2014" selection-end-column="23" />
-              <caret line="2015" column="65" selection-start-line="2015" selection-start-column="65" selection-end-line="2015" selection-end-column="65" />
+              <caret line="2014" column="6" selection-start-line="2014" selection-start-column="6" selection-end-line="2014" selection-end-column="6" />
+              <caret line="2015" column="10" selection-start-line="2015" selection-start-column="10" selection-end-line="2015" selection-end-column="10" />
               <caret line="2673" column="23" selection-start-line="2673" selection-start-column="23" selection-end-line="2673" selection-end-column="23" />
               <caret line="2784" column="23" selection-start-line="2784" selection-start-column="23" selection-end-line="2784" selection-end-column="23" />
               <caret line="5506" column="23" selection-start-line="5506" selection-start-column="23" selection-end-line="5506" selection-end-column="23" />
@@ -258,7 +254,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="797" />
@@ -268,6 +264,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,7 +290,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -374,11 +370,14 @@
       <workItem from="1537194170563" duration="1363000" />
       <workItem from="1537256796386" duration="716000" />
       <workItem from="1537368670999" duration="943000" />
+      <workItem from="1538059551731" duration="2602000" />
+      <workItem from="1538120738004" duration="1346000" />
+      <workItem from="1538142708742" duration="236000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58764000" />
+    <option name="totallyTimeSpent" value="62948000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -390,10 +389,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -407,7 +406,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5081043" side_tool="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4918957" visible="true" weight="0.27710843" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4918957" visible="true" weight="0.23493975" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Duplicates" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -520,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.eslintrc.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -534,14 +526,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/spinkit/css/spinners/2-double-bounce.css">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/spinkit/css/spinkit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/containers/Modal.jsx">
       <provider selected="true" editor-type-id="text-editor">
@@ -554,8 +550,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97485">
           <caret line="1178" column="23" selection-start-line="1178" selection-start-column="23" selection-end-line="1178" selection-end-column="23" />
-          <caret line="2014" column="23" selection-start-line="2014" selection-start-column="23" selection-end-line="2014" selection-end-column="23" />
-          <caret line="2015" column="65" selection-start-line="2015" selection-start-column="65" selection-end-line="2015" selection-end-column="65" />
+          <caret line="2014" column="6" selection-start-line="2014" selection-start-column="6" selection-end-line="2014" selection-end-column="6" />
+          <caret line="2015" column="10" selection-start-line="2015" selection-start-column="10" selection-end-line="2015" selection-end-column="10" />
           <caret line="2673" column="23" selection-start-line="2673" selection-start-column="23" selection-end-line="2673" selection-end-column="23" />
           <caret line="2784" column="23" selection-start-line="2784" selection-start-column="23" selection-end-line="2784" selection-end-column="23" />
           <caret line="5506" column="23" selection-start-line="5506" selection-start-column="23" selection-end-line="5506" selection-end-column="23" />
@@ -573,17 +569,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/spinkit/css/spinkit.css">
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state relative-caret-position="270">
+          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="85" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
         </state>
       </provider>
     </entry>

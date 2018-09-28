@@ -11538,7 +11538,6 @@ body {
 `;
 
 
-
 // Buttons & Links
 const Button = __WEBPACK_IMPORTED_MODULE_0_styled_components__["default"].button`
     border: 2px solid ${colors.accent};
@@ -11589,7 +11588,6 @@ const Map = __WEBPACK_IMPORTED_MODULE_0_styled_components__["default"].div`
     width: 60vw;
     margin: 0 auto;
     overflow: hidden;
-    height: 60vh;
     display: flex;
     align-items: center;
 `;
@@ -11600,7 +11598,6 @@ const ButtonList = __WEBPACK_IMPORTED_MODULE_0_styled_components__["default"].di
     flex-wrap: wrap;
     padding-bottom: 2rem;
     `;
-
 
 
 
@@ -32326,7 +32323,7 @@ var MapContainer = function (_Component) {
             info: info,
             alt: alt
           }),
-          data ? _react2.default.createElement(
+          _react2.default.createElement(
             _reactSimpleMaps.ComposableMap,
             {
               projectionConfig: {
@@ -32339,7 +32336,7 @@ var MapContainer = function (_Component) {
                 height: 'auto'
               }
             },
-            _react2.default.createElement(
+            data ? _react2.default.createElement(
               _reactSimpleMaps.ZoomableGroup,
               {
                 center: center,
@@ -32410,12 +32407,12 @@ var MapContainer = function (_Component) {
                   });
                 }
               )
+            ) : _react2.default.createElement(
+              'div',
+              { className: 'sk-double-bounce' },
+              _react2.default.createElement('div', { className: 'sk-child sk-double-bounce1' }),
+              _react2.default.createElement('div', { className: 'sk-child sk-double-bounce2' })
             )
-          ) : _react2.default.createElement(
-            'div',
-            { className: 'sk-double-bounce' },
-            _react2.default.createElement('div', { className: 'sk-child sk-double-bounce1' }),
-            _react2.default.createElement('div', { className: 'sk-child sk-double-bounce2' })
           )
         ),
         _react2.default.createElement(
