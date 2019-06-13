@@ -1,22 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import { AboutSection } from '../../styles/style';
 
-// About section
-
-const AboutSection = styled.section`
-  color: #3D5A80;
-
-  h2 {
-    font-size: 1.5rem;
-    padding-top: 2rem;;
-    text-align: center; 
-} 
-  p {
-    text-align: center;
-    padding: 2rem 0 2rem 0;  
-}`;
-
-function About() {
+export default function About() {
   return (
     <AboutSection>
       <h2>
@@ -29,5 +14,3 @@ function About() {
     </AboutSection>
   );
 }
-
-export default About;

@@ -6,11 +6,10 @@ import {
   Geography,
 } from 'react-simple-maps';
 
-
 import Modal from './Modal';
-import { Button, ButtonList, Map } from '../../styles/style';
-
-const Loader = require('halogen/RotateLoader');
+import {
+  Button, ButtonList, secondaryMap, Map, primaryMap, pressedMap,
+} from '../../styles/style';
 
 const initialState = {
   country: '',
@@ -23,15 +22,16 @@ const initialState = {
   info: 'Sorry. This content is not yet available. Try a different or random country.',
 };
 
+const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json';
+const apiUrl = 'https://codekingdom.pl/projects/coderslab-workshops/international-breakfast/';
+
 const initialZoom = {
   center: [0, 20],
   zoom: 1,
 };
 
-class MapContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+export default class MapContainer extends Component {
+  state = {
       data: null,
       ...initialZoom,
       ...initialState,
@@ -44,14 +44,9 @@ class MapContainer extends Component {
         { name: 'South America', coordinates: [-58.3816, -18.6037] },
       ],
     };
-    this.handleZoom = this.handleZoom.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleReset = this.handleReset.bind(this);
-    this.handleRandom = this.handleRandom.bind(this);
-  }
 
   componentDidMount() {
-    fetch('https://codekingdom.pl/projects/coderslab-workshops/international-breakfast/')
+    fetch(apiUrl)
       .then(resp => resp.json())
       .then(data => this.setState({ data: data.breakfast }))
       .catch(err => err);
@@ -74,16 +69,16 @@ class MapContainer extends Component {
     });
   }
 
-  handleToggle() {
+  handleToggle = () => {
     const {
       visible,
     } = this.state;
     this.setState({
       visible: !visible,
     });
-  }
+  };
 
-  handleZoom(e) {
+  handleZoom = (e) => {
     const {
       continents,
     } = this.state;
@@ -100,15 +95,15 @@ class MapContainer extends Component {
         zoom: 2,
       });
     }
-  }
+  };
 
-  handleReset() {
+  handleReset = () => {
     this.setState({
       ...initialZoom,
     });
-  }
+  };
 
-  handleClick(geography) {
+  handleClick = (geography) => {
     const {
       data,
     } = this.state;
@@ -119,16 +114,16 @@ class MapContainer extends Component {
       this.getBreakfastData(data);
       this.handleToggle();
     });
-  }
+  };
 
-  handleClose() {
+  handleClose = () => {
     this.handleToggle();
     this.setState({
       ...initialState,
     });
-  }
+  };
 
-  handleRandom() {
+  handleRandom = () => {
     const {
       data,
     } = this.state;
@@ -140,7 +135,7 @@ class MapContainer extends Component {
       this.getBreakfastData(data);
       this.handleToggle();
     });
-  }
+  };
 
   render() {
     const {
@@ -188,7 +183,7 @@ class MapContainer extends Component {
                   center={center}
                   zoom={zoom}
                 >
-                  <Geographies geographyUrl="https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json">
+                  <Geographies geographyUrl={geoUrl}>
                     {(geographies, projection) => geographies.map(geography => (
                       <Geography
                         key={geography.properties.NAME}
@@ -196,53 +191,17 @@ class MapContainer extends Component {
                         data-country={geography.properties.NAME}
                         projection={projection}
                         style={data.map(el => el.name).includes(geography.properties.NAME) ? {
-                          default: {
-                            fill: '#EE6C4D',
-                            stroke: '#3D5A80',
-                            strokeWidth: 0.75,
-                            outline: 'none',
-                            transition: 'fill .5s',
-                          },
-                          hover: {
-                            fill: 'lightgrey',
-                            stroke: '#3D5A80',
-                            strokeWidth: 0.75,
-                            outline: 'none',
-                            cursor: 'pointer',
-                            transition: 'fill .5s',
-                          },
-                          pressed: {
-                            fill: 'lightgrey',
-                            stroke: '#3D5A80',
-                            strokeWidth: 0.75,
-                            outline: 'none',
-                            transition: 'fill .5s',
-                          },
+                          default: { ...primaryMap },
+                          hover: { ...pressedMap },
+                          pressed: { ...pressedMap },
                         } : {
-                          default: {
-                            fill: 'lightgrey',
-                            stroke: '#3D5A80',
-                            strokeWidth: 0.75,
-                            outline: 'none',
-                            transition: 'fill .5s',
-                          },
-                          hover: {
-                            fill: 'lightgrey',
-                            stroke: '#3D5A80',
-                            strokeWidth: 0.75,
-                            outline: 'none',
-                            transition: 'fill .5s',
-                          },
-                          pressed: {
-                            fill: 'lightgrey',
-                            stroke: '#3D5A80',
-                            strokeWidth: 0.75,
-                            outline: 'none',
-                            transition: 'fill .5s',
-                          },
+                          default: { ...secondaryMap },
+                          hover: { ...secondaryMap },
+                          pressed: { ...secondaryMap },
                         }}
                         onClick={data.map(el => el.name).includes(geography.properties.NAME)
                         && this.handleClick}
+                        round
                       />
                     ))}
                   </Geographies>
@@ -272,4 +231,3 @@ class MapContainer extends Component {
   }
 }
 
-export default MapContainer;

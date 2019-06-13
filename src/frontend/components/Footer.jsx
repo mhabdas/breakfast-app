@@ -1,26 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Link } from '../../styles/style';
+import { Link, StyledFooter } from '../../styles/style';
 
-// Footer
-
-const StyledFooter = styled.footer`
-  text-align: center;
-  color: #3D5A80;
-  background-color: lightgrey;
-
-  p {
-    font-size: .75rem;
-    :first-child {
-    padding-top: 1rem;
-    }
-    :last-child {
-      padding-bottom: 1rem;
-    }
-  }
-`;
-
-function Footer() {
+export default function Footer() {
   return (
     <StyledFooter>
       <p>
@@ -74,5 +55,3 @@ function Footer() {
     </StyledFooter>
   );
 }
-
-export default Footer;
