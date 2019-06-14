@@ -28551,7 +28551,12 @@ function Header() {
     _react2.default.createElement(
       'h1',
       null,
-      'Breakfast'
+      'Breakfast hh ffff'
+    ),
+    _react2.default.createElement(
+      _style.Button,
+      null,
+      'Sign in'
     )
   );
 }

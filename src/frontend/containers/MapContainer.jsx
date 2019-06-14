@@ -6,7 +6,7 @@ import {
   Geography,
 } from 'react-simple-maps';
 
-import Modal from './Modal';
+import Modal from '../components/Modal';
 import {
   Button, ButtonList, secondaryMap, Map, primaryMap, pressedMap,
 } from '../../styles/style';

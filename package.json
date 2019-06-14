@@ -5,8 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/webpack",
-    "server": "./node_modules/.bin/webpack-dev-server"
+    "start:dev": "webpack-dev-server --content-base ./ --port 9966 --hot"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +17,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.0",
     "eslint-plugin-styled-components": "0.0.0",
+    "firebase": "^6.2.0",
     "halogen": "^0.2.0",
     "prop-types": "^15.6.2",
     "react": "^15.6.2",

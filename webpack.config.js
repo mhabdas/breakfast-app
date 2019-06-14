@@ -1,21 +1,19 @@
 // Konfiguracja Webpack
 const path = require('path');
 
-const BUILD_DIR = path.resolve(__dirname, 'src/frontend/public');
 const APP_DIR = path.resolve(__dirname, 'src/frontend/');
 
 module.exports = {
   entry: `${APP_DIR}/app/index.jsx`,
   output: {
-    path: BUILD_DIR,
-    filename: 'js/bundle.js',
+    path: path.join(__dirname, '/dist'),
+    publicPath: '/dist/',
+    filename: 'index_bundle.js',
   },
-  devServer: {
-    inline: true,
-    contentBase: './',
-    port: 3001,
-  },
-  watch: true,
+  devtool: 'source-map',
+  // devServer: {
+  //   contentBase: 'dist/index_bundle.js',
+  // },
   module: {
     rules: [{
       test: /\.(js(x))$/,

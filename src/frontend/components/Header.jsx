@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledHeader } from '../../styles/style';
+import { StyledHeader, Button } from '../../styles/style';
 
 export default function Header() {
   return (
@@ -8,6 +8,7 @@ export default function Header() {
       <h1>
         Breakfast
       </h1>
+      {/* <Button>Sign in</Button> */}
     </StyledHeader>
   );
 }
