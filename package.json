@@ -5,7 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "webpack-dev-server --content-base ./ --port 9966 --hot"
+    "start:dev": "webpack-dev-server --content-base ./ --port 9966 --hot",
+    "build": "node_modules/.bin/webpack --mode production"
   },
   "author": "",
   "license": "ISC",
