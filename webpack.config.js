@@ -11,9 +11,6 @@ module.exports = {
     filename: 'index_bundle.js',
   },
   devtool: 'source-map',
-  // devServer: {
-  //   contentBase: 'dist/index_bundle.js',
-  // },
   module: {
     rules: [{
       test: /\.(js(x))$/,
