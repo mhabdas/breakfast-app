@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-import styled, { injectGlobal } from 'styled-components';
+import styled, { css, injectGlobal } from 'styled-components';
 import '../../node_modules/spinkit/css/spinners/2-double-bounce.css';
 
 
@@ -86,6 +86,14 @@ const Button = styled.button`
         }
         
     }
+    
+    ${props => props.large && css`
+    background-color: transparent;
+    border-color: ${colors.light};
+    color: ${colors.light};
+    font-size: 1rem;
+    height: 3rem;
+`}
 `;
 
 const Link = styled.a`
@@ -155,24 +163,11 @@ const StyledFooter = styled.footer`
 // Header
 
 const StyledHeader = styled.header`
-height: 5rem;
-background-color: ${colors.dark};
-display: flex;
-flex-direction: row;  
-justify-content: center;
-align-items: center;
-
-h1 {
-  font-weight: 700;
-  color: ${colors.light};
-  font-size: 2.5rem;
-} 
-
-img {
-  width: 4rem;
-  height: 4rem;
-  padding-right: .5rem;
-}
+  background-color: ${colors.dark};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
 `;
 
 const ModalBackground = styled.div`
@@ -228,6 +223,26 @@ const ModalWindow = styled.div`
     
 `;
 
+const Logo = styled.div`
+  display: flex;
+  flex-direction: row;  
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+
+  h1 {
+    font-weight: 700;
+    color: ${colors.light};
+    font-size: 2.5rem;
+  } 
+
+  img {
+    width: 4rem;
+    height: 4rem;
+    padding-right: .5rem;
+  }
+`;
+
 const primaryMap = {
   fill: colors.secondary,
   stroke: colors.dark,
@@ -268,4 +283,5 @@ export {
   pressedMap,
   ModalBackground,
   ModalWindow,
+  Logo,
 };
