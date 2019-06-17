@@ -30,7 +30,7 @@ const initialZoom = {
   zoom: 1,
 };
 
-export default class MapContainer extends Component {
+class MapContainer extends Component {
   state = {
       data: null,
       ...initialZoom,
@@ -231,3 +231,4 @@ export default class MapContainer extends Component {
   }
 }
 
+export default MapContainer;

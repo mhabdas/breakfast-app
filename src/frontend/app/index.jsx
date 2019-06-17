@@ -1,21 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Header from '../components/Header';
-import MapContainer from '../containers/MapContainer';
-import Footer from '../components/Footer';
-import About from '../components/About';
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import * as ROUTES from '../constants/routes';
+import LandingPage from '../components/LandingPage';
+import SignInPage from '../components/SignInPage';
 
 // Main app container
 
 function App() {
   return (
     <div>
-      <Header />
-      <About />
-      <MapContainer />
-      <Footer />
+      <Router>
+        <div>
+          <Route exact path={ROUTES.LANDING} component={LandingPage} />
+          <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+        </div>
+      </Router>
     </div>
   );
 }

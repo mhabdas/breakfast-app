@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50607d39-0023-4953-96ca-9b5980729eff" name="Default Changelist" comment="ł">
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/components/LandingPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/components/SignInPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/app/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/constants/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/constants/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/containers/MapContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/containers/MapContainer.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/js/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,19 +33,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package-lock.json">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="1197" column="23" selection-start-line="1197" selection-start-column="23" selection-end-line="1197" selection-end-column="23" />
-              <caret line="2024" column="6" selection-start-line="2024" selection-start-column="6" selection-end-line="2024" selection-end-column="6" />
-              <caret line="2025" column="6" selection-start-line="2025" selection-start-column="6" selection-end-line="2025" selection-end-column="6" />
-              <caret line="2708" column="23" selection-start-line="2708" selection-start-column="23" selection-end-line="2708" selection-end-column="23" />
-              <caret line="2819" column="23" selection-start-line="2819" selection-start-column="23" selection-end-line="2819" selection-end-column="23" />
-              <caret line="5666" column="23" selection-start-line="5666" selection-start-column="23" selection-end-line="5666" selection-end-column="23" />
-              <caret line="6546" column="7" selection-start-line="6546" selection-start-column="7" selection-end-line="6546" selection-end-column="7" />
-              <caret line="6554" column="7" selection-start-line="6554" selection-start-column="7" selection-end-line="6554" selection-end-column="7" />
-              <caret line="6639" column="23" selection-start-line="6639" selection-start-column="23" selection-end-line="6639" selection-end-column="23" />
-              <caret line="6652" column="23" selection-start-line="6652" selection-start-column="23" selection-end-line="6652" selection-end-column="23" />
+            <state relative-caret-position="330">
+              <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -46,26 +44,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/components/Header.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+            <state relative-caret-position="180">
+              <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/index_bundle.js">
+        <entry file="file://$PROJECT_DIR$/src/frontend/components/SignInPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6570">
-              <caret line="219" column="75730" selection-start-line="219" selection-start-column="75724" selection-end-line="219" selection-end-column="75730" />
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/app/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+            <state relative-caret-position="90">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,56 +77,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/containers/MapContainer.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/Modal.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+            <state relative-caret-position="3300">
+              <caret line="220" column="24" lean-forward="true" selection-start-line="220" selection-start-column="24" selection-end-line="220" selection-end-column="24" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/style.jsx">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/frontend/components/LandingPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="169" column="14" selection-start-line="169" selection-start-column="14" selection-end-line="169" selection-end-column="14" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" column="54" lean-forward="true" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/About.jsx">
+        <entry file="file://$PROJECT_DIR$/src/frontend/constants/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/Footer.jsx">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -171,17 +157,20 @@
         <option value="$PROJECT_DIR$/src/frontend/components/Footer.jsx" />
         <option value="$PROJECT_DIR$/.eslintrc.json" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
-        <option value="$PROJECT_DIR$/src/frontend/app/index.jsx" />
         <option value="$PROJECT_DIR$/babel.config.js" />
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/src/frontend/containers/Modal.jsx" />
-        <option value="$PROJECT_DIR$/src/frontend/constants/routes.js" />
-        <option value="$PROJECT_DIR$/src/frontend/containers/MapContainer.jsx" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/frontend/components/Header.jsx" />
         <option value="$PROJECT_DIR$/src/styles/style.jsx" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/src/frontend/components/Navigation.jsx" />
+        <option value="$PROJECT_DIR$/src/frontend/components/Header.jsx" />
+        <option value="$PROJECT_DIR$/src/frontend/app/index.jsx" />
+        <option value="$PROJECT_DIR$/src/frontend/containers/MapContainer.jsx" />
+        <option value="$PROJECT_DIR$/src/frontend/constants/routes.js" />
+        <option value="$PROJECT_DIR$/src/frontend/components/SignInPage.jsx" />
+        <option value="$PROJECT_DIR$/src/frontend/components/LandingPage.jsx" />
       </list>
     </option>
   </component>
@@ -191,9 +180,10 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="801" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -250,6 +240,27 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
@@ -369,12 +380,12 @@
       <workItem from="1560438635830" duration="947000" />
       <workItem from="1560498066537" duration="6620000" />
       <workItem from="1560519202715" duration="1568000" />
-      <workItem from="1560753207284" duration="1885000" />
+      <workItem from="1560753207284" duration="4369000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89697000" />
+    <option name="totallyTimeSpent" value="92181000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -386,10 +397,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="801" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -403,7 +414,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50880903" side_tool="true" weight="0.26330534" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49119097" visible="true" weight="0.2626506" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49119097" visible="true" weight="0.30747533" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Duplicates" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -466,13 +477,6 @@
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.txt" />
-    <entry file="file://$PROJECT_DIR$/src/frontend/app/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/babel.config.js" />
     <entry file="file://$PROJECT_DIR$/.babelrc" />
     <entry file="file://$PROJECT_DIR$/.eslintrc.json">
@@ -495,31 +499,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/public/js/bundle.js" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/constants/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/index_bundle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6570">
-          <caret line="219" column="75730" selection-start-line="219" selection-start-column="75724" selection-end-line="219" selection-end-column="75730" />
+        <state relative-caret-position="6765">
+          <caret line="232" column="75730" selection-start-line="232" selection-start-column="75730" selection-end-line="232" selection-end-column="75730" />
         </state>
       </provider>
     </entry>
@@ -559,13 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/containers/MapContainer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/components/About.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -573,13 +549,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/components/Header.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -597,6 +566,81 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/components/Navigation.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/app/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/containers/MapContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3300">
+          <caret line="220" column="24" lean-forward="true" selection-start-line="220" selection-start-column="24" selection-end-line="220" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/constants/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/components/SignInPage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/components/Header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/components/LandingPage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="54" lean-forward="true" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
         </state>
       </provider>
     </entry>
