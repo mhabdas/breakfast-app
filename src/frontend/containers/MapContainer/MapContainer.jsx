@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 
-import Modal from "../../components/Modal/Modal";
 import { ButtonList } from "../../../styles/globals";
 import Button from "../../components/Button";
 import Map from "../../components/Map";
+import Modal from "../../components/Modal";
+import MainSection from "../../components/MainSection";
 
 const initialState = {
   country: "",
@@ -146,7 +147,7 @@ class MapContainer extends Component {
       data
     } = this.state;
     return (
-      <div>
+      <MainSection>
         <Modal
           show={visible}
           close={() => this.handleClose()}
@@ -177,7 +178,7 @@ class MapContainer extends Component {
           <Button action={this.handleReset} title="Reset" />
           <Button action={this.handleRandom} title="Random" />
         </ButtonList>
-      </div>
+      </MainSection>
     );
   }
 }

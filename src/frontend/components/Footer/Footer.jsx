@@ -5,9 +5,10 @@ const StyledFooter = styled.footer`
   text-align: center;
   color: ${colors.light};
   background-color: ${colors.dark};
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
+  height: 5.5rem;
 
   p {
     font-size: .75rem;

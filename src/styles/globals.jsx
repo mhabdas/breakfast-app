@@ -19,8 +19,17 @@ injectGlobal`
   padding: 0;
 }
 
+html {
+  height: 100%;
+   margin:0;
+   padding:0;
+}
+
 body {
-    background-color: ${colors.light};
+   background-color: ${colors.light};
+   height: 100%;
+   margin:0;
+   padding:0;
 }
 
 .fade-enter {
@@ -68,8 +77,6 @@ const Link = styled.a`
 
 // MapContainer
 
-
-
 const ButtonList = styled.div`
   display: flex;
   justify-content: center;
@@ -82,56 +89,6 @@ const ButtonList = styled.div`
 // Footer
 
 // Header
-
-const ModalBackground = styled.div`
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 50px;
-`;
-
-const ModalWindow = styled.div`
-  background-color: whitesmoke;
-  border-radius: 5px;
-  max-width: 500px;
-  min-height: 300px;
-  margin: 0 auto;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-
-  h2 {
-    color: #ee6c4d;
-    text-align: center;
-    padding-bottom: 0.5rem;
-  }
-
-  h3 {
-    color: #3d5a80;
-    padding-bottom: 0.5rem;
-  }
-
-  p {
-    color: #3d5a80;
-    padding-bottom: 0.5rem;
-
-    &:last-of-type {
-      font-size: 0.75rem;
-    }
-  }
-
-  img {
-    width: 80%;
-    border-radius: 5%;
-    opacity: 0.8;
-    padding-bottom: 0.5rem;
-  }
-`;
 
 const Logo = styled.div`
   display: flex;
@@ -180,12 +137,5 @@ const pressedMap = {
 };
 
 export {
-  Link,
-  ButtonList,
-  primaryMap,
-  secondaryMap,
-  pressedMap,
-  ModalBackground,
-  ModalWindow,
-  Logo,
+  Link, ButtonList, primaryMap, secondaryMap, pressedMap, Logo,
 };

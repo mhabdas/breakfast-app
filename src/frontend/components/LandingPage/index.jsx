@@ -6,7 +6,11 @@ import Footer from '../Footer';
 import Header from '../Header';
 
 const LandingPage = () => (
-  <div>
+  <div style={{
+    minHeight: '100%',
+    position: 'relative',
+  }}
+  >
     <Header />
     <About />
     <MapContainer />

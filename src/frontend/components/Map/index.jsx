@@ -37,27 +37,29 @@ const Map = (props) => {
                   data-country={geography.properties.NAME}
                   projection={projection}
                   style={
-                                    data.map(el => el.name).includes(geography.properties.NAME)
-                                      ? {
-                                        default: { ...primaryMap },
-                                        hover: { ...pressedMap },
-                                        pressed: { ...pressedMap },
-                                      }
-                                      : {
-                                        default: { ...secondaryMap },
-                                        hover: { ...secondaryMap },
-                                        pressed: { ...secondaryMap },
-                                      }
-                                }
+                      data
+                        .map(el => el.name)
+                        .includes(geography.properties.NAME)
+                        ? {
+                          default: { ...primaryMap },
+                          hover: { ...pressedMap },
+                          pressed: { ...pressedMap },
+                        }
+                        : {
+                          default: { ...secondaryMap },
+                          hover: { ...secondaryMap },
+                          pressed: { ...secondaryMap },
+                        }
+                    }
                   onClick={
-                                    data
-                                      .map(el => el.name)
-                                      .includes(geography.properties.NAME) && handleClick
-                                }
+                      data
+                        .map(el => el.name)
+                        .includes(geography.properties.NAME) && handleClick
+                    }
                   round
                 />
               ))
-                        }
+              }
             </Geographies>
           </ZoomableGroup>
         ) : (
