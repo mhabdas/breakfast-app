@@ -35,16 +35,16 @@ body {
 .fade-enter {
     opacity: 0.01;
   }
-  
+
 .fade-enter.fade-enter-active {
     opacity: 1;
     transition: opacity 500ms ease-in;
   }
-  
+
 .fade-leave {
     opacity: 1;
   }
-  
+
 .fade-leave.fade-leave-active {
     opacity: 0.01;
     transition: opacity 300ms ease-in;
@@ -52,27 +52,15 @@ body {
 .fade-appear {
     opacity: 0.01;
   }
-  
+
 .fade-appear.fade-appear-active {
     opacity: 1;
     transition: opacity .5s ease-in;
   }
-  
+
 .sk-double-bounce .sk-child {
  background-color: ${colors.accent};
 }
-`;
-
-// Buttons & Links
-
-const Link = styled.a`
-  text-decoration: none;
-  font-weight: bold;
-  color: ${colors.light};
-
-  &:hover {
-    color: ${colors.accent};
-  }
 `;
 
 // MapContainer
@@ -83,12 +71,6 @@ const ButtonList = styled.div`
   flex-wrap: wrap;
   padding-bottom: 1rem;
 `;
-
-// About section
-
-// Footer
-
-// Header
 
 const Logo = styled.div`
   display: flex;
@@ -137,5 +119,5 @@ const pressedMap = {
 };
 
 export {
-  Link, ButtonList, primaryMap, secondaryMap, pressedMap, Logo,
+  ButtonList, primaryMap, secondaryMap, pressedMap, Logo,
 };

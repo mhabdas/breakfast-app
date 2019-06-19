@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledMainSection = styled.div`
-  padding-bottom: 5.5rem;
+  padding-bottom: 6rem;
 `;
 
 export default StyledMainSection;
