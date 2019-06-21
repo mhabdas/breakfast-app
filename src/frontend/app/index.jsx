@@ -11,7 +11,7 @@ import LandingPage from '../components/LandingPage';
 function App() {
   return (
     <div>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename="https://mhabdas.github.io/breakfast-app">
         <div>
           <Route exact path={ROUTES.LANDING} component={LandingPage} />
           <Route path={ROUTES.SIGN_IN} component={SignInPage} />
