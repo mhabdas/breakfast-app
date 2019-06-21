@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="50607d39-0023-4953-96ca-9b5980729eff" name="Default Changelist" comment="ł">
       <change beforePath="$PROJECT_DIR$/src/frontend/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/app/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/constants/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/constants/routes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/js/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/app/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="148">
-              <caret line="15" column="71" lean-forward="true" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -49,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/frontend/constants/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="31" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="31" />
+            <state>
+              <caret column="39" selection-start-column="39" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -72,15 +73,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="55" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/globals.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -143,6 +135,8 @@
       <find>center</find>
       <find>favicon</find>
       <find>favico</find>
+      <find>mhab</find>
+      <find>&quot;/&quot;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,7 +169,6 @@
         <option value="$PROJECT_DIR$/src/frontend/components/Navigation.jsx" />
         <option value="$PROJECT_DIR$/src/frontend/components/Header.jsx" />
         <option value="$PROJECT_DIR$/src/frontend/containers/MapContainer.jsx" />
-        <option value="$PROJECT_DIR$/src/frontend/constants/routes.js" />
         <option value="$PROJECT_DIR$/src/frontend/components/SignInPage.jsx" />
         <option value="$PROJECT_DIR$/src/frontend/components/LandingPage.jsx" />
         <option value="$PROJECT_DIR$/src/frontend/components/AboutSection/index.jsx" />
@@ -202,6 +195,7 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/frontend/app/index.jsx" />
+        <option value="$PROJECT_DIR$/src/frontend/constants/routes.js" />
       </list>
     </option>
   </component>
@@ -396,12 +390,12 @@
       <workItem from="1560870022751" duration="941000" />
       <workItem from="1560929446827" duration="3412000" />
       <workItem from="1560947436107" duration="2650000" />
-      <workItem from="1561102881028" duration="3699000" />
+      <workItem from="1561102881028" duration="3959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108935000" />
+    <option name="totallyTimeSpent" value="109195000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,13 +509,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/public/js/bundle.js" />
-    <entry file="file://$PROJECT_DIR$/dist/index_bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6765">
-          <caret line="232" column="75730" selection-start-line="232" selection-start-column="75730" selection-end-line="232" selection-end-column="75730" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="535">
@@ -724,13 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/constants/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -755,13 +735,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index_bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="112" column="135538" selection-start-line="112" selection-start-column="135535" selection-end-line="112" selection-end-column="135538" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/app/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
-          <caret line="15" column="71" lean-forward="true" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/constants/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
         </state>
       </provider>
     </entry>
