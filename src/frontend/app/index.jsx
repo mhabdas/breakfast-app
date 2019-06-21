@@ -11,7 +11,7 @@ import LandingPage from '../components/LandingPage';
 function App() {
   return (
     <div>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div>
           <Route exact path={ROUTES.LANDING} component={LandingPage} />
           <Route path={ROUTES.SIGN_IN} component={SignInPage} />
