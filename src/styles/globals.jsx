@@ -20,14 +20,14 @@ injectGlobal`
 }
 
 html {
-  height: 100%;
-   margin:0;
-   padding:0;
+  min-height: 100vh;
+  margin:0;
+  padding:0;
 }
 
 body {
    background-color: ${colors.light};
-   height: 100%;
+   min-height: 100vh;
    margin:0;
    padding:0;
 }

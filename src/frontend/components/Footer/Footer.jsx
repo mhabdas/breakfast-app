@@ -10,6 +10,7 @@ const StyledFooter = styled.footer`
   width: 100%;
   height: 5.5rem;
   margin-bottom: auto;
+  z-index: -1;
 
   p {
     font-size: .75rem;

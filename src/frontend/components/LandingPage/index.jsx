@@ -7,7 +7,7 @@ import Header from '../Header';
 
 const LandingPage = () => (
   <div style={{
-    minHeight: '100%',
+    minHeight: '100vh',
     position: 'relative',
   }}
   >
