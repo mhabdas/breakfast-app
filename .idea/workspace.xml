@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50607d39-0023-4953-96ca-9b5980729eff" name="Default Changelist" comment="ł">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index_bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index_bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index_bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index_bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/app/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/js/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -33,14 +28,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/app/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
+            <state relative-caret-position="208">
               <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -128,6 +132,7 @@
       <find>Link</find>
       <find>data-cont</find>
       <find>center</find>
+      <find>favicon</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,7 +161,6 @@
         <option value="$PROJECT_DIR$/babel.config.js" />
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/src/frontend/containers/Modal.jsx" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/frontend/components/Navigation.jsx" />
         <option value="$PROJECT_DIR$/src/frontend/components/Header.jsx" />
@@ -187,6 +191,7 @@
         <option value="$PROJECT_DIR$/src/frontend/components/LandingPage/index.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/frontend/app/index.jsx" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -229,66 +234,6 @@
               <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="LandingPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Link" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainSection" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
@@ -420,12 +365,12 @@
       <workItem from="1560870022751" duration="941000" />
       <workItem from="1560929446827" duration="3412000" />
       <workItem from="1560947436107" duration="2650000" />
-      <workItem from="1561102881028" duration="2721000" />
+      <workItem from="1561102881028" duration="2994000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107957000" />
+    <option name="totallyTimeSpent" value="108230000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -440,7 +385,7 @@
     <frame x="0" y="23" width="1440" height="801" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -454,7 +399,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50880903" side_tool="true" weight="0.26330534" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49119097" visible="true" weight="0.30183357" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49119097" visible="true" weight="0.30183357" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Duplicates" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -563,13 +508,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/components/Navigation.jsx" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/components/SignInPage/SignInPage.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -781,11 +719,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/app/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
+        <state relative-caret-position="208">
           <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
