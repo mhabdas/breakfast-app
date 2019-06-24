@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50607d39-0023-4953-96ca-9b5980729eff" name="Default Changelist" comment="ł">
-      <change afterPath="$PROJECT_DIR$/src/frontend/components/Logo/Logo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/components/Logo/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/app/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/AboutSection/AboutSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/AboutSection/AboutSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/Button/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/Button/Button.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/Button/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/Button/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/Footer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/Header/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/Link/Link.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/Link/Link.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/Map/Map.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/Map/Map.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/Map/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/Map/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/Modal/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/Modal/Modal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/constants/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/constants/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/containers/MapContainer/MapContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/containers/MapContainer/MapContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="50607d39-0023-4953-96ca-9b5980729eff" name="Default Changelist" comment="ł" />
     <ignored path="$PROJECT_DIR$/js/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,120 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/Map/Map.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/AboutSection/AboutSection.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/Footer/Footer.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/Modal/Modal.jsx">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/Modal/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-335">
-              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#43#69#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/Link/Link.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/Header/Header.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/Link/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/Header/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/components/Footer/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -281,37 +153,6 @@
               <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Link" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breakfast-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Modal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="breakfast-app" type="b2602c69:ProjectViewProjectNode" />
@@ -460,12 +301,12 @@
       <workItem from="1560929446827" duration="3412000" />
       <workItem from="1560947436107" duration="2650000" />
       <workItem from="1561102881028" duration="4512000" />
-      <workItem from="1561367106390" duration="1411000" />
+      <workItem from="1561367106390" duration="2972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111159000" />
+    <option name="totallyTimeSpent" value="112720000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -478,9 +319,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="798" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -494,7 +334,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50880903" side_tool="true" weight="0.26330534" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49119097" visible="true" weight="0.30311614" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49119097" visible="true" weight="0.30311614" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Duplicates" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -628,13 +468,6 @@
       </provider>
       <provider editor-type-id="sourcemapFileViewerProvider" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/index_bundle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -760,16 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/components/Map/Map.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/components/AboutSection/AboutSection.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -853,8 +676,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/components/Modal/Modal.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        <state relative-caret-position="60">
+          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/components/Map/Map.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
         </state>
       </provider>
     </entry>
