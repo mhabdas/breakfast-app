@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import { ButtonList } from "../../../styles/globals";
 import Button from "../../components/Button";
 import Map from "../../components/Map";
 import Modal from "../../components/Modal";
 import MainSection from "../../components/MainSection";
+import {ButtonList} from "../../components/Button/Button";
 
 const initialState = {
   country: "",

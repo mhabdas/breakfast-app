@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-expressions */
-import styled, { injectGlobal } from 'styled-components';
+import { injectGlobal } from 'styled-components';
 import '../../node_modules/spinkit/css/spinners/2-double-bounce.css';
 
 // Colors
-export const colors = {
+const colors = {
   light: '#e8edf3',
   accent: '#e05323',
   dark: '#22264b',
@@ -63,61 +63,4 @@ body {
 }
 `;
 
-// MapContainer
-
-const ButtonList = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-bottom: 1rem;
-`;
-
-const Logo = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 5rem;
-
-  h1 {
-    font-weight: 700;
-    color: ${colors.light};
-    font-size: 2.5rem;
-  }
-
-  img {
-    width: 4rem;
-    height: 4rem;
-    padding-right: 0.5rem;
-  }
-`;
-
-const primaryMap = {
-  fill: colors.secondary,
-  stroke: colors.dark,
-  strokeWidth: 0.65,
-  outline: 'none',
-  cursor: 'pointer',
-  transition: 'fill .5s',
-};
-
-const secondaryMap = {
-  fill: colors.light,
-  stroke: colors.dark,
-  strokeWidth: 0.65,
-  outline: 'none',
-  transition: 'fill .5s',
-};
-
-const pressedMap = {
-  fill: colors.light,
-  stroke: colors.dark,
-  strokeWidth: 0.65,
-  outline: 'none',
-  cursor: 'pointer',
-  transition: 'fill .5s',
-};
-
-export {
-  ButtonList, primaryMap, secondaryMap, pressedMap, Logo,
-};
+export default colors;

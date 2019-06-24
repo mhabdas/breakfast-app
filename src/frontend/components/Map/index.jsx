@@ -6,8 +6,34 @@ import {
 } from 'react-simple-maps';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { pressedMap, primaryMap, secondaryMap } from '../../../styles/globals';
 import StyledMap from './Map';
+import colors from '../../../styles/globals';
+
+const primaryMap = {
+  fill: colors.secondary,
+  stroke: colors.dark,
+  strokeWidth: 0.65,
+  outline: 'none',
+  cursor: 'pointer',
+  transition: 'fill .5s',
+};
+
+const secondaryMap = {
+  fill: colors.light,
+  stroke: colors.dark,
+  strokeWidth: 0.65,
+  outline: 'none',
+  transition: 'fill .5s',
+};
+
+const pressedMap = {
+  fill: colors.light,
+  stroke: colors.dark,
+  strokeWidth: 0.65,
+  outline: 'none',
+  cursor: 'pointer',
+  transition: 'fill .5s',
+};
 
 const Map = (props) => {
   const {

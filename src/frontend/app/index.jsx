@@ -13,7 +13,15 @@ function App() {
     <div>
       <Router>
         <div>
-          <Route exact path={ROUTES.LANDING} component={LandingPage} />
+          <Route
+            exact
+            path={
+              process.env.NODE_ENV === 'development'
+                ? ROUTES.LANDING_DEV
+                : ROUTES.LANDING_PROD
+            }
+            component={LandingPage}
+          />
           <Route path={ROUTES.SIGN_IN} component={SignInPage} />
         </div>
       </Router>
@@ -21,9 +29,6 @@ function App() {
   );
 }
 
-document
-  .addEventListener('DOMContentLoaded', () => {
-    ReactDOM.render(
-      <App />, document.getElementById('app'),
-    );
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(<App />, document.getElementById('app'));
+});

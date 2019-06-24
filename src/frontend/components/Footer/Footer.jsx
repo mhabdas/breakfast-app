@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../../styles/globals';
+import colors from '../../../styles/globals';
 
 const StyledFooter = styled.footer`
   text-align: center;
@@ -10,7 +10,6 @@ const StyledFooter = styled.footer`
   width: 100%;
   height: 5.5rem;
   margin-bottom: auto;
-  z-index: -1;
 
   p {
     font-size: .75rem;

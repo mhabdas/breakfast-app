@@ -1,7 +1,7 @@
 import React from 'react';
 import StyledHeader from './Header';
 import Button from '../Button';
-import { Logo } from '../../../styles/globals';
+import Logo from '../Logo';
 
 const Header = () => (
   <StyledHeader>
@@ -12,8 +12,8 @@ const Header = () => (
       </h1>
     </Logo>
     <div>
-      <Button large title="Sign in" />
-      <Button large title="Sign up" />
+      <Button large action={() => console.log('signin')} title="Sign in" />
+      <Button large action={() => console.log('signup')} title="Sign up" />
     </div>
   </StyledHeader>
 );

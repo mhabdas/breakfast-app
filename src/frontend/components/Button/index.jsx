@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledButton from './Button';
+import { StyledButton } from './Button';
 
 const Button = ({
   action, title, large, dataAttr,

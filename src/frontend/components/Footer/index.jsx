@@ -10,6 +10,7 @@ const Footer = () => (
         href="https://github.com/mhabdas"
         target="_blank"
         description="&nbsp;Marta Habdas"
+        title="Marta Habdas"
       />
       .
     </p>
@@ -43,6 +44,7 @@ const Footer = () => (
         href="https://commons.wikimedia.org/wiki/Main_Page"
         target="_blank"
         description="&nbsp;Wikimedia Commons&nbsp;"
+        title="Wikimedia Commons"
       />
       are licensed by
       <Link
@@ -59,6 +61,7 @@ const Footer = () => (
         href="https://www.independent.co.uk/life-style/food-and-drink/features/what-people-eat-for-breakfast-around-the-world-a6730126.html"
         target="_blank"
         description="Independent"
+        title="Independent"
       />
       .
     </p>
