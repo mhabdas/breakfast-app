@@ -12,21 +12,21 @@ module.exports = {
   },
   devtool: 'source-map',
   module: {
-    rules: [{
-      test: /\.(js(x))$/,
-      exclude: /node_modules/,
-      include: APP_DIR,
-      loader: 'babel-loader',
-      query: {
-        presets: ['es2015', 'stage-2', 'react'],
+    rules: [
+      {
+        test: /\.(js(x))$/,
+        exclude: /node_modules/,
+        include: APP_DIR,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'stage-2', 'react'],
+        },
       },
-    }, {
-      test: /\.css$/,
-      use: [
-        { loader: 'style-loader' },
-        { loader: 'css-loader' },
-      ],
-    }],
+      {
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+      },
+    ],
   },
   resolve: {
     extensions: [' ', '.js', '.jsx'],
