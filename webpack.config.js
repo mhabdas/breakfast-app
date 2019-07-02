@@ -1,4 +1,3 @@
-// Konfiguracja Webpack
 const path = require('path');
 
 const APP_DIR = path.resolve(__dirname, 'src/frontend/');
@@ -10,7 +9,7 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'index_bundle.js',
   },
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {

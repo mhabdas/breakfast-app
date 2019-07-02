@@ -1,13 +1,14 @@
 {
   "name": "breakfast",
+  "sideEffects": false,
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
   "homepage": "https://mhabdas.github.io/breakfast-app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "webpack-dev-server --content-base ./ --port 9966 --hot --mode development",
-    "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --mode production"
+    "dev": "webpack-dev-server --content-base ./ --port 9966 --hot --config ./webpack.dev.js --mode development",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack.prod.js --mode production"
   },
   "author": "Marta Habdas",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "firebase": "^6.2.0",
     "gh-pages": "^2.0.1",
     "halogen": "^0.2.0",
+    "html-loader": "^0.5.5",
     "prop-types": "^15.6.2",
     "react": "^16.8.6",
     "react-addons-css-transition-group": "^15.6.2",
@@ -37,14 +39,25 @@
     "webpack-dev-server": "^3.7.1"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.2",
     "babel-preset-stage-2": "^6.24.1",
-    "eslint": "^4.19.1",
+    "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.17.3",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-standard": "^4.0.0",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-cli": "^3.3.4"
+    "webpack-cli": "^3.3.4",
+    "webpack-merge": "^4.2.1"
   }
 }
