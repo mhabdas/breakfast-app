@@ -13,7 +13,7 @@ const Header = () => (
       </h1>
     </Logo>
     <div>
-      <Button large action={() => console.log('signin')} title="Sign in" />
+      <Button large title="Sign in"></Button>
       <Button large action={() => console.log('signup')} title="Sign up" />
     </div>
   </StyledHeader>

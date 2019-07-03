@@ -6,7 +6,7 @@
   "homepage": "https://mhabdas.github.io/breakfast-app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --content-base ./ --port 9966 --hot --config ./webpack.dev.js --mode development lint-staged",
+    "dev": "webpack-dev-server --content-base ./ --port 9966 --hot --config ./webpack.dev.js --mode development",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack.prod.js --mode production"
   },
   "author": "Marta Habdas",
@@ -17,11 +17,9 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": [
-      "eslint"
-    ],
-    "src/**/*.{js,jsx,json,md}": [
-      "prettier --list-different"
+    "*.js": [
+      "eslint --fix",
+      "git add"
     ]
   },
   "dependencies": {
