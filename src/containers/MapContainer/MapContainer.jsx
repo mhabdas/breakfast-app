@@ -1,7 +1,7 @@
 import React, { Component, Suspense } from "react";
 
 import Button from "../../components/Button";
-import Map from "../../components/Map";
+const Map = React.lazy(() => import("../../components/Map"));
 const Modal = React.lazy(() => import("../../components/Modal"));
 import MainSection from "../../components/MainSection";
 import {ButtonList} from "../../components/Button/Button";

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Suspense } from "react";
 
 import MapContainer from '../../containers/MapContainer/MapContainer';
-import About from '../AboutSection';
-import Footer from '../Footer';
-import Header from '../Header';
+const AboutSection = React.lazy(() => import("../AboutSection"));
+const Footer = React.lazy(() => import("../Footer"));
+const Header = React.lazy(() => import("../Header"));
+
+
 
 const LandingPage = () => (
   <div style={{
@@ -11,10 +13,13 @@ const LandingPage = () => (
     position: 'relative',
   }}
   >
+    <Suspense fallback={<div>Loading...</div>}>
+
     <Header />
-    <About />
+    <AboutSection />
     <MapContainer />
     <Footer />
+    </Suspense>
   </div>
 );
 
