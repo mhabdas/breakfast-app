@@ -1,7 +1,7 @@
 import React from 'react';
 import StyledHeader from './Header';
-import Button from '../Button';
-import Logo from '../Logo';
+const Button = React.lazy(() => import("../Button"));
+const Logo = React.lazy(() => import("../Logo"));
 import logoPic from '../../img/breakfast.svg';
 
 const Header = () => (

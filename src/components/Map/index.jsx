@@ -4,6 +4,7 @@ import {
   Geography,
   ZoomableGroup,
 } from 'react-simple-maps';
+
 import PropTypes from 'prop-types';
 import colors from '../../styles/globals';
 import React from "react";

@@ -1,10 +1,11 @@
 import React, { Component, Suspense } from "react";
 
-import Button from "../../components/Button";
+const Button = React.lazy(() => import("../../components/Button"));
 const Map = React.lazy(() => import("../../components/Map"));
 const Modal = React.lazy(() => import("../../components/Modal"));
-import MainSection from "../../components/MainSection";
+const MainSection = React.lazy(() => import("../../components/MainSection"));
 import {ButtonList} from "../../components/Button/Button";
+import Spinner from "../../components/Spinner";
 
 const initialState = {
   country: "",
@@ -148,7 +149,7 @@ class MapContainer extends Component {
     } = this.state;
     return (
       <MainSection>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Spinner />}>
         <Modal
           show={visible}
           close={() => this.handleClose()}

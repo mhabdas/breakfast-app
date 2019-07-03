@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Suspense } from "react";
 import ReactDOM from 'react-dom';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as ROUTES from './constants/routes';
-import SignInPage from './components/SignInPage/SignInPage';
-import LandingPage from './components/LandingPage';
+const SignInPage = React.lazy(() => import("./components/SignInPage/SignInPage"));
+const LandingPage = React.lazy(() => import("./components/LandingPage"));
 
 // Main app container
 
@@ -13,6 +13,7 @@ function App() {
     <div>
       <Router>
         <div>
+          <Suspense fallback={<div/>}>
           <Route
             exact
             path={
@@ -23,6 +24,7 @@ function App() {
             component={LandingPage}
           />
           <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+          </Suspense>
         </div>
       </Router>
     </div>
