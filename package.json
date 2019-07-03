@@ -3,7 +3,6 @@
   "sideEffects": false,
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
   "homepage": "https://mhabdas.github.io/breakfast-app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -32,6 +31,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-simple-maps": "^0.8.4",
+    "react-spinners": "^0.5.4",
     "spinkit": "^1.2.5",
     "style-loader": "^0.23.0",
     "styled-components": "^2.4.1",

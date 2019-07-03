@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-expressions */
 import { injectGlobal } from 'styled-components';
-import '../../node_modules/spinkit/css/spinners/2-double-bounce.css';
 
 // Colors
 const colors = {
@@ -57,10 +56,6 @@ body {
     opacity: 1;
     transition: opacity .5s ease-in;
   }
-
-.sk-double-bounce .sk-child {
- background-color: ${colors.accent};
-}
 `;
 
 export default colors;
