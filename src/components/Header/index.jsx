@@ -1,22 +1,19 @@
-import React from 'react';
-import StyledHeader from './Header';
-const Button = React.lazy(() => import("../Button"));
-const Logo = React.lazy(() => import("../Logo"));
-import logoPic from '../../img/breakfast.svg';
+import React from "react";
+import StyledHeader from "./Header";
+const Logo = React.lazy(() => import("../../utils/Logo"));
+import logoPic from "../../img/breakfast.svg";
+import AuthModals from "../AuthModals/AuthModals";
 
-const Header = () => (
-  <StyledHeader>
-    <Logo>
-      <img src={logoPic} alt="Icon depicting breakfast plate" />
-      <h1>
-        Breakfast
-      </h1>
-    </Logo>
-    <div>
-      <Button large title="Sign in"></Button>
-      <Button large action={() => console.log('signup')} title="Sign up" />
-    </div>
-  </StyledHeader>
-);
+const Header = () => {
+  return (
+    <StyledHeader>
+      <Logo>
+        <img src={logoPic} alt="Icon depicting breakfast plate" />
+        <h1>Breakfast</h1>
+      </Logo>
+      <AuthModals />
+    </StyledHeader>
+  );
+};
 
 export default Header;

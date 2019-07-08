@@ -9,7 +9,7 @@ const colors = {
   secondary: '#e05323',
 };
 
-// CSS Styles (with styled-components)
+// CSS Styles (with styled-utils)
 injectGlobal`
 * {
   box-sizing: border-box;

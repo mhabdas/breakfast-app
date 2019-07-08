@@ -1,6 +1,6 @@
 import React from 'react';
 import StyledFooter from './Footer';
-import Link from '../Link';
+import Link from '../../utils/Link';
 
 const Footer = () => (
   <StyledFooter>

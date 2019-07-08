@@ -1,11 +1,11 @@
 import React, { Component, Suspense } from "react";
 
-const Button = React.lazy(() => import("../../components/Button"));
-const Map = React.lazy(() => import("../../components/Map"));
-const Modal = React.lazy(() => import("../../components/Modal"));
-const MainSection = React.lazy(() => import("../../components/MainSection"));
-import {ButtonList} from "../../components/Button/Button";
-import Spinner from "../../components/Spinner";
+const Button = React.lazy(() => import("../../utils/Button"));
+const Map = React.lazy(() => import("../Map"));
+const Modal = React.lazy(() => import("../../utils/Modal"));
+const MainSection = React.lazy(() => import("../MainSection"));
+import { ButtonList } from "../../utils/Button/Button";
+import Spinner from "../../utils/Spinner";
 
 const initialState = {
   country: "",
@@ -150,17 +150,34 @@ class MapContainer extends Component {
     return (
       <MainSection>
         <Suspense fallback={<Spinner />}>
-        <Modal
-          show={visible}
-          close={() => this.handleClose()}
-          country={country}
-          breakfastName={breakfastName}
-          description={description}
-          img={img}
-          attr={attr}
-          info={info}
-          alt={alt}
-        />
+          <Modal
+            visible={visible}
+            title={country}
+            body={
+              <div>
+                <h3>
+                  {breakfastName}
+                  {info}
+                </h3>
+                <p>{description}</p>
+                <img src={img} alt={alt} />
+                <p>{attr}</p>
+              </div>
+            }
+            footer={
+              <div>
+                <Button
+                  action={() =>
+                    window.open(
+                      `https://www.google.pl/search?q=${breakfastName}+recipe`
+                    )
+                  }
+                  title="Take a challenge"
+                />
+                <Button action={() => this.handleClose()} title="Close" />
+              </div>
+            }
+          />
         </Suspense>
         <Map
           data={data}
