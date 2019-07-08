@@ -2,63 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50607d39-0023-4953-96ca-9b5980729eff" name="Default Changelist" comment="ł">
-      <change afterPath="$PROJECT_DIR$/dist/0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/0.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AuthModals/AuthModals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SignInForm/SignInForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SignUpForm/SignUpForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Form/Form.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Form/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Modal/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/endpoints.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/secretApiKey.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/10.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/10.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/10.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/10.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/11.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/11.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/11.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/11.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/12.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/12.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/12.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/12.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/13.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/13.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/13.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/13.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/2.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/2.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/3.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/3.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/4.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/4.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/5.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/6.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/6.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/7.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/7.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/7.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/7.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/8.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/8.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/8.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/9.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/9.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/9.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/9.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Button/Button.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Button/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LandingPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Link/Link.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Link/Link.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Link/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Link/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logo/Logo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Logo/Logo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logo/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Logo/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Modal/Modal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SignInPage/SignInPage.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Spinner/Spinner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Spinner/Spinner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Spinner/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Spinner/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MapContainer/MapContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MapContainer/MapContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/js/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -101,16 +45,16 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+            <state relative-caret-position="150">
+              <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.eslintignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
@@ -201,7 +145,6 @@
         <option value="$PROJECT_DIR$/src/components/Button/index.jsx" />
         <option value="$PROJECT_DIR$/src/constants/routes.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/Header/Header.jsx" />
         <option value="$PROJECT_DIR$/src/components/Header/index.jsx" />
         <option value="$PROJECT_DIR$/src/containers/AuthModals/AuthModals.js" />
@@ -217,6 +160,7 @@
         <option value="$PROJECT_DIR$/src/components/SignUpModal/SignUpModal.jsx" />
         <option value="$PROJECT_DIR$/src/components/AuthModals/AuthModals.js" />
         <option value="$PROJECT_DIR$/.eslintignore" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -434,12 +378,12 @@
       <workItem from="1562315208082" duration="1269000" />
       <workItem from="1562328169673" duration="13000" />
       <workItem from="1562576380712" duration="1946000" />
-      <workItem from="1562590708525" duration="2692000" />
+      <workItem from="1562590708525" duration="2929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145953000" />
+    <option name="totallyTimeSpent" value="146190000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -872,17 +816,17 @@
     <entry file="file://$PROJECT_DIR$/stats.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.eslintignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
         </state>
       </provider>
     </entry>
