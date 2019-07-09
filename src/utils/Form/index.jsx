@@ -1,24 +1,16 @@
-import React, { Component } from "react";
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import React from "react";
+import { Formik } from "formik";
 import PropTypes from "prop-types";
 import axios from "axios";
 
-import { SIGN_UP_URL } from "../endpoints";
-import Button from "../Button";
+import { Form, Input } from "./Form";
 
 const FormTemplate = props => {
+  const { initialValues, generateAxiosObject, fields } = props;
+
   const onSubmit = (values, actions) => {
     axios({
-      method: "POST",
-      url: SIGN_UP_URL,
-      data: {
-        email: values.email,
-        password: values.password,
-        returnSecureToken: true
-      },
-      header: {
-        "Content-Type": "application/json"
-      }
+      ...generateAxiosObject(values)
     }).then(
       response => {
         actions.setSubmitting(false);
@@ -33,21 +25,27 @@ const FormTemplate = props => {
     );
   };
 
-  const { initialValues } = props;
-
   return (
     <Formik
       initialValues={initialValues}
-      onSubmit={this.onSubmit}
-      render={({ errors, status, touched, isSubmitting }) => (
-        <Form>
-          <Field type="email" name="email" />
-          <ErrorMessage name="email" component="div" />
-          <Field type="password" name="password" />
-          <ErrorMessage name="email" component="div" />
-          <Field type="confirmPassword" name="confirmPassword" />
-          <ErrorMessage name="email" component="div" />
-          <Button title='Submit' action='submit' />
+      onSubmit={onSubmit}
+      render={(
+        touched,
+        errors,
+        values,
+        handleChange,
+        handleBlur,
+        handleSubmit
+      ) => (
+        <Form onSubmit={handleSubmit}>
+          {fields.map(field => (
+            <Input
+              key={field.name}
+              type={field.type}
+              name={field.name}
+              placeholder={field.placeholder}
+            />
+          ))}
         </Form>
       )}
     />
@@ -55,7 +53,10 @@ const FormTemplate = props => {
 };
 
 FormTemplate.propTypes = {
-  initialValues: PropTypes.object
+  initialValues: PropTypes.object,
+  url: PropTypes.string,
+  generateAxiosObject: PropTypes.func,
+  fields: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default FormTemplate;

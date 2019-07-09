@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import Button from "../../utils/Button";
 import Modal from "../../utils/Modal";
+import SignUpForm from "../SignUpForm/SignUpForm";
+import SignInForm from "../SignInForm/SignInForm";
 
 class AuthModals extends Component {
   state = {
@@ -16,6 +18,8 @@ class AuthModals extends Component {
   };
 
   render() {
+    const { signUp, signIn } = this.state;
+
     return (
       <div>
         <Button
@@ -29,17 +33,22 @@ class AuthModals extends Component {
           title="Sign up"
         />
         <Modal
-          visible={this.state.signIn}
+          visible={signIn}
           title="Sign in"
+          body={<SignInForm />}
           footer={
             <Button title="Close" action={() => this.toggleModal("signIn")} />
           }
         />
         <Modal
-          visible={this.state.signUp}
+          visible={signUp}
           title="Sign up"
+          body={<SignUpForm />}
           footer={
-            <Button title="Close" action={() => this.toggleModal("signUp")} />
+            <div>
+              <Button title="Submit" action="submit" />
+              <Button title="Close" action={() => this.toggleModal("signUp")} />
+            </div>
           }
         />
       </div>
