@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import FormTemplate from "../../utils/Form";
 import { SIGN_UP_URL } from "../../utils/endpoints";
+import { signUpSchema } from "../../utils/validation";
 
 class SignUpForm extends Component {
   state = {
@@ -29,8 +30,8 @@ class SignUpForm extends Component {
 
   fieldsConfig = [
     { type: "text", name: "email", placeholder: "Email" },
-    { type: "pass", name: "password", placeholder: "Password" },
-    { type: "pass", name: "confirmPassword", placeholder: "Confirm password" }
+    { type: "password", name: "password", placeholder: "Password" },
+    { type: "password", name: "confirmPassword", placeholder: "Confirm password" }
   ];
 
   render() {
@@ -40,6 +41,7 @@ class SignUpForm extends Component {
         initialValues={initialValues}
         generateAxiosObject={this.generateAxiosObject}
         fields={this.fieldsConfig}
+        validationSchema={signUpSchema}
       />
     );
   }

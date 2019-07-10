@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import FormTemplate from "../../utils/Form";
 import { SIGN_IN_URL } from "../../utils/endpoints";
+import { signInSchema } from "../../utils/validation";
 
 class SignInForm extends Component {
   state = {
@@ -38,6 +39,7 @@ class SignInForm extends Component {
         initialValues={initialValues}
         generateAxiosObject={this.generateAxiosObject}
         fields={this.fieldsConfig}
+        validationSchema={signInSchema}
       />
     );
   }

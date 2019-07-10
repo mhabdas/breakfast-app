@@ -6,7 +6,7 @@ import axios from "axios";
 import { Form, Input } from "./Form";
 
 const FormTemplate = props => {
-  const { initialValues, generateAxiosObject, fields } = props;
+  const { initialValues, generateAxiosObject, fields, validationSchema } = props;
 
   const onSubmit = (values, actions) => {
     axios({
@@ -26,29 +26,33 @@ const FormTemplate = props => {
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={onSubmit}
-      render={(
-        touched,
-        errors,
+    <Formik initialValues={initialValues}
+            onSubmit={onSubmit}
+            validationSchema={validationSchema}>
+      {({
         values,
         handleChange,
         handleBlur,
         handleSubmit
-      ) => (
-        <Form onSubmit={handleSubmit}>
-          {fields.map(field => (
-            <Input
-              key={field.name}
-              type={field.type}
-              name={field.name}
-              placeholder={field.placeholder}
-            />
-          ))}
-        </Form>
-      )}
-    />
+      }) => {
+        console.log(values);
+        return (
+          <Form onSubmit={handleSubmit}>
+            {fields.map(field => (
+              <Input
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values[field.name]}
+                key={field.name}
+                type={field.type}
+                name={field.name}
+                placeholder={field.placeholder}
+              />
+            ))}
+          </Form>
+        );
+      }}
+    </Formik>
   );
 };
 
@@ -56,7 +60,7 @@ FormTemplate.propTypes = {
   initialValues: PropTypes.object,
   url: PropTypes.string,
   generateAxiosObject: PropTypes.func,
-  fields: PropTypes.arrayOf(PropTypes.object),
+  fields: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default FormTemplate;

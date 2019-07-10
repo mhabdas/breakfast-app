@@ -37,7 +37,10 @@ class AuthModals extends Component {
           title="Sign in"
           body={<SignInForm />}
           footer={
-            <Button title="Close" action={() => this.toggleModal("signIn")} />
+            <div>
+              <Button title="Submit" action="submit" />
+              <Button title="Close" action={() => this.toggleModal("signIn")} />
+            </div>
           }
         />
         <Modal
