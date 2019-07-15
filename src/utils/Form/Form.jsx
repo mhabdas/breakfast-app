@@ -25,4 +25,10 @@ const Input = styled.input`
   }
 `;
 
-export { Form, Input };
+const Error = styled.div`
+  font-size: 0.75rem;
+  color: ${colors.accent};
+  margin-bottom: 0.5rem;
+`;
+
+export { Form, Input, Error };

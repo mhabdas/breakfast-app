@@ -1,34 +1,14 @@
 import React, { Suspense } from "react";
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
+const AppContainer = React.lazy(() =>
+  import("./components/AppContainer/AppContainer")
+);
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import * as ROUTES from './constants/routes';
-const LandingPage = React.lazy(() => import("./components/LandingPage"));
-
-// Main app container
-
-function App() {
-  return (
-    <div>
-      <Router>
-        <div>
-          <Suspense fallback={<div/>}>
-          <Route
-            exact
-            path={
-              process.env.NODE_ENV === 'development'
-                ? ROUTES.LANDING_DEV
-                : ROUTES.LANDING_PROD
-            }
-            component={LandingPage}
-          />
-          </Suspense>
-        </div>
-      </Router>
-    </div>
+document.addEventListener("DOMContentLoaded", () => {
+  ReactDOM.render(
+    <Suspense fallback={<div />}>
+      <AppContainer />
+    </Suspense>,
+    document.getElementById("app")
   );
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<App />, document.getElementById('app'));
 });

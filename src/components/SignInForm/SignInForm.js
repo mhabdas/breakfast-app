@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import FormTemplate from "../../utils/Form";
-import { SIGN_IN_URL } from "../../utils/endpoints";
 import { signInSchema } from "../../utils/validation";
 
 class SignInForm extends Component {
@@ -12,24 +11,24 @@ class SignInForm extends Component {
     }
   };
 
-  generateAxiosObject = values => {
-    return {
-      method: "POST",
-      url: SIGN_IN_URL,
-      data: {
-        email: values.email,
-        password: values.password,
-        returnSecureToken: true
-      },
-      header: {
-        "Content-Type": "application/json"
-      }
-    };
-  };
+  // generateAxiosObject = values => {
+  //   return {
+  //     method: "POST",
+  //     url: SIGN_IN_URL,
+  //     data: {
+  //       email: values.email,
+  //       password: values.password,
+  //       returnSecureToken: true
+  //     },
+  //     header: {
+  //       "Content-Type": "application/json"
+  //     }
+  //   };
+  // };
 
   fieldsConfig = [
     { type: "text", name: "email", placeholder: "Email" },
-    { type: "pass", name: "password", placeholder: "Password" },
+    { type: "password", name: "password", placeholder: "Password" },
   ];
 
   render() {

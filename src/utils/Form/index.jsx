@@ -1,17 +1,21 @@
 import React from "react";
 import { Formik } from "formik";
 import PropTypes from "prop-types";
-import axios from "axios";
 
-import { Form, Input } from "./Form";
+import { Error, Form, Input } from "./Form";
+import Button from "../Button";
 
 const FormTemplate = props => {
-  const { initialValues, generateAxiosObject, fields, validationSchema } = props;
+  const {
+    initialValues,
+    firebaseAction,
+    fields,
+    validationSchema,
+  } = props;
 
   const onSubmit = (values, actions) => {
-    axios({
-      ...generateAxiosObject(values)
-    }).then(
+    console.log(values);
+    firebaseAction(values).then(
       response => {
         actions.setSubmitting(false);
         console.log(response.data);
@@ -26,29 +30,37 @@ const FormTemplate = props => {
   };
 
   return (
-    <Formik initialValues={initialValues}
-            onSubmit={onSubmit}
-            validationSchema={validationSchema}>
+    <Formik
+      initialValues={initialValues}
+      onSubmit={onSubmit}
+      validationSchema={validationSchema}
+    >
       {({
         values,
         handleChange,
         handleBlur,
-        handleSubmit
+        handleSubmit,
+        errors,
+        touched
       }) => {
-        console.log(values);
         return (
           <Form onSubmit={handleSubmit}>
             {fields.map(field => (
-              <Input
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values[field.name]}
-                key={field.name}
-                type={field.type}
-                name={field.name}
-                placeholder={field.placeholder}
-              />
+              <div key={field.name}>
+                <Input
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values[field.name]}
+                  type={field.type}
+                  name={field.name}
+                  placeholder={field.placeholder}
+                />
+                {errors[field.name] && touched[field.name] ? (
+                  <Error>{errors[field.name]}</Error>
+                ) : null}
+              </div>
             ))}
+            <Button title="Submit" action="submit" />
           </Form>
         );
       }}
@@ -59,8 +71,9 @@ const FormTemplate = props => {
 FormTemplate.propTypes = {
   initialValues: PropTypes.object,
   url: PropTypes.string,
-  generateAxiosObject: PropTypes.func,
-  fields: PropTypes.arrayOf(PropTypes.object)
+  firebaseAction: PropTypes.func,
+  fields: PropTypes.arrayOf(PropTypes.object),
+  validationSchema: PropTypes.object
 };
 
 export default FormTemplate;

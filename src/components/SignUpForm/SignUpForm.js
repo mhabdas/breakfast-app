@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import FormTemplate from "../../utils/Form";
-import { SIGN_UP_URL } from "../../utils/endpoints";
 import { signUpSchema } from "../../utils/validation";
+import FirebaseContext from "../Firebase/context";
 
 class SignUpForm extends Component {
   state = {
@@ -13,36 +13,31 @@ class SignUpForm extends Component {
     }
   };
 
-  generateAxiosObject = values => {
-    return {
-      method: "POST",
-      url: SIGN_UP_URL,
-      data: {
-        email: values.email,
-        password: values.password,
-        returnSecureToken: true
-      },
-      header: {
-        "Content-Type": "application/json"
-      }
-    };
-  };
-
   fieldsConfig = [
     { type: "text", name: "email", placeholder: "Email" },
     { type: "password", name: "password", placeholder: "Password" },
-    { type: "password", name: "confirmPassword", placeholder: "Confirm password" }
+    {
+      type: "password",
+      name: "confirmPassword",
+      placeholder: "Confirm password"
+    }
   ];
 
   render() {
-    const { initialValues } = this.state;
+    const {
+      initialValues,
+      // firebase: { doCreateUserWithEmailAndPassword }
+    } = this.state;
     return (
-      <FormTemplate
+      <FirebaseContext.Consumer>
+        {firebase => <FormTemplate
         initialValues={initialValues}
-        generateAxiosObject={this.generateAxiosObject}
         fields={this.fieldsConfig}
         validationSchema={signUpSchema}
-      />
+        firebase={firebase}
+        // firebaseAction={doCreateUserWithEmailAndPassword}
+      />}
+      </FirebaseContext.Consumer>
     );
   }
 }
