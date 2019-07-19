@@ -153,6 +153,7 @@ class MapContainer extends Component {
           <Modal
             visible={visible}
             title={country}
+            closeModal={() => this.handleClose()}
             body={
               <div>
                 <h3>
@@ -174,7 +175,6 @@ class MapContainer extends Component {
                   }
                   title="Take a challenge"
                 />
-                <Button action={() => this.handleClose()} title="Close" />
               </div>
             }
           />

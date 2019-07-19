@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import FormTemplate from "../../utils/Form";
 import { signUpSchema } from "../../utils/validation";
-import FirebaseContext from "../Firebase/context";
 
 class SignUpForm extends Component {
   state = {
@@ -24,20 +23,14 @@ class SignUpForm extends Component {
   ];
 
   render() {
-    const {
-      initialValues,
-      // firebase: { doCreateUserWithEmailAndPassword }
-    } = this.state;
+    const { initialValues } = this.state;
     return (
-      <FirebaseContext.Consumer>
-        {firebase => <FormTemplate
+      <FormTemplate
         initialValues={initialValues}
         fields={this.fieldsConfig}
         validationSchema={signUpSchema}
-        firebase={firebase}
-        // firebaseAction={doCreateUserWithEmailAndPassword}
-      />}
-      </FirebaseContext.Consumer>
+        {...this.props}
+      />
     );
   }
 }

@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-expressions */
-import { injectGlobal } from 'styled-components';
+import { injectGlobal } from "styled-components";
 
 // Colors
 const colors = {
-  light: '#e8edf3',
-  accent: '#e05323',
-  dark: '#22264b',
-  secondary: '#e05323',
+  light: "#e8edf3",
+  accent: "#e05323",
+  dark: "#22264b",
+  secondary: "#e05323"
 };
 
 // CSS Styles (with styled-utils)
@@ -56,6 +56,25 @@ body {
     opacity: 1;
     transition: opacity .5s ease-in;
   }
+  
+.close-icon {
+  color: ${colors.accent};
+  width: 35px;
+  height: 35px;
+}
+  
+.close-button {
+  display: flex; 
+  justify-content: flex-end; 
+  width: 100%;
+  
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+}
 `;
 
 export default colors;

@@ -8,23 +8,22 @@ import Button from "../Button";
 const FormTemplate = props => {
   const {
     initialValues,
-    firebaseAction,
     fields,
     validationSchema,
+    firebase: { doCreateUserWithEmailAndPassword }
   } = props;
 
   const onSubmit = (values, actions) => {
-    console.log(values);
-    firebaseAction(values).then(
+    doCreateUserWithEmailAndPassword(values).then(
       response => {
         actions.setSubmitting(false);
         console.log(response.data);
       },
       error => {
         actions.setSubmitting(false);
-        actions.setErrors(error.response.data.error);
-        actions.setStatus({ msg: "Error" });
-        console.log(error.response.data.error);
+        actions.setErrors(error.message);
+        actions.setStatus({ msg: error.message });
+        console.log(error.message);
       }
     );
   };
@@ -73,7 +72,8 @@ FormTemplate.propTypes = {
   url: PropTypes.string,
   firebaseAction: PropTypes.func,
   fields: PropTypes.arrayOf(PropTypes.object),
-  validationSchema: PropTypes.object
+  validationSchema: PropTypes.object,
+  firebase: PropTypes.object
 };
 
 export default FormTemplate;

@@ -18,9 +18,8 @@ const ModalWindow = styled.div`
   background-color: whitesmoke;
   border-radius: 5px;
   max-width: 500px;
-  min-height: 300px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 0.5rem 0.5rem 2rem 0.5rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -40,6 +39,8 @@ const ModalWindow = styled.div`
   p {
     color: #3d5a80;
     padding-bottom: 0.5rem;
+    max-width: 80%;
+    margin: 0 auto;
 
     &:last-of-type {
       font-size: 0.75rem;

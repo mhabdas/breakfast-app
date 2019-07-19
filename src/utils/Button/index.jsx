@@ -13,7 +13,7 @@ const Button = ({ action, title, large, dataAttr }) => (
 );
 
 Button.propTypes = {
-  action: PropTypes.func.isRequired,
+  action: PropTypes.oneOfType([PropTypes.func, PropTypes.string]).isRequired,
   title: PropTypes.string.isRequired,
   large: PropTypes.bool,
   dataAttr: PropTypes.number

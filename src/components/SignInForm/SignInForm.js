@@ -7,28 +7,13 @@ class SignInForm extends Component {
   state = {
     initialValues: {
       email: "",
-      password: "",
+      password: ""
     }
   };
 
-  // generateAxiosObject = values => {
-  //   return {
-  //     method: "POST",
-  //     url: SIGN_IN_URL,
-  //     data: {
-  //       email: values.email,
-  //       password: values.password,
-  //       returnSecureToken: true
-  //     },
-  //     header: {
-  //       "Content-Type": "application/json"
-  //     }
-  //   };
-  // };
-
   fieldsConfig = [
     { type: "text", name: "email", placeholder: "Email" },
-    { type: "password", name: "password", placeholder: "Password" },
+    { type: "password", name: "password", placeholder: "Password" }
   ];
 
   render() {
@@ -36,9 +21,9 @@ class SignInForm extends Component {
     return (
       <FormTemplate
         initialValues={initialValues}
-        generateAxiosObject={this.generateAxiosObject}
         fields={this.fieldsConfig}
         validationSchema={signInSchema}
+        {...this.props}
       />
     );
   }
