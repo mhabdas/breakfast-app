@@ -1,19 +1,8 @@
 /* eslint-disable no-unused-expressions */
 import React from "react";
 import PropTypes from "prop-types";
-import { IconContext } from "react-icons";
-import { IoIosClose } from "react-icons/io";
 import StyledModal from "./Modal";
-
-const CloseIcon = ({ closeModal }) => (
-  <IconContext.Provider value={{ className: "close-icon" }}>
-    <div className="close-button">
-      <button onClick={closeModal}>
-        <IoIosClose />
-      </button>
-    </div>
-  </IconContext.Provider>
-);
+const CloseIcon = React.lazy(() => import("./CloseIcon"));
 
 const Modal = props => {
   const { visible, title, body, footer, closeModal } = props;
@@ -25,10 +14,6 @@ const Modal = props => {
       <div className="modal-footer">{footer}</div>
     </StyledModal>
   );
-};
-
-CloseIcon.propTypes = {
-  closeModal: PropTypes.func
 };
 
 Modal.propTypes = {

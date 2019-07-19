@@ -5,7 +5,7 @@ const App = React.lazy(() => import("../App/App"));
 
 const AppContainer = () => (
   <FirebaseContext.Provider value={new Firebase()}>
-      <App />
+    <App />
   </FirebaseContext.Provider>
 );
 

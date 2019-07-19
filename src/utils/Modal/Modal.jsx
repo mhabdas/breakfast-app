@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import React from 'react';
-import PropTypes from 'prop-types';
+import styled from "styled-components";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import React from "react";
+import PropTypes from "prop-types";
 
 const ModalBackground = styled.div`
   position: fixed;
@@ -55,32 +55,31 @@ const ModalWindow = styled.div`
   }
 `;
 
-const StyledModal = (props) => {
-  const {
-    children,
-    visible,
-  } = props;
-  return visible && (
-  <ModalBackground>
-    <ReactCSSTransitionGroup
-      transitionName="fade"
-      transitionAppear
-      transitionAppearTimeout={500}
-      transitionEnter={false}
-      transitionLeave
-      transitionLeaveTimeout={500}
-    >
-      <ModalWindow>{children}</ModalWindow>
-    </ReactCSSTransitionGroup>
-  </ModalBackground>
+const StyledModal = props => {
+  const { children, visible } = props;
+  return (
+    visible && (
+      <ModalBackground>
+        <ReactCSSTransitionGroup
+          transitionName="fade"
+          transitionAppear
+          transitionAppearTimeout={500}
+          transitionEnter={false}
+          transitionLeave
+          transitionLeaveTimeout={500}
+        >
+          <ModalWindow>{children}</ModalWindow>
+        </ReactCSSTransitionGroup>
+      </ModalBackground>
+    )
   );
 };
 
 StyledModal.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
+    PropTypes.node
+  ]).isRequired
 };
 
 export default StyledModal;

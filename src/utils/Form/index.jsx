@@ -21,9 +21,7 @@ const FormTemplate = props => {
       },
       error => {
         actions.setSubmitting(false);
-        actions.setErrors(error.message);
         actions.setStatus({ msg: error.message });
-        console.log(error.message);
       }
     );
   };
@@ -40,7 +38,8 @@ const FormTemplate = props => {
         handleBlur,
         handleSubmit,
         errors,
-        touched
+        touched,
+        status
       }) => {
         return (
           <Form onSubmit={handleSubmit}>
@@ -59,6 +58,7 @@ const FormTemplate = props => {
                 ) : null}
               </div>
             ))}
+            {status && status.msg && <Error>{status.msg}</Error>}
             <Button title="Submit" action="submit" />
           </Form>
         );
