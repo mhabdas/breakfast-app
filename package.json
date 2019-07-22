@@ -49,6 +49,7 @@
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
+    "react-ionicons": "^3.0.1",
     "react-router-dom": "^5.0.1",
     "react-simple-maps": "^0.8.4",
     "react-spinners": "^0.5.4",

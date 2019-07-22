@@ -61,6 +61,7 @@ body {
   color: ${colors.accent};
   width: 35px;
   height: 35px;
+  font-weight: 600;
 }
   
 .close-button {

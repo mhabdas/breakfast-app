@@ -1,16 +1,14 @@
-import { IconContext } from "react-icons";
-import { IoIosClose } from "react-icons/io";
 import React from "react";
 import PropTypes from "prop-types";
+import IosClose from "react-ionicons/lib/IosClose";
+import colors from '../../styles/globals';
 
 const CloseIcon = ({ closeModal }) => (
-  <IconContext.Provider value={{ className: "close-icon" }}>
-    <div className="close-button">
-      <button onClick={closeModal}>
-        <IoIosClose />
-      </button>
-    </div>
-  </IconContext.Provider>
+  <div className="close-button">
+    <button onClick={closeModal}>
+      <IosClose className="close-icon" color={colors.accent} />
+    </button>
+  </div>
 );
 
 CloseIcon.propTypes = {
