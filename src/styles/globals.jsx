@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-import { injectGlobal } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 // Colors
 const colors = {
@@ -10,7 +10,7 @@ const colors = {
 };
 
 // CSS Styles (with styled-utils)
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
 * {
   box-sizing: border-box;
   font-family: Work Sans;
@@ -78,4 +78,4 @@ body {
 }
 `;
 
-export default colors;
+export { colors, GlobalStyle };

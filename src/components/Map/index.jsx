@@ -6,7 +6,7 @@ import {
 } from 'react-simple-maps';
 
 import PropTypes from 'prop-types';
-import colors from '../../styles/globals';
+import {colors} from '../../styles/globals';
 import React from "react";
 import StyledMap from "./Map";
 

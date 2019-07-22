@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import StyledHeader from "./Header";
 const Logo = React.lazy(() => import("../../utils/Logo"));
 import logoPic from "../../img/breakfast.svg";
-const AuthModals = React.lazy(() => import("../AuthModals/AuthModals"));
+import AuthModals from "../AuthModals/AuthModals";
 
 const Header = () => {
   return (

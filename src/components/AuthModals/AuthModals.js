@@ -1,10 +1,10 @@
 import React, { Component, Suspense } from "react";
 import SignUpForm from "../SignUpForm/SignUpForm";
 import FirebaseContext from "../Firebase/context";
+import SignInForm from "../SignInForm/SignInForm";
+import Modal from "../../utils/Modal";
 
 const Button = React.lazy(() => import("../../utils/Button"));
-const Modal = React.lazy(() => import("../../utils/Modal"));
-const SignInForm = React.lazy(() => import("../SignInForm/SignInForm"));
 
 class AuthModals extends Component {
   state = {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from '../../styles/globals';
+import {colors} from '../../styles/globals';
 
 const StyledMap = styled.div`
   border: 2px solid ${colors.dark};

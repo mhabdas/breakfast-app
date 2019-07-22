@@ -5,7 +5,6 @@ import * as ROUTES from "../../constants/routes";
 const LandingPage = React.lazy(() => import("../../components/LandingPage"));
 
 const App = () => {
-  console.log(process.env.API_KEY);
   return (
     <div>
       <Router>

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import colors from '../../styles/globals';
+import {colors} from '../../styles/globals';
 
 const StyledButton = styled.button`
   border: 2px solid ${colors.dark};

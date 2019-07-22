@@ -1,6 +1,6 @@
 
 import styled from 'styled-components';
-import colors from '../../styles/globals';
+import {colors} from '../../styles/globals';
 
 const StyledHeader = styled.header`
   background-color: ${colors.dark};

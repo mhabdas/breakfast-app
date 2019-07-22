@@ -1,6 +1,6 @@
 import { SyncLoader } from "react-spinners";
 import React from "react";
-import colors from "../../styles/globals";
+import {colors} from "../../styles/globals";
 import StyledSpinner from './Spinner';
 
 const Spinner = () => {

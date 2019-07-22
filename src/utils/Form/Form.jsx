@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from '../../styles/globals';
+import { colors } from "../../styles/globals";
 
 const Form = styled.form`
   width: 300px;
@@ -18,10 +18,10 @@ const Input = styled.input`
   padding: 0.25rem;
   color: ${colors.dark};
   font-size: 1rem;
-  
+
   &:focus {
-      border: 2px solid ${colors.accent};
-      outline: none;
+    border: 2px solid ${colors.accent};
+    outline: none;
   }
 `;
 
