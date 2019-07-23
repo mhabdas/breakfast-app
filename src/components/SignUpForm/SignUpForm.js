@@ -22,13 +22,22 @@ class SignUpForm extends Component {
     }
   ];
 
+  onSuccessAction = (response) => {
+    console.log(response);
+  };
+
   render() {
     const { initialValues } = this.state;
+    const {
+      firebase: { doCreateUserWithEmailAndPassword }
+    } = this.props;
     return (
       <FormTemplate
         initialValues={initialValues}
         fields={this.fieldsConfig}
         validationSchema={signUpSchema}
+        firebaseAction={doCreateUserWithEmailAndPassword}
+        onSuccessAction={this.onSuccessAction}
         {...this.props}
       />
     );
@@ -36,7 +45,8 @@ class SignUpForm extends Component {
 }
 
 SignUpForm.propTypes = {
-  initialValues: PropTypes.object
+  initialValues: PropTypes.object,
+  firebase: PropTypes.object,
 };
 
 export default SignUpForm;

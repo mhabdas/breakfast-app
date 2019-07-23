@@ -10,14 +10,15 @@ const FormTemplate = props => {
     initialValues,
     fields,
     validationSchema,
-    firebase: { doCreateUserWithEmailAndPassword }
+    firebaseAction,
+    onSuccessAction
   } = props;
 
   const onSubmit = (values, actions) => {
-    doCreateUserWithEmailAndPassword(values).then(
-      response => {
+    firebaseAction(values).then(
+      (response) => {
         actions.setSubmitting(false);
-        console.log(response.data);
+        onSuccessAction && onSuccessAction(response);
       },
       error => {
         actions.setSubmitting(false);
@@ -73,7 +74,8 @@ FormTemplate.propTypes = {
   firebaseAction: PropTypes.func,
   fields: PropTypes.arrayOf(PropTypes.object),
   validationSchema: PropTypes.object,
-  firebase: PropTypes.object
+  firebase: PropTypes.object,
+  onSuccessAction: PropTypes.func
 };
 
 export default FormTemplate;

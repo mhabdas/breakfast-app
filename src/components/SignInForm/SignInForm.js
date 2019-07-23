@@ -16,13 +16,22 @@ class SignInForm extends Component {
     { type: "password", name: "password", placeholder: "Password" }
   ];
 
-  render() {
+  onSuccessAction = (response) => {
+    console.log(response);
+  };
+
+    render() {
     const { initialValues } = this.state;
+    const {
+      firebase: { doSignInWithEmailAndPassword }
+    } = this.props;
     return (
       <FormTemplate
         initialValues={initialValues}
         fields={this.fieldsConfig}
         validationSchema={signInSchema}
+        firebaseAction={doSignInWithEmailAndPassword}
+        onSuccessAction={this.onSuccessAction}
         {...this.props}
       />
     );
@@ -30,7 +39,8 @@ class SignInForm extends Component {
 }
 
 SignInForm.propTypes = {
-  initialValues: PropTypes.object
+  initialValues: PropTypes.object,
+  firebase: PropTypes.object
 };
 
 export default SignInForm;
