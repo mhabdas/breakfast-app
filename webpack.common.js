@@ -12,7 +12,7 @@ module.exports = {
         include: APP_DIR,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'stage-2', 'react'],
+          presets: ['@babel/env', '@babel/react'],
         },
       }, {
         test: /\.css$/,

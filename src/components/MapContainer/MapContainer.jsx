@@ -1,4 +1,5 @@
-import React, { Component, Suspense } from "react";
+import React, { Suspense, useState, useEffect, useCallback } from "react";
+import axios from "axios";
 
 const Button = React.lazy(() => import("../../utils/Button"));
 const Map = React.lazy(() => import("../Map"));
@@ -8,8 +9,6 @@ import { ButtonList } from "../../utils/Button/Button";
 import Spinner from "../../utils/Spinner";
 
 const initialState = {
-  country: "",
-  visible: false,
   breakfastName: "",
   description: "",
   img: "",
@@ -29,178 +28,163 @@ const initialZoom = {
   zoom: 1
 };
 
-class MapContainer extends Component {
-  state = {
-    data: null,
-    ...initialZoom,
-    ...initialState,
-    continents: [
-      { name: "Asia", coordinates: [103.8198, 15.3521] },
-      { name: "Africa", coordinates: [3.3792, 6.5244] },
-      { name: "Australia", coordinates: [151.2093, -33.8688] },
-      { name: "Europe", coordinates: [8.5417, 52.3769] },
-      { name: "North America", coordinates: [-122.4194, 37.7749] },
-      { name: "South America", coordinates: [-58.3816, -18.6037] }
-    ]
-  };
+const MapContainer = () => {
+  const [data, setData] = useState({ data: [] });
+  const [continents, setContinents] = useState([
+    { name: "Asia", coordinates: [103.8198, 15.3521] },
+    { name: "Africa", coordinates: [3.3792, 6.5244] },
+    { name: "Australia", coordinates: [151.2093, -33.8688] },
+    { name: "Europe", coordinates: [8.5417, 52.3769] },
+    { name: "North America", coordinates: [-122.4194, 37.7749] },
+    { name: "South America", coordinates: [-58.3816, -18.6037] }
+  ]);
+  const [visible, setVisible] = useState(false);
+  const [country, setCountry] = useState("");
+  const [breakfastByCountry, setBreakfastByCountry] = useState({
+    ...initialState
+  });
+  const [zoom, setZoom] = useState({ ...initialZoom });
 
-  componentDidMount() {
-    fetch(apiUrl)
-      .then(resp => resp.json())
-      .then(data => this.setState({ data: data.breakfast }))
-      .catch(err => err);
-  }
+  useEffect(() => {
+    let ignore = false;
 
-  getBreakfastData(resp) {
-    const { country } = this.state;
-    resp.forEach(element => {
+    async function fetchData() {
+      const result = await axios(apiUrl);
+      if (!ignore) setData(result.data);
+    }
+
+    fetchData();
+    return () => {
+      ignore = true;
+    };
+  }, []);
+
+  const getBreakfastData = () => {
+    data.breakfast.forEach(element => {
       if (element.name === country) {
-        this.setState({
-          breakfastName: element.breakfastName,
-          description: element.description,
-          img: element.img,
-          attr: element.attr,
-          info: ""
-        });
+        setBreakfastByCountry(...element);
       }
     });
-  }
-
-  handleToggle = () => {
-    const { visible } = this.state;
-    this.setState({
-      visible: !visible
-    });
   };
 
-  handleZoom = e => {
-    const { continents } = this.state;
+  useEffect(() => {
+    data.breakfast && country !== "" &&
+      data.breakfast.forEach(element => {
+        if (element.name === country) {
+          setBreakfastByCountry({ ...element });
+        }
+      });
+  }, [country, data]);
+
+  const handleToggle = () => {
+    setVisible(!visible);
+  };
+
+  const handleZoom = e => {
     const contId = e.target.getAttribute("data-attr");
     const cont = continents[contId];
     if (cont.name === "Europe") {
-      this.setState({
+      setZoom({
         center: cont.coordinates,
         zoom: 3.5
       });
     } else {
-      this.setState({
+      setZoom({
         center: cont.coordinates,
         zoom: 2
       });
     }
   };
 
-  handleReset = () => {
-    this.setState({
-      ...initialZoom
-    });
+  const handleReset = () => {
+    setZoom({ ...initialZoom });
   };
 
-  handleClick = geography => {
-    const { data } = this.state;
+  const handleClick = geography => {
     const countryName = geography.properties.NAME;
-    this.setState(
-      {
-        country: countryName
-      },
-      () => {
-        this.getBreakfastData(data);
-        this.handleToggle();
-      }
-    );
+    setCountry(countryName);
+    getBreakfastData(countryName);
+    handleToggle();
   };
 
-  handleClose = () => {
-    this.handleToggle();
-    this.setState({
-      ...initialState
-    });
+  const handleClose = () => {
+    handleToggle();
+    setBreakfastByCountry({ ...initialState });
+    setCountry("");
   };
 
-  handleRandom = () => {
-    const { data } = this.state;
-    const random = data[Math.floor(Math.random() * data.length)];
+  const handleRandom = () => {
+    const random =
+      data.breakfast &&
+      data.breakfast[Math.floor(Math.random() * data.breakfast.length)];
     const countryName = random.name;
-    this.setState(
-      {
-        country: countryName
-      },
-      () => {
-        this.getBreakfastData(data);
-        this.handleToggle();
-      }
-    );
+    setCountry(countryName);
+    getBreakfastData(countryName);
+    handleToggle();
   };
 
-  render() {
-    const {
-      country,
-      breakfastName,
-      description,
-      img,
-      attr,
-      info,
-      alt,
-      center,
-      zoom,
-      continents,
-      visible,
-      data
-    } = this.state;
-    return (
-      <MainSection>
-        <Suspense fallback={<Spinner />}>
-          <Modal
-            visible={visible}
-            title={country}
-            closeModal={() => this.handleClose()}
-            body={
-              <div>
-                <h3>
-                  {breakfastName}
-                  {info}
-                </h3>
-                <p>{description}</p>
-                <img src={img} alt={alt} />
-                <p>{attr}</p>
-              </div>
-            }
-            footer={
-              <div>
-                <Button
-                  action={() =>
-                    window.open(
-                      `https://www.google.pl/search?q=${breakfastName}+recipe`
-                    )
-                  }
-                  title="Take a challenge"
-                />
-              </div>
-            }
-          />
-        </Suspense>
-        <Map
-          data={data}
-          center={center}
-          geoUrl={geoUrl}
-          zoom={zoom}
-          handleClick={this.handleClick}
+  const {
+    breakfastName,
+    description,
+    img,
+    attr,
+    info,
+    alt,
+    center
+  } = breakfastByCountry;
+  return (
+    <MainSection>
+      <Suspense fallback={<div />}>
+        <Modal
+          visible={visible}
+          title={country}
+          closeModal={() => handleClose()}
+          body={
+            <div>
+              <h3>
+                {breakfastName}
+                {info}
+              </h3>
+              <p>{description}</p>
+              <img src={img} alt={alt} />
+              <p>{attr}</p>
+            </div>
+          }
+          footer={
+            <div>
+              <Button
+                action={() =>
+                  window.open(
+                    `https://www.google.pl/search?q=${breakfastName}+recipe`
+                  )
+                }
+                title="Take a challenge"
+              />
+            </div>
+          }
         />
-        <ButtonList>
-          {continents.map((cont, i) => (
-            <Button
-              key={cont.name}
-              action={this.handleZoom}
-              dataAttr={i}
-              title={cont.name}
-            />
-          ))}
-          <Button action={this.handleReset} title="Reset" />
-          <Button action={this.handleRandom} title="Random" />
-        </ButtonList>
-      </MainSection>
-    );
-  }
-}
+      </Suspense>
+      <Map
+        data={data.breakfast}
+        center={zoom.center}
+        geoUrl={geoUrl}
+        zoom={zoom.zoom}
+        handleClick={handleClick}
+      />
+      <ButtonList>
+        {continents.map((cont, i) => (
+          <Button
+            key={cont.name}
+            action={handleZoom}
+            dataAttr={i}
+            title={cont.name}
+          />
+        ))}
+        <Button action={handleReset} title="Reset" />
+        <Button action={handleRandom} title="Random" />
+      </ButtonList>
+    </MainSection>
+  );
+};
 
 export default MapContainer;
