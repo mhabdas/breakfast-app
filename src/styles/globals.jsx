@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-expressions */
 import { createGlobalStyle } from "styled-components";
+import WorkSans from "../fonts/WorkSans-Regular.ttf"
+import WorkSansBold from "../fonts/WorkSans-Bold.ttf"
 
 // Colors
 const colors = {
@@ -11,6 +13,17 @@ const colors = {
 
 // CSS Styles (with styled-utils)
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: WorkSans;
+    src: url(${WorkSans});
+  }
+  
+  @font-face {
+    font-family: WorkSans;
+    src: url(${WorkSansBold});
+    font-weight: bold;
+  }
+  
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,8 +37,7 @@ html {
 }
 
 body {
-  @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
-   font-family: 'Work Sans', sans-serif;
+   font-family: WorkSans, sans-serif;
    background-color: ${colors.light};
    min-height: 100vh;
    margin:0;
