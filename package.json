@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --env.development --content-base ./ --port 9966 --hot --config ./webpack.dev.js --mode development",
     "build": "webpack --env.production --config ./webpack.prod.js --mode production",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "deploy": "git push origin `git subtree split --prefix dist master`:gh-pages --force"
   },
   "author": "Marta Habdas",
   "license": "ISC",
