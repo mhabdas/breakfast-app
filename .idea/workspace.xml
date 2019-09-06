@@ -2,62 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50607d39-0023-4953-96ca-9b5980729eff" name="Default Changelist" comment="ł">
-      <change afterPath="$PROJECT_DIR$/src/components/BreakfastModal/BreakfastModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Button/ButtonList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/10.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/10.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/11.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/11.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/12.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/12.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/13.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/13.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/14.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/14.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/15.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/15.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/16.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/16.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/17.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/17.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/18.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/18.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/19.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/19.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/2.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/20.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/20.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/21.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/21.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/3.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/4.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/7.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/8.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/9.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/c752d8b1b96dd4e6aa2c79fdfa2b4e3e.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppContainer/AppContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppContainer/AppContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AuthModals/AuthModals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthModals/AuthModals.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Firebase/Firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Firebase/Firebase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Firebase/context.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Firebase/context.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Map/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Map/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MapContainer/MapContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MapContainer/MapContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SignInForm/SignInForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignInForm/SignInForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SignUpForm/SignUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignUpForm/SignUpForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Button/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Button/Button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Button/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Button/index.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +57,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -258,7 +212,8 @@
       <workItem from="1564739730480" duration="727000" />
       <workItem from="1564747898328" duration="598000" />
       <workItem from="1567691297498" duration="3697000" />
-      <workItem from="1567755518689" duration="3842000" />
+      <workItem from="1567755518689" duration="5487000" />
+      <workItem from="1567766981178" duration="142000" />
     </task>
     <servers />
   </component>

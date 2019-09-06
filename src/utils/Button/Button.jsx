@@ -40,11 +40,4 @@ const StyledButton = styled.button`
     `}
 `;
 
-const ButtonList = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-bottom: 1rem;
-`;
-
-export { StyledButton, ButtonList };
+export default StyledButton;

@@ -42,8 +42,6 @@ const Map = (props) => {
     data, center, zoom, geoUrl, handleClick,
   } = props;
 
-  console.log(data);
-
   return (
     <StyledMap>
       <ComposableMap

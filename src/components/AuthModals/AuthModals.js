@@ -2,8 +2,8 @@ import React, { Component, Suspense } from "react";
 import SignUpForm from "../SignUpForm/SignUpForm";
 import SignInForm from "../SignInForm/SignInForm";
 import Modal from "../../utils/Modal";
+import Button from "../../utils/Button";
 
-const Button = React.lazy(() => import("../../utils/Button"));
 
 class AuthModals extends Component {
   state = {

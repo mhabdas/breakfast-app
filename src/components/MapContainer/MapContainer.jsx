@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 const Button = React.lazy(() => import("../../utils/Button"));
 const Map = React.lazy(() => import("../Map"));
 const MainSection = React.lazy(() => import("../MainSection"));
-import { ButtonList } from "../../utils/Button/Button";
-import BreakfastModal from "../BreakfastModal/BreakfastModal";
+const BreakfastModal = React.lazy(() => import("../BreakfastModal/BreakfastModal"));
 import { withFirebase } from "../Firebase/context";
+import ButtonList from "../../utils/Button/ButtonList";
 
 const initialState = {
   breakfastName: "",
@@ -102,13 +102,15 @@ const MapContainerBase = props => {
 
   return (
     <MainSection>
+      <Suspense fallback={<div />}>
       <BreakfastModal
         breakfastByCountry={breakfastByCountry}
         visible={visible}
         handleClose={handleClose}
         country={country}
       />
-      <Map
+      </Suspense>
+        <Map
         data={data}
         center={zoom.center}
         geoUrl={geoUrl}
@@ -116,6 +118,7 @@ const MapContainerBase = props => {
         handleClick={handleClick}
         loading={loading}
       />
+      <Suspense fallback={<div />}>
       <ButtonList>
         {continents.map((cont, i) => (
           <Button
@@ -128,6 +131,7 @@ const MapContainerBase = props => {
         <Button action={handleReset} title="Reset" />
         <Button action={handleRandom} title="Random" />
       </ButtonList>
+      </Suspense>
     </MainSection>
   );
 };
