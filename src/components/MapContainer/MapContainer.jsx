@@ -1,12 +1,10 @@
-import React, { Suspense, useState, useEffect, useCallback } from "react";
-import axios from "axios";
-
+import React, { useState, useEffect } from "react";
 const Button = React.lazy(() => import("../../utils/Button"));
 const Map = React.lazy(() => import("../Map"));
-const Modal = React.lazy(() => import("../../utils/Modal"));
 const MainSection = React.lazy(() => import("../MainSection"));
 import { ButtonList } from "../../utils/Button/Button";
-import Spinner from "../../utils/Spinner";
+import BreakfastModal from "../BreakfastModal/BreakfastModal";
+import { withFirebase } from "../Firebase/context";
 
 const initialState = {
   breakfastName: "",
@@ -20,17 +18,16 @@ const initialState = {
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json";
-const apiUrl =
-  "https://codekingdom.pl/projects/coderslab-workshops/international-breakfast/";
 
 const initialZoom = {
   center: [0, 20],
   zoom: 1
 };
 
-const MapContainer = () => {
-  const [data, setData] = useState({ data: [] });
-  const [continents, setContinents] = useState([
+const MapContainerBase = props => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [continents] = useState([
     { name: "Asia", coordinates: [103.8198, 15.3521] },
     { name: "Africa", coordinates: [3.3792, 6.5244] },
     { name: "Australia", coordinates: [151.2093, -33.8688] },
@@ -46,35 +43,16 @@ const MapContainer = () => {
   const [zoom, setZoom] = useState({ ...initialZoom });
 
   useEffect(() => {
-    let ignore = false;
-
-    async function fetchData() {
-      const result = await axios(apiUrl);
-      if (!ignore) setData(result.data);
-    }
-
-    fetchData();
-    return () => {
-      ignore = true;
-    };
-  }, []);
-
-  const getBreakfastData = () => {
-    data.breakfast.forEach(element => {
-      if (element.name === country) {
-        setBreakfastByCountry(...element);
-      }
+    props.firebase.breakfast().on("value", snapshot => {
+      setLoading(true);
+      setData(snapshot.val());
+      setLoading(false);
     });
-  };
+  }, [props.firebase]);
 
-  useEffect(() => {
-    data.breakfast && country !== "" &&
-      data.breakfast.forEach(element => {
-        if (element.name === country) {
-          setBreakfastByCountry({ ...element });
-        }
-      });
-  }, [country, data]);
+  const getBreakfastData = (country) => {
+    setBreakfastByCountry(data[country]);
+  };
 
   const handleToggle = () => {
     setVisible(!visible);
@@ -114,62 +92,29 @@ const MapContainer = () => {
   };
 
   const handleRandom = () => {
-    const random =
-      data.breakfast &&
-      data.breakfast[Math.floor(Math.random() * data.breakfast.length)];
-    const countryName = random.name;
+    const keys = data && Object.keys(data);
+    const countryName =  keys &&
+      keys[Math.floor(Math.random() * keys.length)];
     setCountry(countryName);
     getBreakfastData(countryName);
     handleToggle();
   };
 
-  const {
-    breakfastName,
-    description,
-    img,
-    attr,
-    info,
-    alt,
-    center
-  } = breakfastByCountry;
   return (
     <MainSection>
-      <Suspense fallback={<div />}>
-        <Modal
-          visible={visible}
-          title={country}
-          closeModal={() => handleClose()}
-          body={
-            <div>
-              <h3>
-                {breakfastName}
-                {info}
-              </h3>
-              <p>{description}</p>
-              <img src={img} alt={alt} />
-              <p>{attr}</p>
-            </div>
-          }
-          footer={
-            <div>
-              <Button
-                action={() =>
-                  window.open(
-                    `https://www.google.pl/search?q=${breakfastName}+recipe`
-                  )
-                }
-                title="Take a challenge"
-              />
-            </div>
-          }
-        />
-      </Suspense>
+      <BreakfastModal
+        breakfastByCountry={breakfastByCountry}
+        visible={visible}
+        handleClose={handleClose}
+        country={country}
+      />
       <Map
-        data={data.breakfast}
+        data={data}
         center={zoom.center}
         geoUrl={geoUrl}
         zoom={zoom.zoom}
         handleClick={handleClick}
+        loading={loading}
       />
       <ButtonList>
         {continents.map((cont, i) => (
@@ -186,5 +131,7 @@ const MapContainer = () => {
     </MainSection>
   );
 };
+
+const MapContainer = withFirebase(MapContainerBase);
 
 export default MapContainer;

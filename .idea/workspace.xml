@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50607d39-0023-4953-96ca-9b5980729eff" name="Default Changelist" comment="ł">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BreakfastModal/BreakfastModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/0.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/0.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/1.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/10.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/10.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/11.js" beforeDir="false" />
@@ -34,8 +32,6 @@
       <change beforePath="$PROJECT_DIR$/dist/20.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/21.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/21.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/22.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/22.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/3.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/3.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/4.js" beforeDir="false" />
@@ -54,12 +50,14 @@
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/main.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppContainer/AppContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppContainer/AppContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AuthModals/AuthModals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthModals/AuthModals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Firebase/Firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Firebase/Firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Firebase/context.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Firebase/context.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Map/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Map/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MapContainer/MapContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MapContainer/MapContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SignInForm/SignInForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignInForm/SignInForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SignUpForm/SignUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignUpForm/SignUpForm.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -252,7 +250,15 @@
       <workItem from="1564475621481" duration="2015000" />
       <workItem from="1564485936724" duration="3751000" />
       <workItem from="1564494787916" duration="515000" />
-      <workItem from="1564495341244" duration="1273000" />
+      <workItem from="1564495341244" duration="1624000" />
+      <workItem from="1564567669393" duration="994000" />
+      <workItem from="1564578963254" duration="1701000" />
+      <workItem from="1564648296467" duration="2381000" />
+      <workItem from="1564734238588" duration="2355000" />
+      <workItem from="1564739730480" duration="727000" />
+      <workItem from="1564747898328" duration="598000" />
+      <workItem from="1567691297498" duration="3697000" />
+      <workItem from="1567755518689" duration="3842000" />
     </task>
     <servers />
   </component>

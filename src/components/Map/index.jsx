@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import {colors} from '../../styles/globals';
 import React from "react";
 import StyledMap from "./Map";
+import Spinner from "../../utils/Spinner";
 
 const primaryMap = {
   fill: colors.secondary,
@@ -41,6 +42,8 @@ const Map = (props) => {
     data, center, zoom, geoUrl, handleClick,
   } = props;
 
+  console.log(data);
+
   return (
     <StyledMap>
       <ComposableMap
@@ -64,25 +67,21 @@ const Map = (props) => {
                   data-country={geography.properties.NAME}
                   projection={projection}
                   style={
-                      data
-                        .map(el => el.name)
-                        .includes(geography.properties.NAME)
-                        ? {
-                          default: { ...primaryMap },
-                          hover: { ...pressedMap },
-                          pressed: { ...pressedMap },
-                        }
-                        : {
-                          default: { ...secondaryMap },
-                          hover: { ...secondaryMap },
-                          pressed: { ...secondaryMap },
-                        }
-                    }
+                    data[geography.properties.NAME]
+                      ? {
+                        default: { ...primaryMap },
+                        hover: { ...pressedMap },
+                        pressed: { ...pressedMap },
+                      }
+                      : {
+                        default: { ...secondaryMap },
+                        hover: { ...secondaryMap },
+                        pressed: { ...secondaryMap },
+                      }
+                  }
                   onClick={
-                      data
-                        .map(el => el.name)
-                        .includes(geography.properties.NAME) && handleClick
-                    }
+                    data[geography.properties.NAME] && handleClick
+                  }
                   round
                 />
               ))
@@ -90,10 +89,7 @@ const Map = (props) => {
             </Geographies>
           </ZoomableGroup>
         ) : (
-          <div className="sk-double-bounce">
-            <div className="sk-child sk-double-bounce1" />
-            <div className="sk-child sk-double-bounce2" />
-          </div>
+          <Spinner />
         )}
       </ComposableMap>
     </StyledMap>
@@ -101,11 +97,12 @@ const Map = (props) => {
 };
 
 Map.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object),
+  data: PropTypes.objectOf(PropTypes.object),
   center: PropTypes.arrayOf(PropTypes.number).isRequired,
   zoom: PropTypes.number.isRequired,
   geoUrl: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 Map.defaultProps = {

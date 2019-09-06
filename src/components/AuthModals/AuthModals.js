@@ -1,6 +1,5 @@
 import React, { Component, Suspense } from "react";
 import SignUpForm from "../SignUpForm/SignUpForm";
-import FirebaseContext from "../Firebase/context";
 import SignInForm from "../SignInForm/SignInForm";
 import Modal from "../../utils/Modal";
 
@@ -37,21 +36,13 @@ class AuthModals extends Component {
             visible={signIn}
             closeModal={() => this.toggleModal("signIn")}
             title="Sign in"
-            body={
-              <FirebaseContext.Consumer>
-                {firebase => <SignInForm firebase={firebase} />}
-              </FirebaseContext.Consumer>
-            }
+            body={<SignInForm />}
           />
           <Modal
             visible={signUp}
             closeModal={() => this.toggleModal("signUp")}
             title="Sign up"
-            body={
-              <FirebaseContext.Consumer>
-                {firebase => <SignUpForm firebase={firebase} />}
-              </FirebaseContext.Consumer>
-            }
+            body={<SignUpForm />}
           />
         </Suspense>
       </div>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import FormTemplate from "../../utils/Form";
 import { signInSchema } from "../../utils/validation";
+import { withFirebase } from "../Firebase/context";
 
 class SignInForm extends Component {
   state = {
@@ -43,4 +44,4 @@ SignInForm.propTypes = {
   firebase: PropTypes.object
 };
 
-export default SignInForm;
+export default withFirebase(SignInForm);
