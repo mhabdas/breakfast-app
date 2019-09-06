@@ -2,55 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50607d39-0023-4953-96ca-9b5980729eff" name="Default Changelist" comment="ł">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/10.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/10.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/11.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/11.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/12.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/12.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/13.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/13.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/14.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/14.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/15.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/15.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/16.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/16.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/17.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/17.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/18.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/18.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/19.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/19.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/2.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/20.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/20.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/3.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/4.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/7.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/8.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/9.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/c752d8b1b96dd4e6aa2c79fdfa2b4e3e.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/0.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/10.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/10.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/11.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/11.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/12.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/12.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/13.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/13.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/14.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/14.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/15.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/15.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/16.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/16.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/17.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/17.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/18.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/18.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/19.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/19.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/2.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/20.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/20.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/3.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/4.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/5.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/6.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/7.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/8.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/9.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/c752d8b1b96dd4e6aa2c79fdfa2b4e3e.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/main.js.map" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -252,7 +247,7 @@
       <workItem from="1564747898328" duration="598000" />
       <workItem from="1567691297498" duration="3697000" />
       <workItem from="1567755518689" duration="5487000" />
-      <workItem from="1567766981178" duration="4163000" />
+      <workItem from="1567766981178" duration="4408000" />
     </task>
     <servers />
   </component>
