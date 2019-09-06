@@ -13,7 +13,6 @@ const colors = {
 const GlobalStyle = createGlobalStyle`
 * {
   box-sizing: border-box;
-  font-family: Work Sans;
   margin: 0;
   padding: 0;
 }
@@ -25,6 +24,8 @@ html {
 }
 
 body {
+  @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
+   font-family: 'Work Sans', sans-serif;
    background-color: ${colors.light};
    min-height: 100vh;
    margin:0;
