@@ -28,7 +28,18 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpg|gif|ttf)$/,
+        test: /\.(ttf)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            entryPath: `${APP_DIR}/fonts`,
+            outputPath: './fonts',
+          }
+        }
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
         use: [{
           loader: 'file-loader',
           options: {
