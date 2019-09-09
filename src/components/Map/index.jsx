@@ -57,12 +57,11 @@ const Map = (props) => {
       >
         {data ? (
           <ZoomableGroup center={center} zoom={zoom}>
-            <Geographies geographyUrl={geoUrl}>
+            <Geographies geography={geoUrl}>
               {(geographies, projection) => geographies.map(geography => (
                 <Geography
                   key={geography.properties.NAME}
                   geography={geography}
-                  data-country={geography.properties.NAME}
                   projection={projection}
                   style={
                     data[geography.properties.NAME]

@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50607d39-0023-4953-96ca-9b5980729eff" name="Default Changelist" comment="ł">
-      <change afterPath="$PROJECT_DIR$/src/fonts/WorkSans-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/WorkSans-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/WorkSans-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/WorkSans-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/WorkSans-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/WorkSans-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/WorkSans-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/WorkSans-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/WorkSans-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/world-50m-simplified.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/0.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/0.js.map" beforeDir="false" />
@@ -52,12 +44,17 @@
       <change beforePath="$PROJECT_DIR$/dist/8.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/9.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/9.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/740b8e9adcb998d4f65b3b18251fb5e2.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/766db6981a8f279ef14dbdc1bc8b85b6.ttf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/img/c752d8b1b96dd4e6aa2c79fdfa2b4e3e.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/main.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Map/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Map/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MapContainer/MapContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MapContainer/MapContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/globals.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.common.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,11 +105,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src/fonts" />
       <recent name="$PROJECT_DIR$/src/components/AppContainer" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -259,7 +256,8 @@
       <workItem from="1564747898328" duration="598000" />
       <workItem from="1567691297498" duration="3697000" />
       <workItem from="1567755518689" duration="5487000" />
-      <workItem from="1567766981178" duration="5997000" />
+      <workItem from="1567766981178" duration="8635000" />
+      <workItem from="1568014800737" duration="2422000" />
     </task>
     <servers />
   </component>

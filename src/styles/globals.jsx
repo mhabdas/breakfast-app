@@ -16,12 +16,14 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: WorkSans;
     src: url(${WorkSans});
+    font-display: swap;
   }
   
   @font-face {
     font-family: WorkSans;
     src: url(${WorkSansBold});
     font-weight: bold;
+    font-display: swap;
   }
   
 * {

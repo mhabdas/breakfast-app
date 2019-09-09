@@ -68,7 +68,7 @@
     "react-icons": "^3.7.0",
     "react-ionicons": "^3.0.1",
     "react-router-dom": "^5.0.1",
-    "react-simple-maps": "^0.8.4",
+    "react-simple-maps": "^0.12.1",
     "react-spinners": "^0.5.13",
     "spinkit": "^1.2.5",
     "style-loader": "^0.23.0",

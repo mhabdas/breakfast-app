@@ -5,6 +5,8 @@ const MainSection = React.lazy(() => import("../MainSection"));
 const BreakfastModal = React.lazy(() => import("../BreakfastModal/BreakfastModal"));
 import { withFirebase } from "../Firebase/context";
 import ButtonList from "../../utils/Button/ButtonList";
+import geoUrl from "../../utils/world-50m-simplified.json"
+
 
 const initialState = {
   breakfastName: "",
@@ -15,9 +17,6 @@ const initialState = {
   info:
     "Sorry. This content is not yet available. Try a different or random country."
 };
-
-const geoUrl =
-  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-50m.json";
 
 const initialZoom = {
   center: [0, 20],
