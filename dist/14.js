@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{724:function(e,n,a){"use strict";a.r(n);var t=a(38),l=a.n(t),c=a(518),r=a(443),u=l.a.lazy(function(){return Promise.all([a.e(5),a.e(8)]).then(a.bind(null,728))});n.default=function(){return l.a.createElement("div",null,l.a.createElement(c.a,null,l.a.createElement("div",null,l.a.createElement(t.Suspense,{fallback:l.a.createElement("div",null)},l.a.createElement(r.a,{exact:!0,path:"/breakfast-app/",component:u})))))}}}]);
+//# sourceMappingURL=14.js.map
