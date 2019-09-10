@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors } from "../../styles/globals";
 
 const Form = styled.form`
-  width: 300px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
-  width: 300px;
+  max-width: 300px;
   height: 35px;
   border: 2px solid ${colors.dark};
   background-color: #fff;

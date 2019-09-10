@@ -1,6 +1,6 @@
-import React from 'react';
-import StyledFooter from './Footer';
-import Link from '../../utils/Link';
+import React from "react";
+import StyledFooter from "./Footer";
+import Link from "../../utils/Link";
 
 const Footer = () => (
   <StyledFooter>
@@ -62,6 +62,20 @@ const Footer = () => (
         target="_blank"
         description="Independent"
         title="Independent"
+      />
+      ,
+      <Link
+        href="https://mymodernmet.com/breakfasts-around-the-world/"
+        target="_blank"
+        description="My Modern Met"
+        title="My Modern Met"
+      />
+      ,
+      <Link
+        href="https://edition.cnn.com/travel/article/breakfast-food-around-the-world/index.html"
+        target="_blank"
+        description="CNN"
+        title="CNN"
       />
       .
     </p>
