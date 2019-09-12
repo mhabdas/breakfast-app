@@ -7,7 +7,7 @@ const Link = (props) => {
     href, title, target, description,
   } = props;
   return (
-    <StyledLink href={href} title={title} target={target}>
+    <StyledLink href={href} title={title} target={target} rel={rel}>
       {description}
     </StyledLink>
   );
