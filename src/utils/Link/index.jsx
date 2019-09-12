@@ -4,7 +4,7 @@ import StyledLink from './Link';
 
 const Link = (props) => {
   const {
-    href, title, target, description,
+    href, title, target, description, rel,
   } = props;
   return (
     <StyledLink href={href} title={title} target={target} rel={rel}>
@@ -18,6 +18,7 @@ Link.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   target: PropTypes.string.isRequired,
+  rel: PropTypes.string.isRequired,
 };
 
 export default Link;
