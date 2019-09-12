@@ -1,19 +1,17 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import FormTemplate from "../../utils/Form";
 import { signUpSchema } from "../../utils/validation";
 import { withFirebase } from "../Firebase/context";
 
-class SignUpForm extends Component {
-  state = {
-    initialValues: {
-      email: "",
-      password: "",
-      confirmPassword: ""
-    }
-  };
+const SignUpForm = props => {
+  const [initialValues] = useState({
+    email: "",
+    password: "",
+    confirmPassword: ""
+  });
 
-  fieldsConfig = [
+  const fieldsConfig = [
     { type: "text", name: "email", placeholder: "Email" },
     { type: "password", name: "password", placeholder: "Password" },
     {
@@ -23,31 +21,28 @@ class SignUpForm extends Component {
     }
   ];
 
-  onSuccessAction = (response) => {
+  const onSuccessAction = response => {
     console.log(response);
   };
 
-  render() {
-    const { initialValues } = this.state;
-    const {
-      firebase: { doCreateUserWithEmailAndPassword }
-    } = this.props;
-    return (
-      <FormTemplate
-        initialValues={initialValues}
-        fields={this.fieldsConfig}
-        validationSchema={signUpSchema}
-        firebaseAction={doCreateUserWithEmailAndPassword}
-        onSuccessAction={this.onSuccessAction}
-        {...this.props}
-      />
-    );
-  }
-}
+  const {
+    firebase: { doCreateUserWithEmailAndPassword }
+  } = props;
+  return (
+    <FormTemplate
+      initialValues={initialValues}
+      fields={fieldsConfig}
+      validationSchema={signUpSchema}
+      firebaseAction={doCreateUserWithEmailAndPassword}
+      onSuccessAction={onSuccessAction}
+      {...props}
+    />
+  );
+};
 
 SignUpForm.propTypes = {
   initialValues: PropTypes.object,
-  firebase: PropTypes.object,
+  firebase: PropTypes.object
 };
 
 export default withFirebase(SignUpForm);

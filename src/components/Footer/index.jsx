@@ -11,6 +11,7 @@ const Footer = () => (
         target="_blank"
         description="&nbsp;Marta Habdas"
         title="Marta Habdas"
+        rel="noopener noreferrer"
       />
       .
     </p>
@@ -21,6 +22,7 @@ const Footer = () => (
         title="Freepik"
         target="_blank"
         description="&nbsp;Freepik&nbsp;"
+        rel="noopener noreferrer"
       />
       from
       <Link
@@ -28,6 +30,7 @@ const Footer = () => (
         title="Flaticon"
         target="_blank"
         description="&nbsp;www.flaticon.com&nbsp;"
+        rel="noopener noreferrer"
       />
       is licensed by
       <Link
@@ -35,6 +38,7 @@ const Footer = () => (
         title="Creative Commons BY 3.0"
         target="_blank"
         description="&nbsp;CC 3.0 BY"
+        rel="noopener noreferrer"
       />
       .
     </p>
@@ -45,6 +49,7 @@ const Footer = () => (
         target="_blank"
         description="&nbsp;Wikimedia Commons&nbsp;"
         title="Wikimedia Commons"
+        rel="noopener noreferrer"
       />
       are licensed by
       <Link
@@ -52,6 +57,7 @@ const Footer = () => (
         title="Creative Commons BY 3.0"
         target="_blank"
         description="&nbsp;CC 3.0 BY"
+        rel="noopener noreferrer"
       />
       .
     </p>
@@ -62,20 +68,55 @@ const Footer = () => (
         target="_blank"
         description="Independent"
         title="Independent"
+        rel="noopener noreferrer"
       />
-      ,
+      ,&nbsp;
       <Link
         href="https://mymodernmet.com/breakfasts-around-the-world/"
         target="_blank"
         description="My Modern Met"
         title="My Modern Met"
+        rel="noopener noreferrer"
       />
-      ,
+      ,&nbsp;
       <Link
         href="https://edition.cnn.com/travel/article/breakfast-food-around-the-world/index.html"
         target="_blank"
         description="CNN"
         title="CNN"
+        rel="noopener noreferrer"
+      />
+      ,&nbsp;
+      <Link
+        href="https://www.buzzfeed.com/ailbhemalone/breakfasts-around-the-world"
+        target="_blank"
+        description="BuzzFeed"
+        title="BuzzFeed"
+        rel="noopener noreferrer"
+      />
+      ,&nbsp;
+      <Link
+        href="https://worldtravelfamily.com/breakfast-around-the-world-food-travel-blog/"
+        target="_blank"
+        description="World Travel Family"
+        title="World Travel Family"
+        rel="noopener noreferrer"
+      />
+      ,&nbsp;
+      <Link
+        href="https://www.thrillist.com/eat/nation/world-s-best-breakfast-the-best-traditional-breakfast-from-around-the-world-thrillist-nation"
+        target="_blank"
+        description="Thrillist"
+        title="Thrillist"
+        rel="noopener noreferrer"
+      />
+      ,&nbsp;
+      <Link
+        href="https://pulptastic.com/50-world-breakfasts/"
+        target="_blank"
+        description="Pulptastic"
+        title="Pulptastic"
+        rel="noopener noreferrer"
       />
       .
     </p>

@@ -2,11 +2,11 @@ import {
   ComposableMap,
   Geographies,
   Geography,
-  ZoomableGroup,
-} from 'react-simple-maps';
+  ZoomableGroup
+} from "react-simple-maps";
 
-import PropTypes from 'prop-types';
-import {colors} from '../../styles/globals';
+import PropTypes from "prop-types";
+import { colors } from "../../styles/globals";
 import React from "react";
 import StyledMap from "./Map";
 import Spinner from "../../utils/Spinner";
@@ -15,73 +15,78 @@ const primaryMap = {
   fill: colors.secondary,
   stroke: colors.dark,
   strokeWidth: 0.65,
-  outline: 'none',
-  cursor: 'pointer',
-  transition: 'fill .5s',
+  outline: "none",
+  cursor: "pointer",
+  transition: "fill .5s"
 };
 
 const secondaryMap = {
   fill: colors.light,
   stroke: colors.dark,
   strokeWidth: 0.65,
-  outline: 'none',
-  transition: 'fill .5s',
+  outline: "none",
+  transition: "fill .5s"
 };
 
 const pressedMap = {
   fill: colors.light,
   stroke: colors.dark,
   strokeWidth: 0.65,
-  outline: 'none',
-  cursor: 'pointer',
-  transition: 'fill .5s',
+  outline: "none",
+  cursor: "pointer",
+  transition: "fill .5s"
 };
 
-const Map = (props) => {
-  const {
-    data, center, zoom, geoUrl, handleClick,
-  } = props;
+const Map = props => {
+  const { data, center, zoom, geoUrl, handleClick } = props;
 
   return (
     <StyledMap>
       <ComposableMap
         projectionConfig={{
-          scale: 220,
+          scale: 220
         }}
         width={980}
         height={551}
         style={{
-          width: '100%',
-          height: 'auto',
+          width: "100%",
+          height: "auto"
         }}
       >
         {data ? (
           <ZoomableGroup center={center} zoom={zoom}>
             <Geographies geography={geoUrl}>
-              {(geographies, projection) => geographies.map(geography => (
-                <Geography
-                  key={geography.properties.NAME}
-                  geography={geography}
-                  projection={projection}
-                  style={
-                    data[geography.properties.NAME]
-                      ? {
-                        default: { ...primaryMap },
-                        hover: { ...pressedMap },
-                        pressed: { ...pressedMap },
-                      }
-                      : {
-                        default: { ...secondaryMap },
-                        hover: { ...secondaryMap },
-                        pressed: { ...secondaryMap },
-                      }
-                  }
-                  onClick={
-                    data[geography.properties.NAME] && handleClick
-                  }
-                  round
-                />
-              ))
+              {(geographies, projection) =>
+                geographies.map(geography => (
+                  <Geography
+                    key={geography.properties.NAME}
+                    geography={geography}
+                    projection={projection}
+                    style={
+                      data[
+                        geography.properties.NAME ||
+                          geography.properties.NAME_LONG
+                      ]
+                        ? {
+                            default: { ...primaryMap },
+                            hover: { ...pressedMap },
+                            pressed: { ...pressedMap }
+                          }
+                        : {
+                            default: { ...secondaryMap },
+                            hover: { ...secondaryMap },
+                            pressed: { ...secondaryMap }
+                          }
+                    }
+                    onClick={
+                      data[
+                        geography.properties.NAME ||
+                          geography.properties.NAME_LONG
+                      ] && handleClick
+                    }
+                    round
+                  />
+                ))
               }
             </Geographies>
           </ZoomableGroup>
@@ -99,11 +104,11 @@ Map.propTypes = {
   zoom: PropTypes.number.isRequired,
   geoUrl: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 Map.defaultProps = {
-  data: null,
+  data: null
 };
 
 export default Map;
