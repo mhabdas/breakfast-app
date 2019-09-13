@@ -15,7 +15,7 @@ const devConfig = {
 const prodConfig = {
 	apiKey: 'AIzaSyDHAjf4fpbVHUt0vdjEc-g_z5BqGs2dPF4',
 	authDomain: 'breakfast-app-prod.firebaseapp.com',
-	databaseURL: 'https://breakfast-app-prod.firebaseio.com',
+	databaseURL:'https://breakfast-app-prod.firebaseio.com',
 	projectId: 'breakfast-app-prod',
 	storageBucket: '',
 	messagingSenderId: '60119233345',
