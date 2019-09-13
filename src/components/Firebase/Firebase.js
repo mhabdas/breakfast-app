@@ -13,19 +13,16 @@ const devConfig = {
 };
 
 const prodConfig = {
-	apiKey: process.env.PROD_API_KEY,
-	authDomain: process.env.PROD_AUTH_DOMAIN,
-	databaseURL: process.env.PROD_DATABASE_URL,
-	projectId: process.env.PROD_PROJECT_ID,
-	storageBucket: process.env.PROD_STORAGE_BUCKET,
-	messagingSenderId: process.env.PROD_MESSAGING_SENDER_ID,
-	appId: process.env.PROD_ID
+	apiKey: 'AIzaSyDHAjf4fpbVHUt0vdjEc-g_z5BqGs2dPF4',
+	authDomain: 'breakfast-app-prod.firebaseapp.com',
+	databaseURL: 'https://breakfast-app-prod.firebaseio.com',
+	projectId: 'breakfast-app-prod',
+	storageBucket: '',
+	messagingSenderId: '60119233345',
+	appId: '1:60119233345:web:346b135db27ced70'
 };
 
-
-const config =
-  process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
-
+const config = process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
 
 class Firebase {
 	constructor() {
@@ -49,12 +46,10 @@ class Firebase {
 
   doPasswordUpdate = password => this.auth.currentUser.updatePassword(password);
 
-
   // *** Breakfast API ***
 
   breakfast = () => this.db.ref('breakfast');
   breakfastByCountry = country => this.db.ref(`breakfast/${country}`);
-
 }
 
 export default Firebase;

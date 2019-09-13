@@ -11,6 +11,9 @@ module.exports = merge(common, {
 			'process.env.PROD_AUTH_DOMAIN': JSON.stringify(
 				process.env.PROD_AUTH_DOMAIN
 			),
+			'process.env.PROD_DATABASE_URL': JSON.stringify(
+				process.env.PROD_DATABASE_URL
+			),
 			'process.env.PROD_PROJECT_ID': JSON.stringify(process.env.PROD_PROJECT_ID),
 			'process.env.PROD_STORAGE_BUCKET': JSON.stringify(
 				process.env.PROD_STORAGE_BUCKET

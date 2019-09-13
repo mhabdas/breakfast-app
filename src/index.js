@@ -6,6 +6,8 @@ const AppContainer = React.lazy(() =>
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
+console.log(process.env.PROD_API_KEY);
+
 document.addEventListener('DOMContentLoaded', () => {
 	ReactDOM.render(
 		<Suspense fallback={<div />}>
