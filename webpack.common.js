@@ -61,7 +61,7 @@ module.exports = {
 			filename: './index.html'
 		}),
 		new CnameWebpackPlugin({
-			domain: 'www.breakfast-app.com'
+			domain: 'breakfast-app.com'
 		})
 	],
 	resolve: {
