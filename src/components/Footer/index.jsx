@@ -118,14 +118,6 @@ const Footer = () => (
         title="Pulptastic"
         rel="noopener noreferrer"
       />
-      ,&nbsp;
-      <Link
-        href="https://matadornetwork.com/read/breakfast-dishes-around-world/"
-        target="_blank"
-        description="Matador"
-        title="Matador"
-        rel="noopener noreferrer"
-      />
       .
     </p>
   </StyledFooter>
