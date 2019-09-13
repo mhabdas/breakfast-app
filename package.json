@@ -3,7 +3,7 @@
   "sideEffects": false,
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://www.breakfast-app.com",
+  "homepage": "http://www.breakfast-app.com",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --env.development --content-base ./ --port 9966 --hot --config ./webpack.dev.js --mode development",
