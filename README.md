@@ -1,7 +1,7 @@
 # Breakfast Project
 Final project made during the Coders Lab bootcamp "JavaScript Developer: React".
 
-Live version: https://mhabdas.github.io/breakfast-app/
+Live version: https://www.breakfast-app.com
 
 Simple web app which helps to find new breakfast ideas by choosing countries from the world map. 
 The project was made in ReactJS library and styled with the use of styled-components (https://www.styled-components.com/).
