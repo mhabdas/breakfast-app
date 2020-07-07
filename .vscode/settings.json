@@ -1,0 +1,18 @@
+{
+  "editor.tabSize": 2,
+  "search.exclude": {
+    "**/node_modules": false
+  },
+  "eslint.codeActionsOnSave": true,
+  "editor.formatOnSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "typescript.extension.sortImports.pathSortOrder": [
+    "package",
+    "relativeDownLevel",
+    "relativeUpLevel"
+  ],
+  "typescript.extension.sortImports.sortOnSave": true,
+  "typescript.extension.sortImports.omitSemicolon": true,
+  "typescript.extension.sortImports.sortMethod": "path",
+  "eslint.migration.2_x": "off"
+}

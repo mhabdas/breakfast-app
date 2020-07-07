@@ -1,71 +1,74 @@
-const path = require("path");
-const APP_DIR = path.resolve(__dirname, "src/");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const CnameWebpackPlugin = require("cname-webpack-plugin");
-require("dotenv").config();
+const path = require('path')
+const APP_DIR = path.resolve(__dirname, 'src/')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
+const CnameWebpackPlugin = require('cname-webpack-plugin')
+require('dotenv').config()
 
 module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         include: APP_DIR,
-        loader: "babel-loader",
-        query: {
-          presets: ["@babel/env", "@babel/react"]
-        }
+        loader: 'ts-loader',
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'source-map-loader',
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
-            options: { minimize: true }
-          }
-        ]
+            loader: 'html-loader',
+            options: { minimize: true },
+          },
+        ],
       },
       {
         test: /\.(ttf)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
               entryPath: `${APP_DIR}/fonts`,
-              outputPath: "./fonts"
-            }
-          }
-        ]
+              outputPath: './fonts',
+            },
+          },
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
               entryPath: `${APP_DIR}/img`,
-              outputPath: "./img"
-            }
-          }
-        ]
+              outputPath: './img',
+            },
+          },
+        ],
       },
-    ]
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html",
-      favicon: "./src/img/favicon.ico"
+      template: './src/index.html',
+      filename: './index.html',
+      favicon: './src/img/favicon.ico',
     }),
     new CnameWebpackPlugin({
-      domain: "breakfast-app.com"
-    })
+      domain: 'breakfast-app.com',
+    }),
   ],
   resolve: {
-    extensions: [" ", ".js", ".jsx"]
-  }
-};
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
+  devtool: 'source-map',
+}
