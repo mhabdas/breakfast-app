@@ -1,11 +1,11 @@
 // @ts-nocheck
 
 import { ComposableMap, Geographies, Geography, ZoomableGroup, Point } from 'react-simple-maps'
-import { colors } from '../../styles/globals'
+import { colors } from '@styles/globals'
 import React from 'react'
 import StyledMap from './Map'
-import Spinner from '../../utils/Spinner'
-import { BreakfastDataInterface } from '../../interfaces/BreakfastInterface'
+import Spinner from '@utils/Spinner'
+import { BreakfastDataInterface } from '@interfaces/BreakfastInterface'
 
 type Props = {
   data: BreakfastDataInterface

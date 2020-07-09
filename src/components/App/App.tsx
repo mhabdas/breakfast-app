@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import * as ROUTES from '../../constants/routes'
-const LandingPage = React.lazy(() => import('../../components/LandingPage'))
+import * as ROUTES from '@constants/routes'
+const LandingPage = React.lazy(() => import('@components/LandingPage'))
 
 const App = () => {
   return (

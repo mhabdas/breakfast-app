@@ -1,6 +1,6 @@
 import React, { Suspense, useState } from 'react'
-import Spinner from '../../utils/Spinner'
-import { GlobalStyle } from '../../styles/globals'
+import Spinner from '@utils/Spinner'
+import { GlobalStyle } from '@styles/globals'
 import _ from 'lodash'
 const AboutSection = React.lazy(() => import('../AboutSection'))
 const Footer = React.lazy(() => import('../Footer'))

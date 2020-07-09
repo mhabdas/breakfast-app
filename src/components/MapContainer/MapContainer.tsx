@@ -1,14 +1,14 @@
 import React, { useState, useEffect, Suspense } from 'react'
-const Button = React.lazy(() => import('../../utils/Button'))
+const Button = React.lazy(() => import('@utils/Button'))
 const Map = React.lazy(() => import('../Map'))
 const MainSection = React.lazy(() => import('../MainSection'))
 const BreakfastModal = React.lazy(() => import('../BreakfastModal/BreakfastModal'))
 import { withFirebase } from '../Firebase/FirebaseContext'
 import Firebase from '../Firebase'
-import ButtonList from '../../utils/Button/ButtonList'
-import geoUrl from '../../utils/world-50m-simplified.json'
-import BreakfastInterface, { BreakfastDataInterface } from '../../interfaces/BreakfastInterface'
-import GeographyInterface from '../../interfaces/GeographyInterface'
+import ButtonList from '@utils/Button/ButtonList'
+import geoUrl from '@utils/world-50m-simplified.json'
+import BreakfastInterface, { BreakfastDataInterface } from '@interfaces/BreakfastInterface'
+import GeographyInterface from '@interfaces/GeographyInterface'
 import { Point } from 'react-simple-maps'
 
 type Props = {

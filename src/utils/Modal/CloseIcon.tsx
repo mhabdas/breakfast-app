@@ -1,5 +1,4 @@
 import React from 'react'
-import { colors } from '../../styles/globals'
 import Close from '@material-ui/icons/Close'
 
 type Props = {

@@ -1,8 +1,8 @@
 import React, { useState, Suspense, SetStateAction, Dispatch } from 'react'
 import SignUpForm from '../SignUpForm'
 import SignInForm from '../SignInForm'
-import Modal from '../../utils/Modal'
-import Button from '../../utils/Button'
+import Modal from '@utils/Modal'
+import Button from '@utils/Button'
 
 const AuthModals = () => {
   const [signIn, setSignIn] = useState<boolean>(false)

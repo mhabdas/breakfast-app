@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
-import Button from '../../utils/Button'
-import Modal from '../../utils/Modal'
-import BreakfastInterface from '../../interfaces/BreakfastInterface'
+import Button from '@utils/Button'
+import Modal from '@utils/Modal'
+import BreakfastInterface from '@interfaces/BreakfastInterface'
 
 type Props = {
   breakfastByCountry: BreakfastInterface

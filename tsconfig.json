@@ -18,7 +18,17 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@utils/*": ["utils/*"],
+      "@constants/*": ["constants/*"],
+      "@styles/*": ["styles/*"],
+      "@interfaces/*": ["interfaces/*"],
+      "@fonts/*": ["fonts/*"],
+      "@img/*": ["img/*"]
+    }
   },
   "include": ["src/**/*", "custom.d.ts", "fonts.d.ts"],
   "exclude": ["node_modules/**/*", "webpack.common.js", "webpack.dev.js", "webpack.prod.js"]

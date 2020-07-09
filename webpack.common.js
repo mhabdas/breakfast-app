@@ -68,6 +68,15 @@ module.exports = {
     }),
   ],
   resolve: {
+    alias: {
+      '@components': `${APP_DIR}/components/`,
+      '@utils': `${APP_DIR}/utils/`,
+      '@constants': `${APP_DIR}/constants/`,
+      '@styles': `${APP_DIR}/styles/`,
+      '@interfaces': `${APP_DIR}/interfaces/`,
+      '@fonts': `${APP_DIR}/fonts/`,
+      '@img': `${APP_DIR}/img/`,
+    },
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   devtool: 'source-map',

@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
-const AppContainer = React.lazy(() => import('./components/AppContainer/AppContainer'))
+const AppContainer = React.lazy(() => import('@components/AppContainer'))
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(

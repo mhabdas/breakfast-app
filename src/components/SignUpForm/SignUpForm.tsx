@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import FormTemplate from '../../utils/Form'
-import { signUpSchema } from '../../utils/validation'
+import FormTemplate from '@utils/Form'
+import { signUpSchema } from '@utils/validation'
 import { withFirebase } from '../Firebase/FirebaseContext'
 import Firebase from '../Firebase'
 

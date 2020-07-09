@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import {colors} from '../../styles/globals';
+import styled from 'styled-components'
+import { colors } from '@styles/globals'
 
 const StyledLogo = styled.div`
   display: flex;
@@ -19,6 +19,6 @@ const StyledLogo = styled.div`
     height: 4rem;
     padding-right: 0.5rem;
   }
-`;
+`
 
-export default StyledLogo;
+export default StyledLogo

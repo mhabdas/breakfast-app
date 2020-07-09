@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 import { createGlobalStyle } from 'styled-components'
-import WorkSans from '../fonts/WorkSans-Regular.ttf'
-import WorkSansBold from '../fonts/WorkSans-Bold.ttf'
+import WorkSans from '@fonts/WorkSans-Regular.ttf'
+import WorkSansBold from '@fonts/WorkSans-Bold.ttf'
 
 // Colors
 const colors = {
