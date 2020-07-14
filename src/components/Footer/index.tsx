@@ -112,6 +112,14 @@ const Footer = () => (
         title="Pulptastic"
         rel="noopener noreferrer"
       />
+      ,&nbsp;
+      <Link
+        href="https://www.tasteatlas.com/100-most-popular-breakfasts-in-the-world"
+        target="_blank"
+        description="Taste Atlas"
+        title="Taste Atlas"
+        rel="noopener noreferrer"
+      />
       .
     </p>
   </StyledFooter>
