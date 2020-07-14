@@ -61,30 +61,27 @@ const Map = (props: Props) => {
           <ZoomableGroup center={center} zoom={zoom}>
             <Geographies geography={geoUrl}>
               {(geographies, projection) =>
-                geographies?.map(geography => {
-                  console.log(geography)
-                  return (
-                    <Geography
-                      key={geography.properties.NAME}
-                      geography={geography}
-                      projection={projection}
-                      style={
-                        data[geography.properties.NAME || geography.properties.NAME_LONG]
-                          ? {
-                              default: { ...primaryMap },
-                              hover: { ...pressedMap },
-                              pressed: { ...pressedMap },
-                            }
-                          : {
-                              default: { ...secondaryMap },
-                              hover: { ...secondaryMap },
-                              pressed: { ...secondaryMap },
-                            }
-                      }
-                      onClick={data[geography.properties.NAME || geography.properties.NAME_LONG] && handleClick}
-                    />
-                  )
-                })
+                geographies?.map(geography => (
+                  <Geography
+                    key={geography.properties.NAME}
+                    geography={geography}
+                    projection={projection}
+                    style={
+                      data[geography.properties.NAME || geography.properties.NAME_LONG]
+                        ? {
+                            default: { ...primaryMap },
+                            hover: { ...pressedMap },
+                            pressed: { ...pressedMap },
+                          }
+                        : {
+                            default: { ...secondaryMap },
+                            hover: { ...secondaryMap },
+                            pressed: { ...secondaryMap },
+                          }
+                    }
+                    onClick={data[geography.properties.NAME || geography.properties.NAME_LONG] && handleClick}
+                  />
+                ))
               }
             </Geographies>
           </ZoomableGroup>

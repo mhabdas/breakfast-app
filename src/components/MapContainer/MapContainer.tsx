@@ -93,7 +93,6 @@ const MapContainerBase = (props: Props) => {
   }
 
   const handleClick = (e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
-    console.log(e)
     const countryName = ((e as unknown) as GeographyInterface).properties.NAME
     setCountry(countryName)
     getBreakfastData(countryName)
