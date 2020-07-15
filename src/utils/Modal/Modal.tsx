@@ -50,7 +50,8 @@ const ModalWindow = styled.div`
     width: 80%;
     border-radius: 5%;
     opacity: 0.8;
-    padding-bottom: 0.5rem;
+    max-height: 275px;
+    object-fit: cover;
   }
 `
 

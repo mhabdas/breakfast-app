@@ -5,7 +5,7 @@ import Link from '@utils/Link'
 const Footer = () => (
   <StyledFooter>
     <p>
-      &copy; 2018 Breakfast App made by
+      &copy; 2020 Breakfast App made by
       <Link
         href="https://github.com/mhabdas"
         target="_blank"
@@ -118,6 +118,30 @@ const Footer = () => (
         target="_blank"
         description="Taste Atlas"
         title="Taste Atlas"
+        rel="noopener noreferrer"
+      />
+      ,&nbsp;
+      <Link
+        href="https://travel.earth/breakfast-around-the-world/"
+        target="_blank"
+        description="Travel Earth"
+        title="Travel Earth"
+        rel="noopener noreferrer"
+      />
+      ,&nbsp;
+      <Link
+        href="https://www.afar.com/magazine/what-breakfast-looks-like-in-25-countries-around-the-world"
+        target="_blank"
+        description="Afar"
+        title="Afar"
+        rel="noopener noreferrer"
+      />
+      ,&nbsp;
+      <Link
+        href="https://www.thedailymeal.com/travel/what-people-eat-breakfast-around-world-slideshow/slide-50"
+        target="_blank"
+        description="The Daily Meal"
+        title="The Daily Meal"
         rel="noopener noreferrer"
       />
       .
